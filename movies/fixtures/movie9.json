@@ -1,0 +1,302 @@
+[
+	{
+		"model": "movies.movie",
+		"pk": 1,
+		"fields": {
+			"poster_path": "/rwRh4fHnAWpQyOYTBHkOac0aSmP.jpg",
+			"genre": "애니메이션",
+			"release_date": "2020-11-25",
+			"id": 529203,
+			"title": "크루즈 패밀리: 뉴 에이지",
+			"overview": "동굴을 떠나 새로운 거주지를 찾아 나선 크루즈 패밀리. 우여곡절 끝에 찾은 완벽한 트리 하우스에서 진화된 인류, 베터맨 패밀리와 마주한다. 도구를 사용하고 ‘집’에서 안전하게 살아가는 지능형 베터맨 패밀리와 맨손으로 사냥하고 자연과 함께 살아가는 본능형 크루즈 패밀리는 너무나도 다른 삶의 방식으로 사사건건 부딪힌다. 반면 처음으로 여자 사람친구를 만난 ‘이프’와 ‘던’은 가족들과 달리 우정을 쌓아가지만 점점 두 가족에게 예상치 못한 위협이 닥쳐오는데…",
+			"vote_average": 7.6,
+			"backdrop_path": "/fmIp40ev4VGquK2bMo52PQgaV2d.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 2,
+		"fields": {
+			"poster_path": "/zAxdiiyYbwmCUqzRJAsF3My9bsI.jpg",
+			"genre": "액션",
+			"release_date": "2014-12-06",
+			"id": 317442,
+			"title": "나루토 질풍전 극장판 7기 - 더 라스트 - 나루토 더 무비",
+			"overview": "나루토와 사스케가 인연의 대결을 결판 지었던 2년 후  아직 전하지 못한 마음, 그 숨겨온 마음의 행방은…?  전쟁이 끝나고 평화로운 나뭇잎 마을. 나루토는 이제 전쟁 영웅이 되어 마을의 인기를 한 몸에 받는 인기남이 되어 있다. 그런 나루토를 바라보는 히나타는 자신의 마음을 전하기 위해 남몰래 짠 목도리를 나루토에게 전하고 싶지만 아직 전하지 못하고 있다. 그때 갑자기 의문의 남자가 나타나고, 그는 “너희는 곧 멸망할 운명이다. 그 전에 히나타, 널 꼭 맞이하러 오지.”라는 기묘한 말을 남긴 채 사라진다.   육도선인의 동생은 달에 쫓겨가 살고 있는데 그의 후손인 오오츠키 토네루는 권력 암투와 대결에 집중하는 지구를 보고 육도선인의 지구는 이미 실패했다고 생각한다. 이제 토네루는 달과 지구를 충돌시켜 지구를 폭파하려고 하는데…  의문의 남자 정체는 차크라의 시초이자 과거에 나루토, 사스케와 사투를 벌였던 오츠츠키 카구야의 후손. 괴뢰군을 거느린 토네리가 나타나 압도적인 힘으로 나루토 일행을 물리치고, 히나타는 결국 그의 손에 넘어간다. 그 무렵 지상에서는 쏟아지는 운석을 막는 장렬한 방어전이 한계에 다다르고 있다. 마침내 드러난 ‘진정한 최종 계획’이란?! 다가오는 지구 최후의 날, 저마다 굽힐 수 없는 마음이 시간을 초월하여 격돌한다!",
+			"vote_average": 7.8,
+			"backdrop_path": "/l8ubUlfzlB5R2j9cJ3CN7tj0gmd.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 3,
+		"fields": {
+			"poster_path": "/iGp4wBc0ZBVFd2HPicyDgl6Pn1r.jpg",
+			"genre": "애니메이션",
+			"release_date": "2009-02-05",
+			"id": 14836,
+			"title": "코렐라인: 비밀의 문",
+			"overview": "새로운 집으로 이사해 모든 것이 낯선 코렐라인은 부모님도 일 때문에 바쁘자, 혼자 집안을 돌아다니던 중 숨겨진 작은 문을 발견한다. 그날 밤 우연히 문을 열어 본 코렐라인은 그 문을 통해 또 다른 세계로 가게 되고, 상상으로만 생각하던 모든 것이 다 실현되는 또 다른 세계에 점점 마음을 뺏기게 된다. 이 곳에는 단추 눈을 한 가족, 친구, 이웃 등 모든 사람이 자신의 말을 들어주는, 신나고 완벽한 세상인 것. 그러나 이 곳에 머물기 위해 필요한 무시무시하고 엄청난 비밀을 알게 된 코렐라인은 현실의 세계로 돌아가려 하지만, 또 다른 세계의 엄마는 이를 막기 위해 본색을 드러낸다. 과연 코렐라인은 현실의 세계로 무사히 돌아갈 수 있을까?",
+			"vote_average": 7.8,
+			"backdrop_path": "/hofnlIyF6bePkgQOpcuRWLvzf15.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 4,
+		"fields": {
+			"poster_path": "/wovnMbreUW1U5o9eWyNZzzf2JNN.jpg",
+			"genre": "공포",
+			"release_date": "2021-05-26",
+			"id": 523936,
+			"title": "이스케이프 큐브",
+			"overview": "눈을 뜨니 비좁은 통로 안에 갇혀버린 리사.  살기 위해선 함정을 피해 빠르게 탈출해야 한다. 정해진 시간 내에 나가지 못한다면 그녀는 죽을 수밖에 없는 운명.  딸의 환영까지 뿌리치며 그녀가 무조건 해야 할 것은 탈출!  과연 그녀는 무사히 통로를 탈출할 수 있을까?",
+			"vote_average": 6.1,
+			"backdrop_path": "/qOnLuCJDFhRzbWzhpA4aoK75vfY.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 5,
+		"fields": {
+			"poster_path": "/x3BYGVio05n4Atdzc5WTmJpV7CY.jpg",
+			"genre": "애니메이션",
+			"release_date": "2019-12-20",
+			"id": 592350,
+			"title": "나의 히어로 아카데미아 더 무비: 히어로즈 라이징",
+			"overview": "눈이 계속 내리는 겨울 어느 밤, 히어로 사회를 파괴하려고 계획하는 시가라키 토무라가 인솔하는 빌런 연합과 그 움직임을 사전에 포착한 히어로들의 전투가 전개되는 가운데, 남모르게 조용히 꿈틀거리는 \"뭔가\"가 일어나고, 그 자리를 떠났다. 마침 이즈쿠 일행의 유에이 고교 히어로과 1학년 A반이 은퇴한 No.1 히어로 올마이트의 뒤를 이어 \"차세대 영웅 육성 프로젝트\"의 일환으로 학급 전원에서 기간 한정의 교외 히어로 활동을 위해 일본의 훨씬 남쪽에 위치한 외딴 섬 \"나부 섬\"을 찾았다. 얼마 전 큰 사건이 일어나지 않았던 평화로운 섬에서 이들은 주재 영웅으로서 섬사람들의 생활을 도우며 분주했고, 그러면서도 한가한 시간을 보내고 있었다. 그러나 그 정적을 부수듯이, 갑자기 빌런들이 나부 섬을 덮쳐, 차례차례로 섬의 시설을 파괴해 간다. 그들을 지휘하는 것은, \"나인\". 그날 밤, 눈을 뜬 \"뭔가\"그 자체였다. 이즈쿠와 바쿠고 등의 1학년 A반의 멤버는 힘을 모아 빌런에 맞선다! 과연 섬을 덮치는 나인의 목적이란!? 그리고 이즈쿠 일행의 1학년 A반의 \"뉴 히어로\"들은 이 가장 흉악한 빌런으로부터 섬의 사람들을 지킬 수 있을까!?",
+			"vote_average": 8.3,
+			"backdrop_path": "/9guoVF7zayiiUq5ulKQpt375VIy.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 6,
+		"fields": {
+			"poster_path": "/vNwYPtCDETrSkiBXsoiMFR9L6Do.jpg",
+			"genre": "액션",
+			"release_date": "2021-04-22",
+			"id": 637649,
+			"title": "캐시트럭",
+			"overview": "캐시트럭을 노리는 무장 강도에 의해 아들을 잃은 H(제이슨 스타뎀).  분노에 휩싸인 그는 아들을 죽인 범인의 단서를 찾기 위해  현금 호송 회사에 위장 취업한다.  첫 임무부터 백발백중 사격 실력을 자랑하며,  단숨에 에이스로 급부상한 H.  캐시트럭을 노리는 자들을 하나 둘 처리하며, 아들을 죽인 범인들과 점점 가까워지는데…  자비는 없다, 분노에 가득 찬 응징만이 남았다.",
+			"vote_average": 7.7,
+			"backdrop_path": "/70AV2Xx5FQYj20labp0EGdbjI6E.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 7,
+		"fields": {
+			"poster_path": "/kIHgjAkuzvKBnmdstpBOo4AfZah.jpg",
+			"genre": "애니메이션",
+			"release_date": "2020-11-21",
+			"id": 755812,
+			"title": "미라큘러스 월드 : 뉴욕, 하나 된 영웅들",
+			"overview": "",
+			"vote_average": 8.3,
+			"backdrop_path": "/adlZgxAudw3ZPA0HUcDzSTKrH8B.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 8,
+		"fields": {
+			"poster_path": "/iwlmZKndp7fIfHbxVzQtk9zby3A.jpg",
+			"genre": "공포",
+			"release_date": "2021-07-29",
+			"id": 775943,
+			"title": "Llanto Maldito",
+			"overview": "",
+			"vote_average": 4.8,
+			"backdrop_path": "/vkojfC1xykW9XBCyDDCMYeHqLEf.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 9,
+		"fields": {
+			"poster_path": "/cABFrLRNlepxhioYBJEEX0fNOWf.jpg",
+			"genre": "범죄",
+			"release_date": "2022-02-09",
+			"id": 505026,
+			"title": "나일 강의 죽음",
+			"overview": "이집트 나일강에서 열리는 호화로운 결혼 연회에 탐정 에르큘 포와로(케네스 브래나)가 초대를 받는다. 식의 주인공은 리넷(갤 가돗)과 사이먼(아미 해머). 리넷은 자신을 축하하기 위해 모인 친인척들과 재산 관리인, 그리고 헤어진 과거의 연인까지 모두가 자신의 막대한 재산을 노리고 있다는 생각에 빠져 에르큘 포와로에게 자신을 지켜달라는 의뢰를 한다. 그러던 와중에 또 한명의 불청객이 나타난다. 리넷의 가장 친한 친구이자 사이먼과 애인 사이였던 재클린(에마 매키). 앙심을 품은 재클린이 리넷 커플을 따라다니며 대놓고 저주를 퍼붓자 리넷의 불안은 극에 달하고, 그렇게 마침내 나일강 위를 떠다니던 초호화 여객선에서 총알 한방이 발사되고야 마는데...",
+			"vote_average": 6.5,
+			"backdrop_path": "/lRbDyjI7HEaXxflFQbYpqHRGFBJ.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 10,
+		"fields": {
+			"poster_path": "/zNXNRLH5wJprUG6B1olaBTNZOjy.jpg",
+			"genre": "애니메이션",
+			"release_date": "2021-12-03",
+			"id": 770254,
+			"title": "우리 함께 아웃백으로!",
+			"overview": "야생동물 공원을 탈출한 따뜻한 마음씨를 가진 동물 친구들이 '프리티 보이'라는 유명 코알라와 함께, 호주 동물들의 유토피아인 '아웃백'으로 떠나며 추격전이 시작된다는 내용을 다룬 애니메이션",
+			"vote_average": 7.7,
+			"backdrop_path": "/5B22eed7ErxFiYAG4Ksb4eLwKNF.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 11,
+		"fields": {
+			"poster_path": "/oMjmJGLwL6PtGzZew81ovx2TGGe.jpg",
+			"genre": "SF",
+			"release_date": "2021-09-09",
+			"id": 581726,
+			"title": "인피니트",
+			"overview": "한 남자는 자신의 환각이 실제로 전생에서 온 환영이라는 것을 알게 된다. 2009년 출간한 에릭 메이크란츠 《The Reincarnationist Papers》 원작으로 제작된 영화로  수십 세기 환생하며 불멸에 가까운 집단 \"인피니트\"를 그리는 이야기.",
+			"vote_average": 6.7,
+			"backdrop_path": "/fyxNrfrFcobLuNCufMhNkQuWorX.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 12,
+		"fields": {
+			"poster_path": "/zPDY58lk0YIxr9qsnGV64PEnjkI.jpg",
+			"genre": "액션",
+			"release_date": "2021-10-13",
+			"id": 617653,
+			"title": "라스트 듀얼: 최후의 결투",
+			"overview": "부조리한 권력과 야만의 시대, 14세기 프랑스. 장(맷 데이먼)은 영주 피에르(벤 애플렉)의 총애를 받는 자크(애덤 드라이버)에게 불만을 품고 있다. 그러다 피에르에 의해 마르그리트(조디 코머)의 결혼 지참금인 토지를 자크에게 빼앗기게 되자 자크에 대한 적대감이 극에 달한다. 한편 마르그리트에게 첫눈에 반한 자크는 장이 집을 비운 사이 마르그리트를 찾아가 겁탈한다. 용서받지 못할 짓을 저지른 자크는 마르그리트에게 침묵을 강요하지만, 마르그리트는 자신이 입을 여는 순간 감내해야 할 불명예를 각오하고 용기를 내어 자크의 죄를 고발한다. 강간사건에 대한 재판이 시작되고, 서로의 입장이 맹렬히 충돌하면서 파열음을 낸다. 결국 한때 전우였던 장과 자크는 승리한 자가 무죄, 패한 자가 유죄가 되는 결투 재판에서 승부를 겨루게 되는데...",
+			"vote_average": 7.5,
+			"backdrop_path": "/v0zhVgtqisaFsSVAOKxqwVOOlQr.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 13,
+		"fields": {
+			"poster_path": "/2xTZ5VI9iYEAbeVewqSbO0fIAIm.jpg",
+			"genre": "스릴러",
+			"release_date": "2021-08-12",
+			"id": 482373,
+			"title": "맨 인 더 다크 2",
+			"overview": "끔찍한 일이 벌어졌던 그날 밤 이후, 비밀스러운 과거를 가진 소녀 ‘피닉스’와 함께 세상과 단절된 일상을 보내던 눈 먼 노인 ‘노먼’ 어느 날 밤, 정체불명의 괴한들이 침입해 ‘피닉스’를 납치하고 소녀를 되찾기 위해 잠들어 있던 그의 광기가 다시 깨어나는데… 그는 과연 소녀의 수호자인가 괴물인가? 9월, 어둠 속 진실이 밝혀진다!",
+			"vote_average": 7.4,
+			"backdrop_path": "/pUc51UUQb1lMLVVkDCaZVsCo37U.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 14,
+		"fields": {
+			"poster_path": "/egsgKNPmMahQgNhmmYxiMVbLPrC.jpg",
+			"genre": "액션",
+			"release_date": "2012-06-23",
+			"id": 1930,
+			"title": "어메이징 스파이더맨",
+			"overview": "어릴적 사라진 부모 대신 삼촌 내외와 살고 있는 피터 파커는 평범한 학교 생활을 하며 일상을 보내고, 같은 학교 학생 그웬 스테이시와 첫사랑에 빠져 우정과 사랑, 그리고 둘 만의 비밀을 키워나간다. 어느 날 아버지가 사용했던 가방을 발견하고 부모님의 실종사건에 대한 의심을 품게 된 그는 숨겨져 왔던 과거의 비밀을 추적하게 된다. 아버지의 옛 동료 코너스 박사의 실험실을 찾아가게 된 피터는 우연한 사고로 특별한 능력을 갖게 되고, 피터의 도움으로 연구를 완성한 코너스 박사는 자신의 숨겨진 자아인 악당 리자드를 탄생시키는데...",
+			"vote_average": 6.7,
+			"backdrop_path": "/sLWUtbrpiLp23a0XDSiUiltdFPJ.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 15,
+		"fields": {
+			"poster_path": "/fYH6tztMcuiuvLCuPTudml1JDGT.jpg",
+			"genre": "액션",
+			"release_date": "2021-07-22",
+			"id": 568620,
+			"title": "스네이크 아이즈: 지.아이.조",
+			"overview": "상징적인 지.아이.조 영웅인 스네이크 아이즈(헨리 골딩)의 시초를 알아보는 액션으로 무장한 모험 속에서 가만히 앉아 있기 힘들 것이다. 고대 일본의 아라시카게라는 가문의 후계자 스톰 섀도(앤드루 코지)를 구한 뒤 그 가문으로 들어간 스네이크 아이즈는 코브라라는 테러리스트 그룹에 맞서는 전투에 합류한다. 자신의 한계를 밀어붙이는 스네이크 아이즈는 궁극의 전사가 되지만, 과거의 비밀이 수면 위로 드러나자 그의 명예와 충성심이 시험에 들게 된다. 그것이 그가 싸워 온 모든 것을 잃게 된다해도 말이다. 우르술라 코르베로가 배러니스로 출연하며, 서매라 위빙은 스칼릿으로 분한다.",
+			"vote_average": 6.7,
+			"backdrop_path": "/2OFg5p9yarI5zZsUWKCRgBgPctj.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 16,
+		"fields": {
+			"poster_path": "/6Ik5hJ6gOYvc5F1DdKQaAwamsKd.jpg",
+			"genre": "액션",
+			"release_date": "2018-11-14",
+			"id": 338952,
+			"title": "신비한 동물들과 그린델왈드의 범죄",
+			"overview": "마법 세계와 비마법 세계의 공존을 깨려고 했던 강력한 어둠의 마법사 겔러트 그린델왈드(조니 뎁)는 뉴트 스캐맨더(에디 레드메인)와 미국 마법부 의회에 의해 붙잡혔지만, 유럽으로 이송하는 과정에서 탈출하고 만다. 그린델왈드의 탈출 목적은 프랑스 파리에 머무는 것으로 추정되는 크레덴스를 포섭해 자신의 수하로 삼는 것. 영국으로 돌아왔던 뉴트는 덤블도어 교수로부터 자신은 나설 수 없으니 그린델왈드에 맞서달라는 지령을 받고 역시 파리로 향한다. 뉴트의 친구들, 제이콥과 퀴니, 그리고 오러로 복귀한 티나도 순혈 마법사의 세력을 모아 마법을 사용하지 않는 사람들을 지배하려는 그린델왈드의 야욕을 막기 위해 파리로 향하는데...",
+			"vote_average": 6.9,
+			"backdrop_path": "/qrtRKRzoNkf5vemO9tJ2Y4DrHxQ.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 17,
+		"fields": {
+			"poster_path": "/oXQtH8O7pCvXaDKGB8OAjiPVDi5.jpg",
+			"genre": "액션",
+			"release_date": "2021-03-18",
+			"id": 615457,
+			"title": "노바디",
+			"overview": "비범한 과거를 숨긴 채 남들과 다를 바 없는 평범한 일상을 사는 한 가정의 가장 ‘허치’ 매일 출근을 하고, 분리수거를 하고 일과 가정 모두 나름 최선을 다하지만 아들한테는 무시당하고 아내와의 관계도 소원하다. 그러던 어느 날, 집안에 강도가 들고 허치는 한 번의 반항도 하지 못하고 당한다. 더 큰 위험으로부터 가족을 지키기 위한 선택이었는데 모두 무능력하다고 ‘허치’를 비난하고, 결국 그동안 참고 억눌렀던 분노가 폭발하고 만다.",
+			"vote_average": 8.2,
+			"backdrop_path": "/6zbKgwgaaCyyBXE4Sun4oWQfQmi.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 18,
+		"fields": {
+			"poster_path": "/z21p0pm82RbHrUyHj8Mu4tOEun5.jpg",
+			"genre": "액션",
+			"release_date": "2021-05-06",
+			"id": 859041,
+			"title": "疯狂的拳头",
+			"overview": "",
+			"vote_average": 7,
+			"backdrop_path": "/uRkRJjrxVa04w7k83Hy20FKot4G.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 19,
+		"fields": {
+			"poster_path": "/5uxxdvQebVbdD1AZfGff9CMmcQH.jpg",
+			"genre": "다큐멘터리",
+			"release_date": "2022-05-11",
+			"id": 962697,
+			"title": "우리의 아버지",
+			"overview": "가정용 DNA 검사를 통해 자신에게 이복 형제자매가 여럿 있다는 사실을 알게 된 여성. 유명한 불임 전문의와 정자 기증을 둘러싼 충격적인 음모를 밝혀낸다.",
+			"vote_average": 6.7,
+			"backdrop_path": "/iuGaTFUUNlkSAyyULZVKt9ZwBzg.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 20,
+		"fields": {
+			"poster_path": "/vaEX9f8ud7iF0G7EoyGxAyRNV1p.jpg",
+			"genre": "애니메이션",
+			"release_date": "2007-08-04",
+			"id": 20982,
+			"title": "나루토 질풍전 극장판 1기 - 나루토의 죽음",
+			"overview": "미래 예언과 마귀 봉인 능력을 지닌 원령나라의 무녀가 부활한 마귀의 표적으로 지목되자 나루토와 친구들은 무녀를 지키기 위해 길을 떠난다. 그러나 원령나라에 도착한 일행에게 무녀는 나루토의 죽음을 예언하고 이에 모두들 충격에 휩싸이는데...",
+			"vote_average": 7.2,
+			"backdrop_path": "/mUC2BS04DlszdqJQ9vz9MFuPiDd.jpg",
+			"adult": false
+		}
+	}
+]

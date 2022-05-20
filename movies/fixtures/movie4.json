@@ -1,0 +1,302 @@
+[
+	{
+		"model": "movies.movie",
+		"pk": 1,
+		"fields": {
+			"poster_path": "/xVT66OFGCoHXWEzmapPNS1rFX0J.jpg",
+			"genre": "공포",
+			"release_date": "2022-02-18",
+			"id": 632727,
+			"title": "텍사스 전기톱 학살 2022",
+			"overview": "텍사스의 한 유령 도시. 이곳에 생기를 불어넣겠다는 꿈을 안고 도착한 인플루언서들. 이들이 악명 높은 살인마 '살가죽 가면'과 마주친다. 《텍사스 전기톱 학살》의 속편.",
+			"vote_average": 5.2,
+			"backdrop_path": "/aTSA5zMWlVFTYBIZxTCMbLkfOtb.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 2,
+		"fields": {
+			"poster_path": "/hPNb2m2jgchIpAoyGauol3wZHub.jpg",
+			"genre": "전쟁",
+			"release_date": "2022-04-01",
+			"id": 661231,
+			"title": "민스미트 작전",
+			"overview": "사상 최대의 인명 피해를 낳은 제2차 세계대전, 연합군과 추축군은 전쟁을 승리로 이끌 교두보 시칠리아를 두고 팽팽한 대립을 펼친다. 하지만 추축군 독일의 위세가 상당해 시칠리아에는 이미 추축군 병력 무려 23만 명이 주둔해 있던 상황! 연합군은 해군 정보장교 이웬 몬태규와 찰스 첨리를 주축으로 전쟁의 승기를 잡을 단 한 번의 민스미트 작전을 계획하는데…",
+			"vote_average": 6.8,
+			"backdrop_path": "/oZtoyj3rhOST8FUtIXUqblIYmCv.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 3,
+		"fields": {
+			"poster_path": "/qcOFxYpBvU8LwaMyKdjCoP7y7we.jpg",
+			"genre": "로맨스",
+			"release_date": "2022-02-11",
+			"id": 818750,
+			"title": "인 비트윈",
+			"overview": "비극적인 사고로 사랑하는 남자 친구를 잃은 10대 소녀. 크게 상심한 소녀는 어느 순간부터 죽은 그가 저 너머에서 신호를 보내고 있다고 믿기 시작한다.",
+			"vote_average": 7.1,
+			"backdrop_path": "/i9rEpTqC6aIQOWOc4PDEEAE3hFe.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 4,
+		"fields": {
+			"poster_path": "/osJVVjkHmoO5WoJfbBsImYrKWIb.jpg",
+			"genre": "모험",
+			"release_date": "2011-05-14",
+			"id": 1865,
+			"title": "캐리비안의 해적: 낯선 조류",
+			"overview": "부두교의 주술을 부리던  검은 수염은 다리가 한쪽인 남자에게 죽게 된다는 예언을 듣게 된다. 자신의 수명을 늘리기 위해 검은 수염은 젊음의 샘을 찾으러 떠나고, 바르보사 또한 검은수염에게 복수를 하기 위해 그를 뒤쫒는다. 한편 영국에서 블랙펄의 선장이 선원을 모집한다는 소문을 듣게 된 잭 스패로우는 자신을 사칭하는 사기꾼을 잡으려다 영국 왕실에 체포되고, 영국의 국왕은 잭 스패로우에게 젊음의 샘으로 가는 길을 안내하라고 명령하고, 이에 필요한 선장과 배, 선원을 모두 내 주겠다고 하는데...",
+			"vote_average": 6.5,
+			"backdrop_path": "/uzIGtyS6bbnJzGsPL93WCF1FWm8.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 5,
+		"fields": {
+			"poster_path": "/sIeWNZkqmMC6gKQMcWvXdXfw6yz.jpg",
+			"genre": "드라마",
+			"release_date": "2022-01-21",
+			"id": 698508,
+			"title": "리디밍 러브",
+			"overview": "올 봄, 이 사랑이 당신을 꿈꾸게 한다!  누구나 품을 수 있지만, 누구도 소유할 수 없는 ‘엔젤’\r 단 한 번도 원하는 삶을 살아본 적 없던 그녀에게\r 운명처럼 오직 그녀를 사랑하는 남자가 나타난다.\r 무조건적인 그의 사랑에 ‘엔젤’은 매번 도망치지만\r 조금씩, 그리고 천천히 진정한 세상을 알아가는데…",
+			"vote_average": 7.6,
+			"backdrop_path": "/lD8dFIk9wDEvOwZw0RB47e346io.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 6,
+		"fields": {
+			"poster_path": "/mJwwkMKeR5XgHwexw9SJa6CiZY2.jpg",
+			"genre": "가족",
+			"release_date": "2021-11-10",
+			"id": 585245,
+			"title": "클리포드 더 빅 레드 독",
+			"overview": "뉴욕의 아파트로 이사 온 12살 소녀 에밀리. 새로운 학교에 고군분투하는 에밀리를 바쁜 엄마는 출장을 가면서 철없는 삼촌 케이시에게 맡기고 떠난다.  마법 동물 구조 센터를 지나던 에밀리는 운명처럼 작고 빨간 강아지를 만나게 되고, 우여곡절 끝에 함께하게 된다. 하지만 기쁨도 잠시, 작고 빨간 강아지 클리포드는 하루 아침에 3M가 넘게 커져버려 순식간에 뉴욕의 유명인사가 되어버린다. 엄마가 오기 전 클리포드를 되돌리려는 에밀리와 클리포드를 유전학 사업에 이용하려는 기업까지 뒤쫓으며 클리포드는 위험에 빠지고 마는데..!",
+			"vote_average": 7.3,
+			"backdrop_path": "/1Wlwnhn5sXUIwlxpJgWszT622PS.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 7,
+		"fields": {
+			"poster_path": "/AvWlbyLk32HdvSrrSTYpjmXHEXC.jpg",
+			"genre": "SF",
+			"release_date": "2021-12-16",
+			"id": 624860,
+			"title": "매트릭스: 리저렉션",
+			"overview": "토마스 앤더슨은 자신의 현실이 물리적 구성개념인지 아니면 정신적 구성개념인지 알아내기 위해 이번에도 흰 토끼를 따라가야 한다. 토마스, 아니 네오가 배운 게 있다면 비록 환상이라 할지라도 선택이야말로 매트릭스를 탈출할 유일한 길이라는 것이다. 물론 네오는 무엇을 해야 할지 이미 알고 있다. 그가 아직 모르는 사실은 이 새로운 버전의 매트릭스가 그 어느 때보다도 강력하고, 확고부동하고, 위험하다는 것이다.  평범한 일상과 그 이면에 놓여 있는 또 다른 세계, 두 개의 현실이 존재하는 세상에서 운명처럼 인류를 위해 다시 깨어난 구원자 네오. 빨간 약과 파란 약 중 어떤 것을 선택할 것인가?",
+			"vote_average": 6.7,
+			"backdrop_path": "/eNI7PtK6DEYgZmHWP9gQNuff8pv.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 8,
+		"fields": {
+			"poster_path": "/aNSBaYTgPz8QEADi3xiD52X4uVF.jpg",
+			"genre": "액션",
+			"release_date": "",
+			"id": 939243,
+			"title": "수퍼 소닉 3",
+			"overview": "",
+			"vote_average": 0,
+			"backdrop_path": "/j0xO6355h5HfvC425sWDT6tiBZM.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 9,
+		"fields": {
+			"poster_path": "/ejXBuNLvK4kZ7YcqeKqUWnCxdJq.jpg",
+			"genre": "스릴러",
+			"release_date": "2022-01-13",
+			"id": 760926,
+			"title": "골드",
+			"overview": "황량한 황무지를 여행하던 두 명의 방랑자가 땅 속에 파묻힌 엄청나게 큰 금덩이를 발견한다. 그들이 가진 장비로는 도저히 금덩이를 캐낼 방법이 없자, 둘 중 한명이 굴삭기를 가져오기 위해 떠나고 한 명이 그동안 홀로 금덩이를 지켜기로 하는데...",
+			"vote_average": 6.4,
+			"backdrop_path": "/yzH5zvuEzzsHLZnn0jwYoPf0CMT.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 10,
+		"fields": {
+			"poster_path": "/mlOXyDGxqBGpEmzV9LPQMudMgng.jpg",
+			"genre": "코미디",
+			"release_date": "2022-02-01",
+			"id": 656663,
+			"title": "잭애스 포에버",
+			"overview": "2000년부터 미국 MTV에서 방영되며 큰 인기를 끌었던 온갖 지저분하고 위험한 장난이 가득한 동명의 쇼 시리즈를 영화화하며 대박을 쳤던 잭애스 더 무비의 20주년을 기념하여 제작된 작품.  원심분리기에 묶여 돌고, 토할 때까지 강제로 음료수를 마시며, 대포에서 발사되는 등 독창적이지만 정신 나간 위험한 게임 속에서 벌어지는 잭애스 크루들의 무모한 도전과 뱀, 꿀벌, 곰, 황소, 전갈, 거대 거미 등의 위험한 동물과 곤충을 이용한 대결이 펼쳐집니다.  실제로 크루의 리더인 조니 낙스빌은 흥분한 황소에 치어 뇌출혈의 부상을 입기도 했다고 합니다.",
+			"vote_average": 6.9,
+			"backdrop_path": "/f2J8DpT5bqV0AiI9VVcfiuqKo5l.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 11,
+		"fields": {
+			"poster_path": "/6UqbcDQhCYpxboK58Z0eVfdeHcT.jpg",
+			"genre": "코미디",
+			"release_date": "2022-05-11",
+			"id": 800937,
+			"title": "시니어 이어",
+			"overview": "치어리딩 공연 중 사고를 당해 코마에 빠진 소녀. 20년 후 서른일곱 살이 되어 깨어난다. 그럼 이제 고등학생 시절의 꿈을 실행에 옮길 차례. 졸업 파티 퀸이 되고 말 거야!",
+			"vote_average": 6.1,
+			"backdrop_path": "/3FJ53wbpjSAGY98KYiHJ4DQccDr.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 12,
+		"fields": {
+			"poster_path": "/gG06Uu6UQseYaPx1RU2PQjFEUKK.jpg",
+			"genre": "액션",
+			"release_date": "2021-11-04",
+			"id": 512195,
+			"title": "레드 노티스",
+			"overview": "인터폴이 중범죄 피의자를 대상으로 내리는 전 세계적 경보인 레드 노티스. 세계 곳곳에서 지명 수배범을 추적하고 체포하는 것이 그 목적이다. 어느 날 초유의 도난 사건이 발생하고, 그로 인해 FBI 최고의 프로파일러(드웨인 존슨)가 라이벌 관계의 두 범죄자(갤 가돗, 라이언 레이놀즈)와 만나면서 모든 게 엇나가기 시작한다. 늘 한발 앞서 도망치는 사기꾼을 잡기 위해 그들은 어쩔 수 없이 싫어도 이를 악물고 힘을 합쳐야 한다. 이제 무슨 일이 일어날지 그 누구도 장담할 수 없다.",
+			"vote_average": 6.8,
+			"backdrop_path": "/dK12GIdhGP6NPGFssK2Fh265jyr.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 13,
+		"fields": {
+			"poster_path": "/6tD4oT7C01aZLVfoZDz5VFVbJCi.jpg",
+			"genre": "모험",
+			"release_date": "2006-07-06",
+			"id": 58,
+			"title": "캐리비안의 해적: 망자의 함",
+			"overview": "잭 스패로우는 블랙펄을 되찾아 포트 로열을 떠났지만 그를 기다리는 것은 수평선만이 아니었다. 유령선 플라잉 더치맨의 선장 데이비 존스는 잭이 자신에게 피로 진 빚이 있다면서 빚을 갚거나 영혼을 내놓으라고 요구한다. 불행 중 다행한 것은 잭에게 피의 빚 외에도 중매의 은총이 있었다는 것. 결혼을 앞둔 윌 터너와 엘리자베스 스완은 만사를 제쳐두고 옛 친구를 도우러 온다. 잭을 구할 수 있는 단 한 가지 방법은 세상 끝에 있다는 망자의 함을 찾는 것 뿐인데...",
+			"vote_average": 7.3,
+			"backdrop_path": "/8zfRLCgKrLAc5SSnACz8ZqmeKAP.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 14,
+		"fields": {
+			"poster_path": "/d2NhlJvbXPIEalgEfI4lzd4mizb.jpg",
+			"genre": "액션",
+			"release_date": "2022-02-25",
+			"id": 928381,
+			"title": "레스틀리스",
+			"overview": "극단적인 방법으로 사건을 은폐해 버린 부패 경찰. 정체불명의 목격자로부터 협박을 받으면서 그의 인생은 걷잡을 수 없는 소용돌이 속으로 빠져든다.",
+			"vote_average": 6,
+			"backdrop_path": "/7CamWBejQ9JQOO5vAghZfrFpMXY.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 15,
+		"fields": {
+			"poster_path": "/pMXOlasWr1IzHGH8HWw1ZTXs6rQ.jpg",
+			"genre": "액션",
+			"release_date": "2020-02-12",
+			"id": 454626,
+			"title": "수퍼 소닉",
+			"overview": "소리보다 빠른 초고속 고슴도치 히어로 '소닉'은 지구에 불시착한다. 그의 특별한 능력을 감지한 과학자 ‘닥터 로보트닉’은 세계 정복의 야욕을 채우려 하고, 경찰관 ‘톰’은 위험에 빠진 ‘소닉’을 돕기 위해 나서는데…! 과연, ‘소닉'은 천재 악당에 맞서 지구를 지킬 수 있을까?",
+			"vote_average": 7.4,
+			"backdrop_path": "/stmYfCUGd8Iy6kAMBr6AmWqx8Bq.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 16,
+		"fields": {
+			"poster_path": "/paA9xEnHqBVZLElBpPvhTBjmnT.jpg",
+			"genre": "액션",
+			"release_date": "2022-01-07",
+			"id": 753232,
+			"title": "코만도",
+			"overview": "작전 중 사고로 민간인을 쏜 마약단속국의 특수요원 ‘제임스’는 PTSD에 시달린다.  그런 그의 집에 특수부대 출신의 범죄자 ‘조니’ 일당이 몰래 숨겨놓은 돈을 찾기 위해 찾아온다.  이 사실을 모른 채 ‘제임스’와 아내는 집을 비우고, 남은 두 딸이 그들의 인질이 되어버린다.  모두가 위험에 빠진 순간, ‘제임스’는 가족을 구하기 위해 다시 한번 총을 장전하는데…",
+			"vote_average": 6.6,
+			"backdrop_path": "/pnZ9NMxRqbcJ2dPNROIoregruv5.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 17,
+		"fields": {
+			"poster_path": "/yvcNQv8fth51nWuaLwfpr50IRiO.jpg",
+			"genre": "액션",
+			"release_date": "2021-04-07",
+			"id": 460465,
+			"title": "모탈 컴뱃",
+			"overview": "어스렐름와 아웃월드의 최강 챔피언들이 지구의 운명을 걸고 벌이는 서바이벌 대혈전 모탈 컴뱃. MMA 격투 선수 콜 영은 대전을 앞두고 선택 받은 전사들을 사전에 제거하려는 서브제로의 공격을 받는다. 지구와 가족을 보호하고 자기 혈통의 비밀을 알아내기 위해 모탈 컴뱃 토너먼트에 참가해 죽음의 전투를 치러야 한다!",
+			"vote_average": 7.2,
+			"backdrop_path": "/9yBVqNruk6Ykrwc32qrK2TIE5xw.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 18,
+		"fields": {
+			"poster_path": "/kmP6viwzcEkZeoi1LaVcQemcvZh.jpg",
+			"genre": "모험",
+			"release_date": "2018-04-25",
+			"id": 299536,
+			"title": "어벤져스: 인피니티 워",
+			"overview": "타노스는 6개의 인피니티 스톤을 획득해 신으로 군림하려 한다. 그것은 곧 인류의 절반을 학살해 우주의 균형을 맞추겠다는 뜻. 타노스는 닥터 스트레인지가 소유한 타임 스톤, 비전의 이마에 박혀 있는 마인드 스톤을 차지하기 위해 지구를 침략한다. 아이언맨과 스파이더맨은 가디언즈 오브 갤럭시의 멤버들과 타노스를 상대한다. 지구에선 캡틴 아메리카, 완다, 블랙 위도우, 블랙 팬서 등이 비전을 지키기 위해 뭉친다.",
+			"vote_average": 8.3,
+			"backdrop_path": "/lmZFxXgJE3vgrciwuDib0N8CfQo.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 19,
+		"fields": {
+			"poster_path": "/jgevBYQnhBJqbMdN21UTvPduXCB.jpg",
+			"genre": "애니메이션",
+			"release_date": "2021-11-12",
+			"id": 877183,
+			"title": "심슨 가족의 플러스 기념일",
+			"overview": "",
+			"vote_average": 6.6,
+			"backdrop_path": "/1zgob2Z8xVE3RZUgOKnHKcVPzOE.jpg",
+			"adult": false
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 20,
+		"fields": {
+			"poster_path": "/iZjMFSKCrleKolC1gYcz5Rs8bk1.jpg",
+			"genre": "애니메이션",
+			"release_date": "2022-01-14",
+			"id": 926899,
+			"title": "더 하우스",
+			"overview": "어느 가난한 가족, 불안에 시달리는 개발업자, 그리고 화가 잔뜩 난 집주인까지. 미스터리한 집에서 여러 세대에 걸쳐 일어나는 사건을 다룬 블랙 코미디 애니메이션.",
+			"vote_average": 7,
+			"backdrop_path": "/hk4PwhKhT7q7jp1lvA8aiYqDluy.jpg",
+			"adult": false
+		}
+	}
+]

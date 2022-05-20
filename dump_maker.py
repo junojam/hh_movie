@@ -66,17 +66,18 @@ def movie_info(movies_list):
     with open('movie.json', 'w', encoding="utf-8") as f:
         json.dump(movies, f, ensure_ascii=False, indent="\t")
 
+for i in range(3, 11):
+    BASE_URL='https://api.themoviedb.org/3'
+    path = '/movie/popular?'
+    params = {
+        'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
+        'language' : 'ko-KR',
+        'page' : i
+    }
+    response = requests.get(BASE_URL + path, params = params).json()
+    movie = response['results']
+    movies = movie_info(movie)
+    # pprint.pprint(movies)
 
-BASE_URL='https://api.themoviedb.org/3'
-path = '/movie/popular?'
-params = {
-    'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
-    'language' : 'ko-KR'
-}
-response = requests.get(BASE_URL + path, params = params).json()
-movie = response['results']
-movies = movie_info(movie)
-pprint.pprint(movies)
-
-with open('movie.json', 'w', encoding="utf-8") as f:
-    json.dump(movies, f, ensure_ascii=False, indent="\t")
+    with open(f'movie{i}.json', 'w', encoding="utf-8") as f:
+        json.dump(movies, f, ensure_ascii=False, indent="\t")
