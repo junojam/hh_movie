@@ -43,45 +43,43 @@ def movie_info(movies_list):
         # id -> 주소에 입력해서 -> 영상을 가져와서 -> 할당을 하여 저장한다.
     return result
         
-    #       genre_list_temp = []
-    #       for genres in genre_list:       
-    #         # 장르 리스트 순회 2
-    #             try:
-    #                 for idx in range(len(movie['genre_ids'])):
-    #                     if movie['genre_ids'][idx] == genres["pk"]:
-    #                     # 장르 아이디와 일치한다면
-    #                         genre_name = genres["name"]
-    #                         genre_list_temp.append(genre_name)
-    #             except:
-    #                 continue
-    #         fields['genre'] = genre_list_temp
-    #     result.append(fields)
-    # return result
 
+BASE_URL='https://api.themoviedb.org/3'
+path = '/movie/popular?'
+params = {
+    'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
+    'language' : 'ko-KR',
+}
+response = requests.get(BASE_URL + path, params = params).json()
 
-# if __name__ == '__main__':
-#     movies_json = open('movies.json', encoding='UTF8')
-#     movies_list = json.load(movies_json)
+movie = response['results']
+# pprint.pprint(movie)
 
-    movies = movie_info(movies_list)
-    with open('movie.json', 'w', encoding="utf-8") as f:
-        json.dump(movies, f, ensure_ascii=False, indent="\t")
+BASE_URL='https://api.themoviedb.org/3/movie/'
+path = '/credits?'
+params = {
+    'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
+    'language' : 'ko-KR',
+}
+for idx in range(len(movie)):
+    # print(movie[idx]['id'])
+    response = requests.get(BASE_URL + str(movie[idx]['id']) + path, params = params).json()
+    
+    
+    # 출연진 가져오기 !!!!!!!!!!!!!!!!!!!!!!!!
+    
+    # pprint.pprint(response['cast'])
+    for idx2 in range(len(response['cast'])):
+        if response['cast'][idx2]['order'] <= 5:
+            pprint.pprint(response['cast'][idx2])
+    # https://api.themoviedb.org/3/movie/22/credits?api_key=b423b9f62c2dcbbc988e246c89249738&language=en-US
+    
+movies = movie_info(movie)
 
-for i in range(1, 11):
-    BASE_URL='https://api.themoviedb.org/3'
-    path = '/movie/popular?'
-    params = {
-        'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
-        'language' : 'ko-KR',
-        'page' : i
-    }
-    response = requests.get(BASE_URL + path, params = params).json()
-    movie = response['results']
-    movies = movie_info(movie)
-    # pprint.pprint(movies)
+# pprint.pprint(movies)
 
-    with open(f'movie{i}.json', 'w', encoding="utf-8") as f:
-        json.dump(movies, f, ensure_ascii=False, indent="\t")
+# with open(f'movie.json', 'w', encoding="utf-8") as f:
+#     json.dump(movies, f, ensure_ascii=False, indent="\t")
 
 
 
