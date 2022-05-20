@@ -3,6 +3,7 @@
 		"model": "movies.movie",
 		"pk": 1,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=0SBaYuj7Sl0",
 			"poster_path": "/8kZapNBZYGJu7AUbJVBDMmQgO1D.jpg",
 			"genre": "액션",
 			"release_date": "2022-03-24",
@@ -18,6 +19,7 @@
 		"model": "movies.movie",
 		"pk": 2,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=7wl6UrO1UjI",
 			"poster_path": "/8dzKn3RtPWUJRG9ymSpi423eMNV.jpg",
 			"genre": "액션",
 			"release_date": "2022-03-30",
@@ -33,6 +35,7 @@
 		"model": "movies.movie",
 		"pk": 3,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=VwNU4BKxpDc",
 			"poster_path": "/2R8smeSDkPx6TKIRveKPXi0JVI6.jpg",
 			"genre": "액션",
 			"release_date": "2022-02-10",
@@ -48,6 +51,7 @@
 		"model": "movies.movie",
 		"pk": 4,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=tvnpP8mN8us",
 			"poster_path": "/bfeM8NGWm1riLvvVxHDPLtWCRkF.jpg",
 			"genre": "액션",
 			"release_date": "2022-04-07",
@@ -63,6 +67,7 @@
 		"model": "movies.movie",
 		"pk": 5,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=1fAA87ds32o",
 			"poster_path": "/bCz71ysciwNL2xddSm25ufrgZ7V.jpg",
 			"genre": "범죄",
 			"release_date": "2022-03-01",
@@ -78,6 +83,7 @@
 		"model": "movies.movie",
 		"pk": 6,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=VdLI8I4jZD0",
 			"poster_path": "/hangTmbxpSV4gpHG7MgSlCWSSFa.jpg",
 			"genre": "공포",
 			"release_date": "2022-02-10",
@@ -93,6 +99,7 @@
 		"model": "movies.movie",
 		"pk": 7,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=9Z79vlm3zW8",
 			"poster_path": "/8uiV88A5eB7PjMTtY6lQBUZ0Cpl.jpg",
 			"genre": "액션",
 			"release_date": "2022-03-30",
@@ -108,6 +115,7 @@
 		"model": "movies.movie",
 		"pk": 8,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=bG3FmxSTwKw",
 			"poster_path": "/voddFVdjUoAtfoZZp2RUmuZILDI.jpg",
 			"genre": "액션",
 			"release_date": "2021-12-15",
@@ -123,6 +131,7 @@
 		"model": "movies.movie",
 		"pk": 9,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=Xojsvie3UpM",
 			"poster_path": "/vL5ktZauR0fZMDOHKjakb1idhuU.jpg",
 			"genre": "판타지",
 			"release_date": "2022-05-04",
@@ -138,6 +147,7 @@
 		"model": "movies.movie",
 		"pk": 10,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=57YJYXmA7xE",
 			"poster_path": "/x6KSvale7iuxLhsrEfhYNoICyfK.jpg",
 			"genre": "애니메이션",
 			"release_date": "2022-03-17",
@@ -153,6 +163,7 @@
 		"model": "movies.movie",
 		"pk": 11,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=RTt7K2zlhn0",
 			"poster_path": "/fZid9LbFTZV7NjM0qMwL1mPjhqu.jpg",
 			"genre": "액션",
 			"release_date": "2022-03-10",
@@ -168,6 +179,7 @@
 		"model": "movies.movie",
 		"pk": 12,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=iReeddMo_ao",
 			"poster_path": "/6NHyuF440HprqRfYrecdMQH6iQb.jpg",
 			"genre": "코미디",
 			"release_date": "2022-05-06",
@@ -183,6 +195,7 @@
 		"model": "movies.movie",
 		"pk": 13,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=kyn-dYNqTPI",
 			"poster_path": "/hsOhOcX7qDy7bPwbrt1OoITngrf.jpg",
 			"genre": "애니메이션",
 			"release_date": "2022-03-10",
@@ -198,6 +211,7 @@
 		"model": "movies.movie",
 		"pk": 14,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=lV8MuZC_-Fo",
 			"poster_path": "/2xmJCxrt5t2dFhvwvmxZ5Cy577j.jpg",
 			"genre": "SF",
 			"release_date": "2022-02-03",
@@ -213,6 +227,7 @@
 		"model": "movies.movie",
 		"pk": 15,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=7z3u8cvneHE",
 			"poster_path": "/t28iy60uX4sRZhKo2MMxCKyQw1a.jpg",
 			"genre": "액션",
 			"release_date": "2022-03-16",
@@ -228,6 +243,7 @@
 		"model": "movies.movie",
 		"pk": 16,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=qqGQzBGZ0FY",
 			"poster_path": "/3CvBuw9aoziJJAbqymmsF2drnzH.jpg",
 			"genre": "공포",
 			"release_date": "2022-04-21",
@@ -243,6 +259,7 @@
 		"model": "movies.movie",
 		"pk": 17,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=uF4f_nlJpvY",
 			"poster_path": "/61J34xHVVdQHbJ4MSCWQo4e727v.jpg",
 			"genre": "범죄",
 			"release_date": "2022-04-29",
@@ -258,6 +275,7 @@
 		"model": "movies.movie",
 		"pk": 18,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=X3TBM6T1-sM",
 			"poster_path": "/yju3CSIR8fdNsZyPdMsUun7XQnd.jpg",
 			"genre": "범죄",
 			"release_date": "2022-02-25",
@@ -273,6 +291,7 @@
 		"model": "movies.movie",
 		"pk": 19,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=xNcJ0lIDPkE",
 			"poster_path": "/xA7ic72L0mejJX1SYMU38F7wwiF.jpg",
 			"genre": "액션",
 			"release_date": "2016-10-25",
@@ -288,6 +307,7 @@
 		"model": "movies.movie",
 		"pk": 20,
 		"fields": {
+			"video_url": "https://www.youtube.com/watch?v=pyM3z73oMAk",
 			"poster_path": "/7qU0SOVcQ8BTJLodcAlulUAG16C.jpg",
 			"genre": "로맨스",
 			"release_date": "2022-04-27",

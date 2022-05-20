@@ -16,7 +16,26 @@ def movie_info(movies_list):
     i = 1
     for movie in movies_list:
         fields = {}
-        # print(movie)
+                
+        tmp = movie['id']
+        path = f'/movie/{tmp}/videos?'
+        params1 = {
+            'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
+            'language' : 'ko-KR',
+        }
+        params2 = {
+            'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
+        }
+        response1 = requests.get(BASE_URL + path, params = params1).json()
+        response2 = requests.get(BASE_URL + path, params = params2).json()
+        try:
+            if response1['results'][0]['key']:
+                video_url = 'https://www.youtube.com/watch?v=' + response1['results'][0]['key']
+        except:
+            video_url = 'https://www.youtube.com/watch?v=' + response2['results'][0]['key']
+        fields['video_url'] = video_url
+        
+        
         for key in key_list:
             try:
                 fields[key] = movie[key]
@@ -46,7 +65,7 @@ def movie_info(movies_list):
 
 for i in range(1, 11):
     if i == 1:
-        # popular 영화 가져오기
+        # popular 영화 가져오기 -> id 이용하기 위함
         BASE_URL='https://api.themoviedb.org/3'
         path = '/movie/popular?'
         params = {
@@ -58,27 +77,48 @@ for i in range(1, 11):
         movie = response['results']
         movies = movie_info(movie)
         
-        # 각 영화에서 id 가져오기
-        for idx2 in range(len(movies)):
-            tmp = movies[idx2]['fields']['id']
-            path = f'/movie/{tmp}/videos?'
-            params = {
-                'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
-            }
-            response2 = requests.get(BASE_URL + path, params = params).json()
+        with open(f'movie{i}.json', 'w', encoding="utf-8") as f:
+            json.dump(movies, f, ensure_ascii=False, indent="\t")
+            
+        # pprint.pprint(movies)
+        # print(len(movies))
+
+        
+        # 각 영화의 id로부터 정보 불러오기 -> key값을 사용하기 위함
+        # https://api.themoviedb.org/3/movie/22/videos?api_key=b423b9f62c2dcbbc988e246c89249738
+        # https://api.themoviedb.org/3/movie/675353/videos?api_key=b423b9f62c2dcbbc988e246c89249738&language=ko-KR
+        # for idx2 in range(len(movies)):
+        #     tmp = movies[idx2]['fields']['id']
+        #     path = f'/movie/{tmp}/videos?'
+        #     params1 = {
+        #         'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
+        #         'language' : 'ko-KR',
+        #     }
+        #     params2 = {
+        #         'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
+        #     }
+        #     response1 = requests.get(BASE_URL + path, params = params1).json()
+        #     response2 = requests.get(BASE_URL + path, params = params2).json()
+            # print(movies[idx2]['fields']['title'])
+            # print(movies[idx2]['fields']['id'])
+            # try:
+            #     if response1['results'][0]['key']:
+            #         video_url = 'https://www.youtube.com/watch?v=' + response1['results'][0]['key']
+            # except:
+            #     video_url = 'https://www.youtube.com/watch?v=' + response2['results'][0]['key']
+
             
             # 영화의 id에서 key값 가져오기
-            for idx3 in range(len(response2)):
+            # for idx3 in range(len(response2)):
 
                     # pprint.pprint(response2['results'])
-                pprint.pprint(response2['results'][idx3]['key'])
+                # pprint.pprint(response2['results'][idx3]['key'])
             
             # https://api.themoviedb.org/3/movie/22/videos?api_key=b423b9f62c2dcbbc988e246c89249738
 
             
 
-        # with open(f'movie{i}.json', 'w', encoding="utf-8") as f:
-        #     json.dump(movies, f, ensure_ascii=False, indent="\t")
+
 
 
 

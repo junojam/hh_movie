@@ -15,6 +15,7 @@ class Movie(models.Model):
     backdrop_path = models.TextField()
     adult = models.BooleanField()
     genre = models.TextField()
+    video_url = models.TextField()
 
     def __str__(self):
         return self.title
