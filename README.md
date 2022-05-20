@@ -39,18 +39,31 @@
   - 최종 점검 이전(~ 5월 26일(목) 오후) : 아이디어 회의, 기능 구현, 디자인 요소
   - 보완 및 피드백(5월 26일(목) 오후)
 
+
+
+
 - ERD 작성, DB 설계(업데이트 예정)
 
 ![ERD](README.assets/ERD.png)
 
+
   - TMBD API 자료에서 영화 DB 반영
     - title
-    - overview
-    - genre(genre_ids에서 도출)
-    - poster_path
-    - video_url 등
     
+    - overview
+    
+    - genre(genre_ids에서 도출)
+    
+    - poster_path
+    
+    - video_url 등
+
+![models.py](README.assets/models.py.jpg)
+
+
   - dumpdata, loaddata로 데이터 저장하기, 불러오기 확인
+![dump_data](README.assets/dump_data.jpg)
+
 
   - 아이디어 회의
     - 추천 알고리즘을 어떻게 구성하면 좋을 것인가?
