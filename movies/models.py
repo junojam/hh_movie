@@ -29,5 +29,6 @@ class Director(models.Model):
     profile_path = models.TextField()
 
 class Actor(models.Model):
-    profile_path = models.TextField()
     name = models.TextField()
+    profile_path = models.TextField(null=True)
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
