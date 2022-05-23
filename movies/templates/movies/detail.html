@@ -8,6 +8,7 @@
         <div class="item">
             <h1 style="margin-top:50px; margin-bottom:100px;" class="item">{{ movie.title }}</h1>
             <h4 class="item">{{ movie.overview }}</h4>
+            <iframe width="560" height="315" src="{{ movie.video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
     {% if movie.user == request.user %}

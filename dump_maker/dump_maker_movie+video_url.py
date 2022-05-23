@@ -25,9 +25,9 @@ def movie_info(movies_list):
         response2 = requests.get(BASE_URL + path, params = params2).json()
         try:
             if response1['results'][0]['key']:
-                video_url = 'https://www.youtube.com/watch?v=' + response1['results'][0]['key']
+                video_url = 'https://www.youtube.com/embed/' + response1['results'][0]['key'] + '?autoplay=1&mute=1'
         except:
-            video_url = 'https://www.youtube.com/watch?v=' + response2['results'][0]['key']
+            video_url = 'https://www.youtube.com/embed/' + response2['results'][0]['key'] + '?autoplay=1&mute=1'
         fields['video_url'] = video_url
         
         
