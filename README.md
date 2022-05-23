@@ -13,7 +13,7 @@
 
 #### 2. 일정 계획 표
 
-![일정 계획 표](README.assets/일정 계획 표.jpg)
+![일정 계획 표](README.assets/schedule.jpg)
 
 ##### - 일정 수립(5월 20일(금) 오후)
 
@@ -30,7 +30,7 @@
 
 ----------------
 
-![05.20 활동](README.assets/05.20 활동.jpg)
+![05.20 활동](README.assets/0520_01.jpg)
 
 - 프로젝트 기간(05.20 ~ 05.26) 일정 수립(오전, 오후 분할)
 
@@ -58,12 +58,12 @@
     
     - video_url 등
 
-![models.py](README.assets/models.py.jpg)
+![models.py](README.assets/0520_02.jpg)
 
 
   - dumpdata, loaddata로 데이터 저장하기, 불러오기 확인
 
-![dump_data](README.assets/dump_data.jpg)
+![dump_data](README.assets/0520_03.jpg)
 
 
   - 아이디어 회의
@@ -84,7 +84,7 @@
 
 
 
-![0523_월_오전](README.assets/0523_월_오전.jpg)
+![0523_월_오전](README.assets/0523_01.jpg)
 
   - ERD 보충 : models.py의 model 구현에 알맞게 테이블의 인스턴스 변경
 
@@ -92,27 +92,27 @@
 
   - 영화 DB 완성을 위한 감독, 배우의 정보 불러오는 과정
 
-    ![0523_월_02](README.assets/0523_월_02-16532939965551.jpg)
+    ![0523_월_02](README.assets/0523_02.jpg)
 
     - models.py에 Director, Actor 클래스를 작성한다.
 
-      ![0523_월_03](README.assets/0523_월_03-16532940096452.jpg)
+      ![0523_월_03](README.assets/0523_03.jpg)
 
     - dump_maker.py를 만들어서 감독과 배우의 정보를 가져와 DB에 입력하여 dump한다.
 
-      ![0523_월_04](README.assets/0523_월_04.jpg)
+      ![0523_월_04](README.assets/0523_04.jpg)
 
     - 감독 : dumpdata로 DB에서 데이터를 추출한 이후, loaddata로 데이터를 받아 DB에서 확인한 모습 
 
-    ![0523_월_05](README.assets/0523_월_05.jpg)
+    ![0523_월_05](README.assets/0523_05.jpg)
 
     - 배우 : dumpdata로 DB에서 데이터를 추출한 이후, loaddata로 데이터를 받아 DB에서 확인한 모습 
 
-    ![0523_월_06](README.assets/0523_월_06.jpg)
+    ![0523_월_06](README.assets/0523_06.jpg)
 
     - 실제 화면에서 볼 수 있게 views.py에서 임시 화면 구성
 
-    ![0523_월_07](README.assets/0523_월_07.jpg)
+    ![0523_월_07](README.assets/0523_07.jpg)
 
     -  실제 감독, 배우들을 출력한 화면
 
@@ -124,25 +124,25 @@
 
 -------------------
 
-![0523_월_08](README.assets/0523_월_08.jpg)
+![0523_월_08](README.assets/0523_08.jpg)
 
   - 화면 구성 아이디어 회의 및 간단한 배치(향후 수정)
 
-    ![0523_월_09](README.assets/0523_월_09.jpg)
+    ![0523_월_09](README.assets/0523_09.jpg)
 
     - 로고, navBar(로그아웃, 회원정보수정, 회원탈퇴 등), 영화 포스터, 제목, 링크 등 설정하기
 
-    ![0523_월_10](README.assets/0523_월_10.jpg)
+    ![0523_월_10](README.assets/0523_10.jpg)
 
     - 영화 제목 클릭 시 title, overview, Director, Actor등이 담긴 Detail 페이지로 이동
 
   - 모델 - 영화, 감독, 배우의 테이블 구현
 
-    ![0523_월_11](README.assets/0523_월_11.jpg)
+    ![0523_월_11](README.assets/0523_11.jpg)
 
     - Movie, Director, Actor 및 Comment 모델 항목 보완
 
-    ![0523_월_12](README.assets/0523_월_12.jpg)
+    ![0523_월_12](README.assets/0523_12.jpg)
 
     - db.sqlite3에 저장된 테이블의 속성들
 
@@ -166,19 +166,18 @@ __Trouble Shooting__
 
     이러한 형태로 같은 변수명을 사용하다보니, 할당된 값이 의도치 않게 바뀌었습니다.
     
-
   - 해결 방안 : 각각 다른 변수명을 사용
-
+  
     ```python
     BASE_URL = 'https://api.themoviedb.org/3'
     BASE_URL2 = 'https://api.themoviedb.org/3/movie/'
     BASE_URL3 = 'https://api.themoviedb.org/3/person/'
     ```
-
+  
     
-
+  
   - 느낀점 : path 변수명을 이용해서 조금 더 구체적으로 작성했으면 BASE_URL 변경 없이 클린코드를 작성할 수 있을 것이라 판단했습니다.
-
+  
     ```python
     BASE_URL='https://api.themoviedb.org/3/'
     path = ['/movies', '/person', '/credits']
@@ -193,7 +192,7 @@ __Trouble Shooting__
 - 문제상황 2: 같은 값이 Movie_id별로 5개씩 중복돼서 Json파일로 반환되는 현상 발생
   - 원인: fields명 위치가 잘못되어, 같은 fields에 계속해서 새로운 값을 덮어씌우고 있었음
   - 해결방안 : 첫번째 for문 뒤에 선언되어있던 fields명을 두번째 for 문 뒤로 변경
-    ![0523_월_13](README.assets/0523_월_13.PNG)
+    ![0523_월_13](README.assets/0523_13.PNG)
   - 느낀점 : 디버깅의 중요성, 한 줄 한 줄 눈으로 코드를 확인하면서 어느 부분이 잘못되었는지 계산해보았습니다. 같은 값이 반복될 때는 변수의 위치가 정확한지 한번 더 확인하는 습관을 길러야겠습니다.
 
 

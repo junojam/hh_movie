@@ -34,10 +34,8 @@ def create(request):
 
 def detail(request, pk):
     movie = get_object_or_404(Movie, pk=pk)
-    
     actors = get_list_or_404(Actor)
     directors = get_list_or_404(Director)
-    
     comment_form=CommentForm()
     comments=movie.comment_set.all()
     context = {

@@ -7,16 +7,11 @@ import pprint
 
 def movie_info(movies_list):
     result = []
-    
-    genre_list = [{"pk": 28, "name": "액션"}, {"pk": 12, "name": "모험"}, {"pk": 16, "name": "애니메이션"}, {"pk": 35, "name": "코미디"}, {"pk": 80, "name": "범죄"}, { "pk": 99, "name": "다큐멘터리"}, { "pk": 18, "name": "드라마"}, { "pk": 10751, "name": "가족"}, { "pk": 14, "name": "판타지"}, { "pk": 36, "name": "역사"}, { "pk": 27, "name": "공포"}, { "pk": 10402, "name": "음악"}, { "pk": 9648, "name": "미스터리"}, { "pk": 10749, "name": "로맨스"}, { "pk": 878, "name": "SF"}, { "pk": 10770, "name": "TV 영화"}, { "pk": 53, "name": "스릴러"}, {"pk": 10752, "name": "전쟁"}, {"pk": 37, "name": "서부"}]
-
-    # 내가 원하는 정보의 key값
-    key_list = ['poster_path', 'release_date', 'id', 'title','overview', 'releadse_date', 'vote_average', 'backdrop_path', 'adult']
-    # for 문을 이용하여 key가 key_list 내부에 있으면 info ditionary에 추가
     i = 1
+    genre_list = [{"pk": 28, "name": "액션"}, {"pk": 12, "name": "모험"}, {"pk": 16, "name": "애니메이션"}, {"pk": 35, "name": "코미디"}, {"pk": 80, "name": "범죄"}, { "pk": 99, "name": "다큐멘터리"}, { "pk": 18, "name": "드라마"}, { "pk": 10751, "name": "가족"}, { "pk": 14, "name": "판타지"}, { "pk": 36, "name": "역사"}, { "pk": 27, "name": "공포"}, { "pk": 10402, "name": "음악"}, { "pk": 9648, "name": "미스터리"}, { "pk": 10749, "name": "로맨스"}, { "pk": 878, "name": "SF"}, { "pk": 10770, "name": "TV 영화"}, { "pk": 53, "name": "스릴러"}, {"pk": 10752, "name": "전쟁"}, {"pk": 37, "name": "서부"}]
+    key_list = ['poster_path', 'release_date', 'id', 'title','overview', 'releadse_date', 'vote_average', 'backdrop_path', 'adult']
     for movie in movies_list:
         fields = {}
-                
         tmp = movie['id']
         path = f'/movie/{tmp}/videos?'
         params1 = {
@@ -40,17 +35,14 @@ def movie_info(movies_list):
             try:
                 fields[key] = movie[key]
             except:
-                continue
-            # 장르 리스트 순회 1           
+                continue    
             for genres in genre_list:
                 try:
                     if movie['genre_ids'][0] == genres["pk"]:
-                    # 장르 아이디와 일치한다면
                         genre_name = genres["name"]
                         fields['genre'] = genre_name
                 except:
                     continue
-        # print(fields)
         info = { 
             "model": "movies.movie",
             "pk": i,
@@ -58,14 +50,11 @@ def movie_info(movies_list):
         info["fields"] = fields
         result.append(info)
         i += 1
-        # result.append(fields)
-        # id -> 주소에 입력해서 -> 영상을 가져와서 -> 할당을 하여 저장한다.
     return result
         
 
 for i in range(1, 11):
     if i == 1:
-        # popular 영화 가져오기 -> id 이용하기 위함
         BASE_URL='https://api.themoviedb.org/3'
         path = '/movie/popular?'
         params = {
@@ -79,49 +68,7 @@ for i in range(1, 11):
         
         with open(f'movie{i}.json', 'w', encoding="utf-8") as f:
             json.dump(movies, f, ensure_ascii=False, indent="\t")
-            
-        # pprint.pprint(movies)
-        # print(len(movies))
-
         
-        # 각 영화의 id로부터 정보 불러오기 -> key값을 사용하기 위함
-        # https://api.themoviedb.org/3/movie/22/videos?api_key=b423b9f62c2dcbbc988e246c89249738
-        # https://api.themoviedb.org/3/movie/675353/videos?api_key=b423b9f62c2dcbbc988e246c89249738&language=ko-KR
-        # for idx2 in range(len(movies)):
-        #     tmp = movies[idx2]['fields']['id']
-        #     path = f'/movie/{tmp}/videos?'
-        #     params1 = {
-        #         'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
-        #         'language' : 'ko-KR',
-        #     }
-        #     params2 = {
-        #         'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
-        #     }
-        #     response1 = requests.get(BASE_URL + path, params = params1).json()
-        #     response2 = requests.get(BASE_URL + path, params = params2).json()
-            # print(movies[idx2]['fields']['title'])
-            # print(movies[idx2]['fields']['id'])
-            # try:
-            #     if response1['results'][0]['key']:
-            #         video_url = 'https://www.youtube.com/watch?v=' + response1['results'][0]['key']
-            # except:
-            #     video_url = 'https://www.youtube.com/watch?v=' + response2['results'][0]['key']
-
-            
-            # 영화의 id에서 key값 가져오기
-            # for idx3 in range(len(response2)):
-
-                    # pprint.pprint(response2['results'])
-                # pprint.pprint(response2['results'][idx3]['key'])
-            
-            # https://api.themoviedb.org/3/movie/22/videos?api_key=b423b9f62c2dcbbc988e246c89249738
-
-            
-
-
-
-
-
 '''
 영화 id로 출연진 가져오기
 https://api.themoviedb.org/3/movie/22/credits?api_key=b423b9f62c2dcbbc988e246c89249738&language=en-US
