@@ -33,7 +33,7 @@ def movie_info(movies_list):
                     continue
         # print(fields)
         info = { 
-            "model": "movies.movie",
+            "model": "movies.actor",
             "pk": i,
         }
         info["fields"] = fields
@@ -62,30 +62,21 @@ params = {
     'language' : 'ko-KR',
 }
 for idx in range(len(movie)):
-    # print(movie[idx]['id'])
     response = requests.get(BASE_URL + str(movie[idx]['id']) + path, params = params).json()
     
-    
     # 출연진 가져오기 !!!!!!!!!!!!!!!!!!!!!!!!
-    
-    # pprint.pprint(response['cast'])
     for idx2 in range(len(response['cast'])):
-        if response['cast'][idx2]['order'] <= 5:
-            # pprint.pprint(response['cast'][idx2])
-    # https://api.themoviedb.org/3/movie/22/credits?api_key=b423b9f62c2dcbbc988e246c89249738&language=en-US
-            response['cast'][idx2]['id']
-            BASE_URL='https://api.themoviedb.org/3/person/'
-            # path = '/credits?'
+        if response['cast'][idx2]['order'] < 5:
+            pprint.pprint(response['cast'][idx2])
+            BASE_URL2='https://api.themoviedb.org/3/person/'
             params = {
                 'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
                 'language' : 'ko-KR',
             }
-            for idx3 in range(len(response['cast'][idx2])):
-                # print(movie[idx]['id'])
-                res = requests.get(BASE_URL + str(response['cast'][idx2][idx3]['id']), params = params).json()
-                pprint.pprint(res)
-            # with open(f'movie.json', 'w', encoding="utf-8") as f:
-            #     json.dump(movies, f, ensure_ascii=False, indent="\t")
+            res = requests.get(BASE_URL2 + str(response['cast'][idx2]['id']), params = params).json()
+
+            with open(f'movie.json', 'w', encoding="utf-8") as f:
+                json.dump(movies, f, ensure_ascii=False, indent="\t")
 # movies = movie_info(movie)
 
 # pprint.pprint(movies)
