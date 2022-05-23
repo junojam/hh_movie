@@ -1,13 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
     <h1>INDEX</h1>
     {% if request.user.is_authenticated %}
         <a href="{% url 'movies:create' %}">[CREATE]</a>
     {% endif %}
     <hr>
-    {% for movie in movies %}
-        <a href="{% url 'movies:detail' movie.pk %}">{{ movie.title }}</a>
+    <div class="">
+        {% for movie in movies %}
+        <div class="">
+            <div class="">
+                <div>
+
+                    <img style="margin-right:50px" src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{ movie.poster_path }}" alt="">
+                </div>
+                <div>
+
+                    <a href="{% url 'movies:detail' movie.pk %}">{{ movie.title }}</a>
+                </div>
+            </div>
+        </div>
         <hr>
-    {% endfor %}
+        {% endfor %}
+    </div>
 {% endblock content %}

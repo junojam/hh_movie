@@ -5,7 +5,7 @@ import requests
 import pprint
 
 
-def actor_info(movie_list):
+def director_info(movie_list):
     result = []
     # key_list = ['id', ]
     i = 1
@@ -22,16 +22,16 @@ def actor_info(movie_list):
         # print(movie['id'])
         response = requests.get(BASE_URL2 + str(movie['id']) + path2, params = params).json()
         # pprint.pprint(response)
-        for idx2 in range(len(response['cast'])):
-            if response['cast'][idx2]['order'] < 5:
+        for idx2 in range(len(response['crew'])):
+            if response['crew'][idx2]['job'] == "Director":
                 fields = {}
-                # pprint.pprint(response['cast'][idx])
+                # pprint.pprint(response['crew'][idx])
                 BASE_URL3='https://api.themoviedb.org/3/person/'
                 params = {
                     'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
                     'language' : 'ko-KR',
                 }
-                res = requests.get(BASE_URL3 + str(response['cast'][idx2]['id']), params = params).json()
+                res = requests.get(BASE_URL3 + str(response['crew'][idx2]['id']), params = params).json()
                 pprint.pprint(res['name'])
                 pprint.pprint(res['profile_path'])
                 fields['movie_id'] = movie['id']
@@ -45,7 +45,7 @@ def actor_info(movie_list):
                 #         continue    
 
                 info = { 
-                    "model": "movies.actor",
+                    "model": "movies.director",
                     "pk": i,
                 }
                 info["fields"] = fields
@@ -64,9 +64,9 @@ params = {
 }
 response = requests.get(BASE_URL1 + path1, params = params).json()
 movie_list = response['results']
-actors = actor_info(movie_list)
+directors = director_info(movie_list)
 
-pprint.pprint(actors)
+pprint.pprint(directors)
 
-with open('actor1.json', 'w', encoding="utf-8") as f:
-    json.dump(actors, f, ensure_ascii=False, indent="\t")
+with open('director.json', 'w', encoding="utf-8") as f:
+    json.dump(directors, f, ensure_ascii=False, indent="\t")

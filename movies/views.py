@@ -1,5 +1,5 @@
-from django.shortcuts import get_object_or_404, render, redirect
-from .models import Movie, Comment
+from django.shortcuts import get_list_or_404, get_object_or_404, render, redirect
+from .models import Director, Movie, Comment, Actor
 from .forms import MovieForm, CommentForm
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods, require_POST, require_GET
@@ -34,10 +34,16 @@ def create(request):
 
 def detail(request, pk):
     movie = get_object_or_404(Movie, pk=pk)
+    
+    actors = get_list_or_404(Actor)
+    directors = get_list_or_404(Director)
+    
     comment_form=CommentForm()
     comments=movie.comment_set.all()
     context = {
         'movie':movie,
+        'directors':directors,
+        'actors':actors,
         'comment_form':comment_form,
         'comments':comments,
     }

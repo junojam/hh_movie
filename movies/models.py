@@ -26,7 +26,9 @@ class Comment(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
 class Director(models.Model):
-    profile_path = models.TextField()
+    name = models.TextField()
+    profile_path = models.TextField(null=True)
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
 
 class Actor(models.Model):
     name = models.TextField()
