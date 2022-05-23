@@ -62,6 +62,7 @@
 
 
   - dumpdata, loaddata로 데이터 저장하기, 불러오기 확인
+
 ![dump_data](README.assets/dump_data.jpg)
 
 
