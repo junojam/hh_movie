@@ -146,12 +146,55 @@
 
     - db.sqlite3에 저장된 테이블의 속성들
 
-  - Trouble Shooting
 
-    - for문을 활용하면서 같은 인자가 반복되며 초기화되는 상황이 발생하였다. 원인을 몰라 헤매던 중, 코드 한 줄 한 줄 디버깅을 통해 잘못을 인지하고 반영하였다.
-    - 감독, 인물 사진이 없을 때 대체 이미지를 만들어야겠다고 생각하였다.
-    - 자료를 dump하기 위해서, 빈 리스트에 append하거나 requests 모듈을 다루는데 애로사항이 있어 공식문서를 참고하여 해결하였다.
-    - try-except 구문을 활용하였는데, 이를 활용하기 위해 여러 검색을 통해 원하는 방법으로 사용할 수 있었다.
+
+---------------------------
+
+
+
+__Trouble Shooting__
+
+- 문제상황 1 : BASE_URL 초기화 현상 발생
+
+  - 원인 : 2중 포문을 사용하면서 BASE_URL 초기화
+
+    ```python
+    BASE_URL = 'https://api.themoviedb.org/3'
+    BASE_URL = 'https://api.themoviedb.org/3/movie/'
+    BASE_URL = 'https://api.themoviedb.org/3/person/'
+    ```
+
+    이러한 형태로 같은 변수명을 사용하다보니, 할당된 값이 의도치 않게 바뀌었습니다.
+    
+
+  - 해결 방안 : 각각 다른 변수명을 사용
+
+    ```python
+    BASE_URL = 'https://api.themoviedb.org/3'
+    BASE_URL2 = 'https://api.themoviedb.org/3/movie/'
+    BASE_URL3 = 'https://api.themoviedb.org/3/person/'
+    ```
+
+    
+
+  - 느낀점 : path 변수명을 이용해서 조금 더 구체적으로 작성했으면 BASE_URL 변경 없이 클린코드를 작성할 수 있을 것이라 판단했습니다.
+
+    ```python
+    BASE_URL='https://api.themoviedb.org/3/'
+    path = ['/movies', '/person', '/credits']
+    params = {
+        'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
+        'language' : 'ko-KR',
+    }
+    ```
+
+
+
+- 문제상황 2: 같은 값이 Movie_id별로 5개씩 중복돼서 Json파일로 반환되는 현상 발생
+  - 원인: fields명 위치가 잘못되어, 같은 fields에 계속해서 새로운 값을 덮어씌우고 있었음
+  - 해결방안 : 첫번째 for문 뒤에 선언되어있던 fields명을 두번째 for 문 뒤로 변경
+    ![0523_월_13](README.assets/0523_월_13.PNG)
+  - 느낀점 : 디버깅의 중요성, 한 줄 한 줄 눈으로 코드를 확인하면서 어느 부분이 잘못되었는지 계산해보았습니다. 같은 값이 반복될 때는 변수의 위치가 정확한지 한번 더 확인하는 습관을 길러야겠습니다.
 
 
 
