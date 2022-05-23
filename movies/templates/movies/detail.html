@@ -3,8 +3,11 @@
 {% block content %}
     <h1>DETAIL</h1>
     <hr>
+    <div>
+        <img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{ movie.poster_path }}" alt="">
+    </div>
     <h5>{{ movie.title }}</h5>
-    <p>{{ movie.description }}</p>
+    <p>{{ movie.overview }}</p>
     {% if movie.user == request.user %}
     <div>
         <a href="{% url 'movies:update' movie.pk %}">UPDATE</a>
