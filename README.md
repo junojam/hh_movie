@@ -250,12 +250,66 @@ __Trouble Shooting__
  - 댓글 CRUD의 경우, 영화 리뷰형식으로 남기도록 구현하였음
  - 추천 알고리즘 작성에 핵심이 되는 좋아요를 우선적으로 구현하기로 함.
  - movies/models.py 
-![0524_05](README.assets/0524_05.jpg)!
- - movies/models.py 
+
+
+![0524_05](README.assets/0524_05.jpg)
+
+ - articles/models.py 
 
 ![0524_06](README.assets/0524_06.jpg)
 
 
+
+ - 개인 작업 내용(조영훈)
+
+__비동기 구현을 위한 axios 설치__
+
+```bash
+npm install axios
+```
+
+__axios와 아이콘 사용을 위해 base.html에 cdn 추가__
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://kit.fontawesome.com/6725d2d4bc.js" crossorigin="anonymous"></script>
+```
+
+
+
+__관리자 유저에게 CREATE 권한 부여__
+
+- createsuperuser로 관리자 계정 생성 후, is_staff 속성이 1인 것을 확인
+
+  ```bash
+  python manage.py createsuperuser
+  ```
+
+
+![0524_08](README.assets/0524_08.PNG)
+
+- index.html에서 user.is_staff 속성에 따라 CREATE 버튼 노출
+
+  ```html
+  {% if user.is_staff == 1 %}
+      <a href="{% url 'movies:create' %}">[CREATE]</a>
+  {% endif %}
+  ```
+
+
+
+__감독 좋아요 & 배우 좋아요__
+
+- DB 내 director_id와 actor_id가 없음을 확인. Model 수정
+
+  ![0524_09](README.assets/0524_09.PNG)
+
+- 양식에 맞게 Json 재생성 및 DB 반영
+
+
+
+ - 개인 작업 내용(이준호)
+   - 05.25 부터 기록 예정
 
 ----------------
 
@@ -309,3 +363,6 @@ __TROUBLE SHOOTING__
 
     1. 모델 재설계 - Director_id와 Actor_id 삭제
     2. Views.py 재설계 - director_id가 아니라 pk로 복구
+
+
+
