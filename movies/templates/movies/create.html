@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="backgroundimagesetting">
     <h1>CREATE</h1>
     <hr>
     <form action="{% url 'movies:create' %}" method='POST'>
@@ -10,4 +11,5 @@
     </form>
     <hr>
     <a href="{% url 'movies:index' %}">BACK</a>
+</div>
 {% endblock content %}

@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<br>
+<div class="container bg-secondary">
   <h1>회원정보수정</h1>
   <form action="{% url 'accounts:update' %}" method="POST">
     {% csrf_token %}
@@ -8,4 +10,5 @@
     <input type="submit" value="Submit">
   </form>
   <a href="{% url 'movies:index' %}">back</a>
+</div>
 {% endblock content %}

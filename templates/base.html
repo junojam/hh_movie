@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +23,7 @@
         top: 0;
         left: 0;
         z-index: -1;
-        opacity: 0.5;
+        opacity: 1;
         background-size: cover;
       }
 
@@ -37,84 +37,113 @@
         width: 100%;
         height: 100%;
         content: "";
-        background: url('{% static 'movies/BACKGROUNDIMAGE.jpg' %}')  no-repeat center; 
+        background: url('{% static 'movies/BACKGROUNDIMAGE.jpg' %}')  no-repeat; 
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
         opacity: 0.8;
         background-size: cover;
-        background-attachment:fixed;
       }
 
     </style>
 </head>
-<body>
+<body class="mainbackgroundimagesetting">
     <div>
       {% if request.user.is_authenticated %}
       <nav class="d-flex justify-content-between navbar-light bg-dark sticky-top">
-        <a href="{% url 'movies:index' %}">
-          <img class="ms-5 my-2" width="100px" src="{% static 'movies/LOGO_INVISIBLE.png' %}" alt="My image">
-        </a>
-        {% comment %} 홈버튼 {% endcomment %}
-
-        {% comment %} 영화 추천 {% endcomment %}
-        {% comment %} <div class="d-flex">
-          <a href="{% url 'articles:index' %}">Community</a>
-        </div> {% endcomment %}
-
-        {% comment %} 내가 좋아요 한 영화 {% endcomment %}
-
-        {% comment %} 프로필 {% endcomment %}
-
-        <div class="d-flex">
-          <a href="{% url 'articles:index' %}">Community</a>
+        <div class="d-flex flew-row">
+          <a href="{% url 'movies:index' %}">
+            <img class="mx-5 my-2" width="100px" src="{% static 'movies/LOGO_INVISIBLE.png' %}" alt="My image">
+          </a>
+          <div class="d-flex flex-row">
+            <a class="d-flex align-items-center me-2 text-decoration-none text-white" href="{% url 'movies:index' %}">Home</a>
+            {% comment %} 영화 추천 {% endcomment %}
+            {% comment %} <div class="d-flex">
+              <a href="{% url 'articles:index' %}">Community</a>
+            </div> {% endcomment %}
+            
+            {% comment %} 내가 좋아요 한 영화 {% endcomment %}
+            
+            {% comment %} 프로필 {% endcomment %}
+            <div class="d-flex align-items-center justify-content-start  text-decoration-none text-white">
+              <a class=" text-decoration-none text-white mx-2" href="{% url 'articles:index' %}">Community</a>
+            </div>
+          </div>
         </div>
 
-        <div class="d-flex flex-row justify-content-end align-items-center">
-          <div class="text-white me-1">
-            <div>안녕하세요, {{ user }} 님</div>
-          </div>
-          <div class="me-1">
-            <a class="text-decoration-none text-white" href="{% url 'accounts:update' %}">회원정보수정</a>
-          </div>
-          <div class="me-5">
-            <form action="{% url 'accounts:logout' %}" method="POST">
-              {% csrf_token %}
-              <input type="submit" value="Logout">
-            </form>
-          </div>
-          <!-- <div class="me-5 m-1">
-            <form action="{% url 'accounts:delete' %}" method="POST">
-              {% csrf_token %}
-              <input type="submit" value="회원탈퇴">
-            </form>
-          </div> -->
+        <div class="d-flex flex-row justify-content-start align-items-center">
+              <div class="text-white me-1">
+                <div>안녕하세요, {{ user }}님</div>
+              </div>
+
+              <div class="me-1">
+                <a class="text-decoration-none text-white" href="{% url 'accounts:update' %}">회원정보수정</a>
+              </div>
+
+
+
+              <div class="me-5">
+                <form action="{% url 'accounts:logout' %}" method="POST">
+                  {% csrf_token %}
+                  <input type="submit" value="Logout">
+                </form>
+              </div>
+              <!-- <div class="me-5 m-1">
+                <form action="{% url 'accounts:delete' %}" method="POST">
+                  {% csrf_token %}
+                  <input type="submit" value="회원탈퇴">
+                </form>
+              </div> -->
+            </div>
+
         </div>
       </nav>
 
       {% else %}
 
       <nav class="d-flex justify-content-between navbar-light bg-dark sticky-top">
-        <a href="{% url 'movies:index' %}">
-          <img class="ms-5 my-2" width="100px" src="{% static 'movies/LOGO_INVISIBLE.png' %}" alt="My image">
-        </a>
+        <div class="d-flex flew-row">
+          <a href="{% url 'movies:index' %}">
+            <img class="mx-5 my-2" width="100px" src="{% static 'movies/LOGO_INVISIBLE.png' %}" alt="My image">
+          </a>
+          <div class="d-flex flex-row">
+            <a class="d-flex align-items-center me-2 text-decoration-none text-white" href="{% url 'movies:index' %}">Hone</a>
+            {% comment %} 영화 추천 {% endcomment %}
+            {% comment %} <div class="d-flex">
+              <a href="{% url 'articles:index' %}">Community</a>
+            </div> {% endcomment %}
+            
+            {% comment %} 내가 좋아요 한 영화 {% endcomment %}
+            
+            {% comment %} 프로필 {% endcomment %}
+            <div class="d-flex align-items-center justify-content-start  text-decoration-none text-white">
+              <a class=" text-decoration-none text-white mx-2" href="{% url 'articles:index' %}">Community</a>
+            </div>
+          </div>
+        </div>
+
         <div class="d-flex flex-row justify-content-end align-items-center">
+          
           <div class="m-1">
             <a class="text-decoration-none text-white" href="{% url 'accounts:login' %}">Login</a>
           </div>
+
+
           <div class="me-5 m-1">
             <a class="text-decoration-none text-white" href="{% url 'accounts:signup' %}">Signup</a>
           </div>
+
         </div>
       </nav>
       {% endif %}
-
 
       {% block index %}
       {% endblock index %}
       {% block detail %}
       {% endblock detail %}
+      {% block content %}
+      {% endblock content %}
       </div>
     </div>
     

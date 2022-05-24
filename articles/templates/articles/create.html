@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<br>
+<div class="container bg-secondary">
   <h1>CREATE</h1>
   <hr>
   <form action="{% url 'articles:create' %}" method="POST">
@@ -9,4 +11,5 @@
     <input type="submit">
   </form>
   <a href="{% url 'articles:index' %}">back</a>
+</div>
 {% endblock content %}

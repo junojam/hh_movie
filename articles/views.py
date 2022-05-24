@@ -56,7 +56,7 @@ def delete(request, pk):
     if request.user.is_authenticated:
         if request.user == article.user:
             article.delete()
-    return redirect('articles:index', article.pk)
+    return redirect('articles:index')
 
 
 @login_required

@@ -11,8 +11,7 @@ def index(request):
         'movies':movies
     }
 
-    return render(request, 'movies/index copy.html',context)
-    # return render(request, 'movies/index.html',context)
+    return render(request, 'movies/index.html',context)
 
 @login_required
 @require_http_methods(['GET', 'POST'])

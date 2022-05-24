@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<br>
+<div class="container bg-secondary">
   <h1>DETAIL</h1>
   <h3>{{ article.pk }}번째 글</h3>
   <hr>
@@ -43,4 +45,5 @@
   {% else %}
     <a href="{% url 'accounts:login' %}">[댓글을 작성하려면 로그인하세요.]</a>
   {% endif %}
+<</div>
 {% endblock content %}
