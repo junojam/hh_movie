@@ -9,7 +9,7 @@
         <hr> 
 
         <div class="d-flex flex-row justify-content-start align-items-start">
-            <img class="items me-3 mt-3" width="480px" height="720px" src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{ movie.poster_path }}" alt="">
+            <img class="items me-3 mt-3" width="480px" height="720px" src="https://www.themoviedb.org/t/p/original{{ movie.poster_path }}" alt="">
             <div class="">
                 <br>
                 <div class="item d-flex flex-row justify-content-between align-items-center">
@@ -30,7 +30,7 @@
                         <div class="d-flex">
                             <div class="item" style="margin:10px;">
                                 {% load static %}
-                                <img width="135px" src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{director.profile_path}}" onerror="this.src=`{% static 'movies/ALT_IMAGE.png' %}`" alt="">
+                                <img width="135px" src="https://www.themoviedb.org/t/p/original{{director.profile_path}}" onerror="this.src=`{% static 'movies/ALT_IMAGE.png' %}`" alt="">
                                 <div style="width:135px; text-align:center; word-break:normal; " class="text-center text-dark">{{director.name}}</div>
                                 <!-- <div style="width:160px; text-align:center; word-break:normal; " class="text-center text-dark">{{director.department}}</div> -->
                             </div>
@@ -46,7 +46,7 @@
                         {% if actor.movie_id == movie.id %}
                         <div class="d-flex">
                             <div class="item" style="margin:10px;">
-                                <img  width="135px" src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{actor.profile_path}}" onerror="this.src=`{% static 'movies/ALT_IMAGE.png' %}`" alt="">
+                                <img  width="135px" src="https://www.themoviedb.org/t/p/original{{actor.profile_path}}" onerror="this.src=`{% static 'movies/ALT_IMAGE.png' %}`" alt="">
                                 <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.character}} 역</div>
                                 <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.name}}</div>
                                 <!-- <div style="width:130px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.department}}</div> -->
