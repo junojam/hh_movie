@@ -70,6 +70,9 @@ for i in range(1, 11):
             json.dump(movies, f, ensure_ascii=False, indent="\t")
         
 '''
+dumpdata 기본 모델
+https://api.themoviedb.org/3/movie/popular?api_key=b423b9f62c2dcbbc988e246c89249738&language=en-US
+
 영화 id로 출연진 가져오기
 https://api.themoviedb.org/3/movie/22/credits?api_key=b423b9f62c2dcbbc988e246c89249738&language=en-US
 

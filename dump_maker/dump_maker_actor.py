@@ -31,12 +31,19 @@ def actor_info(movie_list):
                     'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
                     'language' : 'ko-KR',
                 }
+                
                 res = requests.get(BASE_URL3 + str(response['cast'][idx2]['id']), params = params).json()
-                pprint.pprint(res['name'])
-                pprint.pprint(res['profile_path'])
+                # print(movie['title'])
+                # pprint.pprint(res['name'])
+                # pprint.pprint(res['profile_path'])
+                # pprint.pprint(response['cast'][idx2]['character'])
+                # pprint.pprint(response['cast'][idx2]['known_for_department'])
+                
                 fields['movie_id'] = movie['id']
                 fields['name'] = res['name']
                 fields['profile_path'] = res['profile_path']
+                fields['department'] = response['cast'][idx2]['known_for_department']
+                fields['character'] = response['cast'][idx2]['character']
         
                 # for key in key_list:
                 #     try:

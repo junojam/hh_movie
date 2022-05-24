@@ -30,6 +30,7 @@ def director_info(movie_list):
                 fields['movie_id'] = movie['id']
                 fields['name'] = res['name']
                 fields['profile_path'] = res['profile_path']
+                fields['department'] = response['crew'][idx2]['department']
                 info = { 
                     "model": "movies.director",
                     "pk": i,

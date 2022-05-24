@@ -3,9 +3,10 @@
 		"model": "movies.director",
 		"pk": 1,
 		"fields": {
-			"movie_id": 752623,
-			"name": "Adam Nee",
-			"profile_path": "/x2UdCvS0j3QL5NlebV6571xwIpt.jpg"
+			"movie_id": 526896,
+			"name": "Daniel Espinosa",
+			"profile_path": "/rq6TkUBkSXvOrmKEjG5lt8kuhF4.jpg",
+			"department": "Directing"
 		}
 	},
 	{
@@ -13,17 +14,19 @@
 		"pk": 2,
 		"fields": {
 			"movie_id": 752623,
-			"name": "Aaron Nee",
-			"profile_path": "/q4ru70Opo26mvv9pkbyqtXE5rxL.jpg"
+			"name": "Adam Nee",
+			"profile_path": "/x2UdCvS0j3QL5NlebV6571xwIpt.jpg",
+			"department": "Directing"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 3,
 		"fields": {
-			"movie_id": 526896,
-			"name": "Daniel Espinosa",
-			"profile_path": "/rq6TkUBkSXvOrmKEjG5lt8kuhF4.jpg"
+			"movie_id": 752623,
+			"name": "Aaron Nee",
+			"profile_path": "/q4ru70Opo26mvv9pkbyqtXE5rxL.jpg",
+			"department": "Directing"
 		}
 	},
 	{
@@ -32,7 +35,8 @@
 		"fields": {
 			"movie_id": 675353,
 			"name": "Jeff Fowler",
-			"profile_path": "/wExdubFgeBkEUP8MojKPKoOcgdZ.jpg"
+			"profile_path": "/wExdubFgeBkEUP8MojKPKoOcgdZ.jpg",
+			"department": "Directing"
 		}
 	},
 	{
@@ -41,7 +45,8 @@
 		"fields": {
 			"movie_id": 639933,
 			"name": "Robert Eggers",
-			"profile_path": "/v9ukVIUGT1vQ3KuPVLSua7FfS9s.jpg"
+			"profile_path": "/v9ukVIUGT1vQ3KuPVLSua7FfS9s.jpg",
+			"department": "Directing"
 		}
 	},
 	{
@@ -50,7 +55,8 @@
 		"fields": {
 			"movie_id": 836225,
 			"name": "Alejandro Hidalgo",
-			"profile_path": null
+			"profile_path": null,
+			"department": "Directing"
 		}
 	},
 	{
@@ -59,7 +65,8 @@
 		"fields": {
 			"movie_id": 335787,
 			"name": "Ruben Fleischer",
-			"profile_path": "/3JLxOPFTLigSy8FjFjDyMwD9GIp.jpg"
+			"profile_path": "/3JLxOPFTLigSy8FjFjDyMwD9GIp.jpg",
+			"department": "Directing"
 		}
 	},
 	{
@@ -68,7 +75,8 @@
 		"fields": {
 			"movie_id": 414906,
 			"name": "Matt Reeves",
-			"profile_path": "/5rA459xpMt6IeJG7ZqvhLbSozEH.jpg"
+			"profile_path": "/5rA459xpMt6IeJG7ZqvhLbSozEH.jpg",
+			"department": "Directing"
 		}
 	},
 	{
@@ -77,25 +85,28 @@
 		"fields": {
 			"movie_id": 453395,
 			"name": "Sam Raimi",
-			"profile_path": "/zQoLMlrwuVYE9KqhVVgo7t5osXl.jpg"
+			"profile_path": "/zQoLMlrwuVYE9KqhVVgo7t5osXl.jpg",
+			"department": "Directing"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 10,
 		"fields": {
-			"movie_id": 629542,
-			"name": "Pierre Perifel",
-			"profile_path": null
+			"movie_id": 634649,
+			"name": "Jon Watts",
+			"profile_path": "/fkXChMX6CUXY1yOxBehAzvaTCl7.jpg",
+			"department": "Directing"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 11,
 		"fields": {
-			"movie_id": 634649,
-			"name": "Jon Watts",
-			"profile_path": "/fkXChMX6CUXY1yOxBehAzvaTCl7.jpg"
+			"movie_id": 629542,
+			"name": "Pierre Perifel",
+			"profile_path": null,
+			"department": "Directing"
 		}
 	},
 	{
@@ -104,7 +115,8 @@
 		"fields": {
 			"movie_id": 628900,
 			"name": "Tarik Saleh",
-			"profile_path": "/rHuCSEQAkMYmAw5xz58YFfomj8P.jpg"
+			"profile_path": "/rHuCSEQAkMYmAw5xz58YFfomj8P.jpg",
+			"department": "Directing"
 		}
 	},
 	{
@@ -113,70 +125,78 @@
 		"fields": {
 			"movie_id": 508947,
 			"name": "Domee Shi",
-			"profile_path": "/qswD23e2Hx91SiaxyiLZHz8glNu.jpg"
+			"profile_path": "/qswD23e2Hx91SiaxyiLZHz8glNu.jpg",
+			"department": "Directing"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 14,
 		"fields": {
-			"movie_id": 785985,
-			"name": "Louis Leterrier",
-			"profile_path": "/pJl1hNtZOIxrdzQjwGlicWWGSXg.jpg"
+			"movie_id": 406759,
+			"name": "Roland Emmerich",
+			"profile_path": "/mN8x74uv9yQ7dJl8nh2q26mkY8v.jpg",
+			"department": "Directing"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 15,
 		"fields": {
-			"movie_id": 406759,
-			"name": "Roland Emmerich",
-			"profile_path": "/mN8x74uv9yQ7dJl8nh2q26mkY8v.jpg"
+			"movie_id": 785985,
+			"name": "Louis Leterrier",
+			"profile_path": "/pJl1hNtZOIxrdzQjwGlicWWGSXg.jpg",
+			"department": "Directing"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 16,
 		"fields": {
-			"movie_id": 763285,
-			"name": "Michael Bay",
-			"profile_path": "/8I9H9IKROECFEn7usvyChbRMhbI.jpg"
+			"movie_id": 893370,
+			"name": "Gustavo Hernández",
+			"profile_path": "/y6kM7EIY0YCde0yV6VCtDpyTMUo.jpg",
+			"department": "Directing"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 17,
 		"fields": {
-			"movie_id": 893370,
-			"name": "Gustavo Hernández",
-			"profile_path": "/y6kM7EIY0YCde0yV6VCtDpyTMUo.jpg"
+			"movie_id": 763285,
+			"name": "Michael Bay",
+			"profile_path": "/8I9H9IKROECFEn7usvyChbRMhbI.jpg",
+			"department": "Directing"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 18,
 		"fields": {
-			"movie_id": 883502,
-			"name": "Josh Sternfeld",
-			"profile_path": null
+			"movie_id": 284052,
+			"name": "Scott Derrickson",
+			"profile_path": "/nOQkRTC6OPkUHebBfjIgtiZ0hvE.jpg",
+			"department": "Directing"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 19,
 		"fields": {
-			"movie_id": 284052,
-			"name": "Scott Derrickson",
-			"profile_path": "/nOQkRTC6OPkUHebBfjIgtiZ0hvE.jpg"
+			"movie_id": 799876,
+			"name": "Graham Moore",
+			"profile_path": "/7L7d6ImqoKaGaokO8xxN0ILnVfx.jpg",
+			"department": "Directing"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 20,
 		"fields": {
-			"movie_id": 799876,
-			"name": "Graham Moore",
-			"profile_path": "/7L7d6ImqoKaGaokO8xxN0ILnVfx.jpg"
+			"movie_id": 883502,
+			"name": "Josh Sternfeld",
+			"profile_path": null,
+			"department": "Directing"
 		}
 	},
 	{
@@ -185,7 +205,8 @@
 		"fields": {
 			"movie_id": 568124,
 			"name": "Byron Howard",
-			"profile_path": "/ePJXkxrD44nM0VB7Xx9Q4ityzfT.jpg"
+			"profile_path": "/ePJXkxrD44nM0VB7Xx9Q4ityzfT.jpg",
+			"department": "Directing"
 		}
 	},
 	{
@@ -194,7 +215,8 @@
 		"fields": {
 			"movie_id": 568124,
 			"name": "Jared Bush",
-			"profile_path": "/2gIwj1cnqZIKWaFg0ihmZnuZypR.jpg"
+			"profile_path": "/2gIwj1cnqZIKWaFg0ihmZnuZypR.jpg",
+			"department": "Directing"
 		}
 	}
 ]

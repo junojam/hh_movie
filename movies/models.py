@@ -29,8 +29,12 @@ class Director(models.Model):
     name = models.TextField()
     profile_path = models.TextField(null=True)
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    department = models.TextField()
+
 
 class Actor(models.Model):
     name = models.TextField()
     profile_path = models.TextField(null=True)
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    department = models.TextField()
+    character = models.TextField()

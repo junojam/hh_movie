@@ -1,53 +1,56 @@
 {% extends 'base.html' %}
 
-{% block content2 %}
+{% block detail %}
 <div class="backgroundimagesetting">
     <br>
     <div class="container bg-secondary" style="padding: 12px;">
         <iframe width="100%" height="600px" src="{{ movie.video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <hr>
-        <div class="d-flex justify-content-start align-items-center">
-            <img class="items me-3" width="300px" height="450px" src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{ movie.poster_path }}" alt="">
-            <div class="items">
-                <h1 class="d-flex item align-items-center">{{ movie.title }} <span class="ms-2 btn btn-success" style="cursor:default">{{movie.vote_average}}</span></h1>
-                <br>
-                <h4>개요 : {{ movie.genre }}</h4>
-                <div class="item" >{{ movie.overview }}</div>
-                <hr>
-                <div class="container">
-                    <div class="d-flex flex-row justify-content-around">
-                        <div>
-                            <h5 class="text-center">감 독</h5>
-                            <div class="d-flex">
-                                {% for director in directors %}
-                                {% if director.movie_id == movie.id %}
-                                <div class="d-flex">
-                                    <div class="item" style="margin:10px;">
-                                        {% load static %}
-                                        <img width="110px" src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{director.profile_path}}" onerror="this.src=`{% static 'movies/ALT_IMAGE.png' %}`" alt="">
-                                        <div style="width:100px; text-align:center; word-break:normal; " class="text-center">{{director.name}}</div>
-                                    </div>
-                                </div>
-                                {% endif %}
-                                {% endfor %}
-                            </div>
-                        </div>
 
-                        <div>
-                            <h5 class="text-center">배 우</h5>
-                            <div class="d-flex">
-                                {% for actor in actors %}
-                                {% if actor.movie_id == movie.id %}
-                                <div class="d-flex">
-                                    <div class="item" style="margin:10px;">
-                                        <img  width="110px" src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{actor.profile_path}}" alt="">
-                                        <div style="width:100px; text-align: center; word-break:normal;">{{actor.name}}</div>
-                                    </div>
-                                </div>
-                                {% endif %}
-                                {% endfor %}
+        <div class="d-flex flex-row justify-content-start align-items-start">
+            <img class="items me-3 mt-3" width="480px" height="720px" src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{ movie.poster_path }}" alt="">
+            <div class="">
+                <br>
+                <div class="item d-flex flex-row justify-content-between align-items-center">
+                    <h1 class="item align-items-center">{{ movie.title }} <span class="ms-2 btn btn-success" style="cursor:default">{{movie.vote_average}}</span></h1>
+                    <h4 class="item align-items-center me-3">{{ movie.genre }}</h4>
+                </div>
+                <hr>
+                <h5 class="item" >{{ movie.overview }}</h5>
+                <br>
+                <div >
+                    <h4>감독</h4>
+                    <hr>
+                    <div class="d-flex flex-row justify-content-start fw-bold">
+                        {% for director in directors %}
+                        {% if director.movie_id == movie.id %}
+                        <div class="d-flex">
+                            <div class="item" style="margin:10px;">
+                                {% load static %}
+                                <img width="135px" src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{director.profile_path}}" onerror="this.src=`{% static 'movies/ALT_IMAGE.png' %}`" alt="">
+                                <div style="width:135px; text-align:center; word-break:normal; " class="text-center text-dark">{{director.name}}</div>
+                                <!-- <div style="width:160px; text-align:center; word-break:normal; " class="text-center text-dark">{{director.department}}</div> -->
                             </div>
                         </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                    <br>
+                    <h4>배우</h4>
+                    <hr>
+                    <div class="d-flex flex-row justify-content-start fw-bold">
+                        {% for actor in actors %}
+                        {% if actor.movie_id == movie.id %}
+                        <div class="d-flex">
+                            <div class="item" style="margin:10px;">
+                                <img  width="135px" src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{actor.profile_path}}" alt="">
+                                <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.character}} 역</div>
+                                <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.name}}</div>
+                                <!-- <div style="width:130px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.department}}</div> -->
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
 
@@ -86,4 +89,4 @@
         </form>
     </div>
 </div>
-{% endblock content2 %}
+{% endblock detail %}

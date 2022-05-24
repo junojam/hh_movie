@@ -3,90 +3,110 @@
 		"model": "movies.actor",
 		"pk": 1,
 		"fields": {
-			"movie_id": 752623,
-			"name": "Sandra Bullock",
-			"profile_path": "/u2tnZ0L2dwrzFKevVANYT5Pb1nE.jpg"
+			"movie_id": 526896,
+			"name": "Jared Leto",
+			"profile_path": "/ca3x0OfIKbJppZh8S1Alx3GfUZO.jpg",
+			"department": "Acting",
+			"character": "Dr. Michael Morbius / Morbius"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 2,
 		"fields": {
-			"movie_id": 752623,
-			"name": "Channing Tatum",
-			"profile_path": "/bhTmp6FA8fOQnGlNk75tdmj2bpu.jpg"
+			"movie_id": 526896,
+			"name": "Matt Smith",
+			"profile_path": "/xr2GSp8Pm6fT5VGm0I9tsWVcZ8q.jpg",
+			"department": "Acting",
+			"character": "Milo / Lucien"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 3,
 		"fields": {
-			"movie_id": 752623,
-			"name": "Daniel Radcliffe",
-			"profile_path": "/uAICvHxj4cwSGjEY9B09Mhqxrk.jpg"
+			"movie_id": 526896,
+			"name": "Adria Arjona",
+			"profile_path": "/gBOblv33jhgAo997KzhEafNOb52.jpg",
+			"department": "Acting",
+			"character": "Martine Bancroft"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 4,
 		"fields": {
-			"movie_id": 752623,
-			"name": "Brad Pitt",
-			"profile_path": "/oAvLuGuTaNcjY3R5huBQdfrZN6j.jpg"
+			"movie_id": 526896,
+			"name": "Jared Harris",
+			"profile_path": "/jAyPWkmge3BqXtgxIG9MfXBzOGj.jpg",
+			"department": "Acting",
+			"character": "Dr. Emil Nicholas"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 5,
 		"fields": {
-			"movie_id": 752623,
-			"name": "Da'Vine Joy Randolph",
-			"profile_path": "/7RuYeGxTwFRt2q8fkT8nuEz1nIC.jpg"
+			"movie_id": 526896,
+			"name": "Al Madrigal",
+			"profile_path": "/p4vN80EGGlzLb5J7G8Ss3n9K2pc.jpg",
+			"department": "Acting",
+			"character": "Agent Alberto Rodriguez"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 6,
 		"fields": {
-			"movie_id": 526896,
-			"name": "Jared Leto",
-			"profile_path": "/ca3x0OfIKbJppZh8S1Alx3GfUZO.jpg"
+			"movie_id": 752623,
+			"name": "Sandra Bullock",
+			"profile_path": "/u2tnZ0L2dwrzFKevVANYT5Pb1nE.jpg",
+			"department": "Acting",
+			"character": "Loretta Sage / Angela"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 7,
 		"fields": {
-			"movie_id": 526896,
-			"name": "Matt Smith",
-			"profile_path": "/xr2GSp8Pm6fT5VGm0I9tsWVcZ8q.jpg"
+			"movie_id": 752623,
+			"name": "Channing Tatum",
+			"profile_path": "/bhTmp6FA8fOQnGlNk75tdmj2bpu.jpg",
+			"department": "Acting",
+			"character": "Alan / Dash"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 8,
 		"fields": {
-			"movie_id": 526896,
-			"name": "Adria Arjona",
-			"profile_path": "/gBOblv33jhgAo997KzhEafNOb52.jpg"
+			"movie_id": 752623,
+			"name": "Daniel Radcliffe",
+			"profile_path": "/uAICvHxj4cwSGjEY9B09Mhqxrk.jpg",
+			"department": "Acting",
+			"character": "Abigail Fairfax"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 9,
 		"fields": {
-			"movie_id": 526896,
-			"name": "Jared Harris",
-			"profile_path": "/jAyPWkmge3BqXtgxIG9MfXBzOGj.jpg"
+			"movie_id": 752623,
+			"name": "Brad Pitt",
+			"profile_path": "/oAvLuGuTaNcjY3R5huBQdfrZN6j.jpg",
+			"department": "Acting",
+			"character": "Jack Trainer"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 10,
 		"fields": {
-			"movie_id": 526896,
-			"name": "Al Madrigal",
-			"profile_path": "/p4vN80EGGlzLb5J7G8Ss3n9K2pc.jpg"
+			"movie_id": 752623,
+			"name": "Da'Vine Joy Randolph",
+			"profile_path": "/7RuYeGxTwFRt2q8fkT8nuEz1nIC.jpg",
+			"department": "Acting",
+			"character": "Beth Hatten"
 		}
 	},
 	{
@@ -95,7 +115,9 @@
 		"fields": {
 			"movie_id": 675353,
 			"name": "Ben Schwartz",
-			"profile_path": "/5vV52TSEIhe4ZZLWwv3i7nfv8we.jpg"
+			"profile_path": "/5vV52TSEIhe4ZZLWwv3i7nfv8we.jpg",
+			"department": "Acting",
+			"character": "Sonic the Hedgehog (voice)"
 		}
 	},
 	{
@@ -104,7 +126,9 @@
 		"fields": {
 			"movie_id": 675353,
 			"name": "Idris Elba",
-			"profile_path": "/be1bVF7qGX91a6c5WeRPs5pKXln.jpg"
+			"profile_path": "/be1bVF7qGX91a6c5WeRPs5pKXln.jpg",
+			"department": "Acting",
+			"character": "Knuckles the Echidna (voice)"
 		}
 	},
 	{
@@ -113,7 +137,9 @@
 		"fields": {
 			"movie_id": 675353,
 			"name": "Colleen O'Shaughnessey",
-			"profile_path": "/y3Kl5tCX1XD6uyL9wefTRbEXTwj.jpg"
+			"profile_path": "/y3Kl5tCX1XD6uyL9wefTRbEXTwj.jpg",
+			"department": "Acting",
+			"character": "Miles 'Tails' Prower (voice)"
 		}
 	},
 	{
@@ -122,7 +148,9 @@
 		"fields": {
 			"movie_id": 675353,
 			"name": "Jim Carrey",
-			"profile_path": "/u0AqTz6Y7GHPCHINS01P7gPvDSb.jpg"
+			"profile_path": "/u0AqTz6Y7GHPCHINS01P7gPvDSb.jpg",
+			"department": "Acting",
+			"character": "Dr. Ivo Robotnik"
 		}
 	},
 	{
@@ -131,7 +159,9 @@
 		"fields": {
 			"movie_id": 675353,
 			"name": "James Marsden",
-			"profile_path": "/mk142GG0saiSXALY6V4wWcmPROW.jpg"
+			"profile_path": "/mk142GG0saiSXALY6V4wWcmPROW.jpg",
+			"department": "Acting",
+			"character": "Tom Wachowski"
 		}
 	},
 	{
@@ -140,7 +170,9 @@
 		"fields": {
 			"movie_id": 639933,
 			"name": "Alexander Skarsgård",
-			"profile_path": "/caOe6hwHEE89AJfGdHatnrGgkKj.jpg"
+			"profile_path": "/caOe6hwHEE89AJfGdHatnrGgkKj.jpg",
+			"department": "Acting",
+			"character": "Amleth"
 		}
 	},
 	{
@@ -149,7 +181,9 @@
 		"fields": {
 			"movie_id": 639933,
 			"name": "Nicole Kidman",
-			"profile_path": "/dlcNtb7y0Be1pOWdsogowLEsOta.jpg"
+			"profile_path": "/dlcNtb7y0Be1pOWdsogowLEsOta.jpg",
+			"department": "Acting",
+			"character": "Queen Gudrún"
 		}
 	},
 	{
@@ -158,7 +192,9 @@
 		"fields": {
 			"movie_id": 639933,
 			"name": "Claes Bang",
-			"profile_path": "/w6kux5RIVfaGwHTb3yiDbaNHBPh.jpg"
+			"profile_path": "/w6kux5RIVfaGwHTb3yiDbaNHBPh.jpg",
+			"department": "Acting",
+			"character": "Fjölnir The Brotherless"
 		}
 	},
 	{
@@ -167,7 +203,9 @@
 		"fields": {
 			"movie_id": 639933,
 			"name": "Ethan Hawke",
-			"profile_path": "/a7rgJl8TYUWAfJuM4fxbLHgD7BL.jpg"
+			"profile_path": "/a7rgJl8TYUWAfJuM4fxbLHgD7BL.jpg",
+			"department": "Acting",
+			"character": "King Aurvandil War-Raven"
 		}
 	},
 	{
@@ -176,7 +214,9 @@
 		"fields": {
 			"movie_id": 639933,
 			"name": "Anya Taylor-Joy",
-			"profile_path": "/aSOvCmB1nsl19IqrjuuWwaguvDh.jpg"
+			"profile_path": "/aSOvCmB1nsl19IqrjuuWwaguvDh.jpg",
+			"department": "Acting",
+			"character": "Olga of the Birch Forest"
 		}
 	},
 	{
@@ -185,7 +225,9 @@
 		"fields": {
 			"movie_id": 836225,
 			"name": "Will Beinbrink",
-			"profile_path": "/6S5JeespvNqBlXkC03znn0Sdfey.jpg"
+			"profile_path": "/6S5JeespvNqBlXkC03znn0Sdfey.jpg",
+			"department": "Acting",
+			"character": "Father Peter Williams"
 		}
 	},
 	{
@@ -194,7 +236,9 @@
 		"fields": {
 			"movie_id": 836225,
 			"name": "María Gabriela de Faría",
-			"profile_path": "/mMxLRggKxuQrwgtMpK3HMwhEmmH.jpg"
+			"profile_path": "/mMxLRggKxuQrwgtMpK3HMwhEmmH.jpg",
+			"department": "Acting",
+			"character": "Esperanza"
 		}
 	},
 	{
@@ -203,7 +247,9 @@
 		"fields": {
 			"movie_id": 836225,
 			"name": "Irán Castillo",
-			"profile_path": "/aaCEVHA4ybRYP2wHYgCYwrO7NJG.jpg"
+			"profile_path": "/aaCEVHA4ybRYP2wHYgCYwrO7NJG.jpg",
+			"department": "Acting",
+			"character": "Magali"
 		}
 	},
 	{
@@ -212,7 +258,9 @@
 		"fields": {
 			"movie_id": 836225,
 			"name": "Joseph Marcell",
-			"profile_path": "/mbjY5qqeT9aV7weLzvbN1ikPq0M.jpg"
+			"profile_path": "/mbjY5qqeT9aV7weLzvbN1ikPq0M.jpg",
+			"department": "Acting",
+			"character": "Father Michael Lewis"
 		}
 	},
 	{
@@ -221,7 +269,9 @@
 		"fields": {
 			"movie_id": 836225,
 			"name": "Hector Kotsifakis",
-			"profile_path": "/yMlCG0Yqigqo1dg8SCBrwUrjW8H.jpg"
+			"profile_path": "/yMlCG0Yqigqo1dg8SCBrwUrjW8H.jpg",
+			"department": "Acting",
+			"character": "Dr. Nelson"
 		}
 	},
 	{
@@ -230,7 +280,9 @@
 		"fields": {
 			"movie_id": 335787,
 			"name": "Tom Holland",
-			"profile_path": "/bBRlrpJm9XkNSg0YT5LCaxqoFMX.jpg"
+			"profile_path": "/bBRlrpJm9XkNSg0YT5LCaxqoFMX.jpg",
+			"department": "Acting",
+			"character": "Nathan Drake"
 		}
 	},
 	{
@@ -239,7 +291,9 @@
 		"fields": {
 			"movie_id": 335787,
 			"name": "Mark Wahlberg",
-			"profile_path": "/bTEFpaWd7A6AZVWOqKKBWzKEUe8.jpg"
+			"profile_path": "/bTEFpaWd7A6AZVWOqKKBWzKEUe8.jpg",
+			"department": "Acting",
+			"character": "Victor 'Sully' Sullivan"
 		}
 	},
 	{
@@ -248,7 +302,9 @@
 		"fields": {
 			"movie_id": 335787,
 			"name": "Sophia Ali",
-			"profile_path": "/uqXn3Gp0FlsV5kDLwJ6FbeuJvx2.jpg"
+			"profile_path": "/uqXn3Gp0FlsV5kDLwJ6FbeuJvx2.jpg",
+			"department": "Acting",
+			"character": "Chloe Frazer"
 		}
 	},
 	{
@@ -257,7 +313,9 @@
 		"fields": {
 			"movie_id": 335787,
 			"name": "Tati Gabrielle",
-			"profile_path": "/txZTL1HkPVxliTilbjlwR51VIt6.jpg"
+			"profile_path": "/txZTL1HkPVxliTilbjlwR51VIt6.jpg",
+			"department": "Acting",
+			"character": "Jo Braddock"
 		}
 	},
 	{
@@ -266,7 +324,9 @@
 		"fields": {
 			"movie_id": 335787,
 			"name": "Antonio Banderas",
-			"profile_path": "/iWIUEwgn2KW50MssR7tdPeFoRGW.jpg"
+			"profile_path": "/iWIUEwgn2KW50MssR7tdPeFoRGW.jpg",
+			"department": "Acting",
+			"character": "Santiago Moncada"
 		}
 	},
 	{
@@ -275,7 +335,9 @@
 		"fields": {
 			"movie_id": 414906,
 			"name": "Robert Pattinson",
-			"profile_path": "/8A4PS5iG7GWEAVFftyqMZKl3qcr.jpg"
+			"profile_path": "/8A4PS5iG7GWEAVFftyqMZKl3qcr.jpg",
+			"department": "Acting",
+			"character": "Bruce Wayne / The Batman"
 		}
 	},
 	{
@@ -284,7 +346,9 @@
 		"fields": {
 			"movie_id": 414906,
 			"name": "Zoë Kravitz",
-			"profile_path": "/4uOfGQSKCz2I7HVV5vPwhvTD61y.jpg"
+			"profile_path": "/4uOfGQSKCz2I7HVV5vPwhvTD61y.jpg",
+			"department": "Acting",
+			"character": "Selina Kyle / Catwoman"
 		}
 	},
 	{
@@ -293,7 +357,9 @@
 		"fields": {
 			"movie_id": 414906,
 			"name": "Paul Dano",
-			"profile_path": "/tHsaqfauzG4MuFs5oCbq0pRy5EF.jpg"
+			"profile_path": "/tHsaqfauzG4MuFs5oCbq0pRy5EF.jpg",
+			"department": "Acting",
+			"character": "Edward Nashton / The Riddler"
 		}
 	},
 	{
@@ -302,7 +368,9 @@
 		"fields": {
 			"movie_id": 414906,
 			"name": "Jeffrey Wright",
-			"profile_path": "/43EGVkmHzZFZQQHW20AL6GivrBD.jpg"
+			"profile_path": "/43EGVkmHzZFZQQHW20AL6GivrBD.jpg",
+			"department": "Acting",
+			"character": "Lt. James Gordon"
 		}
 	},
 	{
@@ -311,7 +379,9 @@
 		"fields": {
 			"movie_id": 414906,
 			"name": "John Turturro",
-			"profile_path": "/6O9W9cJW0kCqMzYeLupV9oH0ftn.jpg"
+			"profile_path": "/6O9W9cJW0kCqMzYeLupV9oH0ftn.jpg",
+			"department": "Acting",
+			"character": "Carmine Falcone"
 		}
 	},
 	{
@@ -320,7 +390,9 @@
 		"fields": {
 			"movie_id": 453395,
 			"name": "Benedict Cumberbatch",
-			"profile_path": "/fBEucxECxGLKVHBznO0qHtCGiMO.jpg"
+			"profile_path": "/fBEucxECxGLKVHBznO0qHtCGiMO.jpg",
+			"department": "Acting",
+			"character": "Dr. Stephen Strange / Sinister Strange / Defender Strange"
 		}
 	},
 	{
@@ -329,7 +401,9 @@
 		"fields": {
 			"movie_id": 453395,
 			"name": "Elizabeth Olsen",
-			"profile_path": "/mbMsmQE5CyMVTIGMGCw2XpcPCOc.jpg"
+			"profile_path": "/mbMsmQE5CyMVTIGMGCw2XpcPCOc.jpg",
+			"department": "Acting",
+			"character": "Wanda Maximoff / The Scarlet Witch"
 		}
 	},
 	{
@@ -338,7 +412,9 @@
 		"fields": {
 			"movie_id": 453395,
 			"name": "Chiwetel Ejiofor",
-			"profile_path": "/kq5DDnqqofoRI0t6ddtRlsJnNPT.jpg"
+			"profile_path": "/kq5DDnqqofoRI0t6ddtRlsJnNPT.jpg",
+			"department": "Acting",
+			"character": "Baron Karl Mordo"
 		}
 	},
 	{
@@ -347,7 +423,9 @@
 		"fields": {
 			"movie_id": 453395,
 			"name": "Benedict Wong",
-			"profile_path": "/ukmfsl59Isvn9odgzMWBidA3cmt.jpg"
+			"profile_path": "/ukmfsl59Isvn9odgzMWBidA3cmt.jpg",
+			"department": "Acting",
+			"character": "Wong"
 		}
 	},
 	{
@@ -356,97 +434,119 @@
 		"fields": {
 			"movie_id": 453395,
 			"name": "Xochitl Gomez",
-			"profile_path": "/oo1wzI9zaRWvZOsae43raoPykgb.jpg"
+			"profile_path": "/oo1wzI9zaRWvZOsae43raoPykgb.jpg",
+			"department": "Acting",
+			"character": "America Chavez"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 41,
 		"fields": {
-			"movie_id": 629542,
-			"name": "Sam Rockwell",
-			"profile_path": "/4zjUldl3ykbgcLO7FxWppR6s7Ck.jpg"
+			"movie_id": 634649,
+			"name": "Tom Holland",
+			"profile_path": "/bBRlrpJm9XkNSg0YT5LCaxqoFMX.jpg",
+			"department": "Acting",
+			"character": "Peter Parker / Spider-Man"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 42,
 		"fields": {
-			"movie_id": 629542,
-			"name": "Marc Maron",
-			"profile_path": "/2ENNRs7lgbyLfrUN622zRqkYJWL.jpg"
+			"movie_id": 634649,
+			"name": "Zendaya",
+			"profile_path": "/xWOU0S7AqGEkyk8scLwwz66R2GO.jpg",
+			"department": "Acting",
+			"character": "Michelle 'MJ' Jones"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 43,
 		"fields": {
-			"movie_id": 629542,
-			"name": "Awkwafina",
-			"profile_path": "/l5AKkg3H1QhMuXmTTmq1EyjyiRb.jpg"
+			"movie_id": 634649,
+			"name": "Benedict Cumberbatch",
+			"profile_path": "/fBEucxECxGLKVHBznO0qHtCGiMO.jpg",
+			"department": "Acting",
+			"character": "Stephen Strange / Doctor Strange"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 44,
 		"fields": {
-			"movie_id": 629542,
-			"name": "Craig Robinson",
-			"profile_path": "/nWZI2ghokrha2lYnr5Z48agItL7.jpg"
+			"movie_id": 634649,
+			"name": "Jacob Batalon",
+			"profile_path": "/53YhaL4xw4Sb1ssoHkeSSBaO29c.jpg",
+			"department": "Acting",
+			"character": "Ned Leeds"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 45,
 		"fields": {
-			"movie_id": 629542,
-			"name": "Anthony Ramos",
-			"profile_path": "/ityTHqIXFT3laID4j4ptlnc84zq.jpg"
+			"movie_id": 634649,
+			"name": "Jon Favreau",
+			"profile_path": "/8MtRRnEHaBSw8Ztdl8saXiw1egP.jpg",
+			"department": "Acting",
+			"character": "Harold 'Happy' Hogan"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 46,
 		"fields": {
-			"movie_id": 634649,
-			"name": "Tom Holland",
-			"profile_path": "/bBRlrpJm9XkNSg0YT5LCaxqoFMX.jpg"
+			"movie_id": 629542,
+			"name": "Sam Rockwell",
+			"profile_path": "/4zjUldl3ykbgcLO7FxWppR6s7Ck.jpg",
+			"department": "Acting",
+			"character": "Mr. Wolf (voice)"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 47,
 		"fields": {
-			"movie_id": 634649,
-			"name": "Zendaya",
-			"profile_path": "/jHWlWOasiqKS8JI40g9GDH5X6AL.jpg"
+			"movie_id": 629542,
+			"name": "Marc Maron",
+			"profile_path": "/2ENNRs7lgbyLfrUN622zRqkYJWL.jpg",
+			"department": "Acting",
+			"character": "Mr. Snake (voice)"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 48,
 		"fields": {
-			"movie_id": 634649,
-			"name": "Benedict Cumberbatch",
-			"profile_path": "/fBEucxECxGLKVHBznO0qHtCGiMO.jpg"
+			"movie_id": 629542,
+			"name": "Awkwafina",
+			"profile_path": "/l5AKkg3H1QhMuXmTTmq1EyjyiRb.jpg",
+			"department": "Acting",
+			"character": "Ms. Tarantula (voice)"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 49,
 		"fields": {
-			"movie_id": 634649,
-			"name": "Jacob Batalon",
-			"profile_path": "/53YhaL4xw4Sb1ssoHkeSSBaO29c.jpg"
+			"movie_id": 629542,
+			"name": "Craig Robinson",
+			"profile_path": "/nWZI2ghokrha2lYnr5Z48agItL7.jpg",
+			"department": "Acting",
+			"character": "Mr. Shark (voice)"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 50,
 		"fields": {
-			"movie_id": 634649,
-			"name": "Jon Favreau",
-			"profile_path": "/8MtRRnEHaBSw8Ztdl8saXiw1egP.jpg"
+			"movie_id": 629542,
+			"name": "Anthony Ramos",
+			"profile_path": "/ityTHqIXFT3laID4j4ptlnc84zq.jpg",
+			"department": "Acting",
+			"character": "Mr. Piranha (voice)"
 		}
 	},
 	{
@@ -455,7 +555,9 @@
 		"fields": {
 			"movie_id": 628900,
 			"name": "Chris Pine",
-			"profile_path": "/vSe6sIsdtcoqBhuWRXynahFg8Vf.jpg"
+			"profile_path": "/vSe6sIsdtcoqBhuWRXynahFg8Vf.jpg",
+			"department": "Acting",
+			"character": "James Harper"
 		}
 	},
 	{
@@ -464,7 +566,9 @@
 		"fields": {
 			"movie_id": 628900,
 			"name": "Ben Foster",
-			"profile_path": "/4le1PMWTGp7y2IBmZEIOHfE3HAB.jpg"
+			"profile_path": "/4le1PMWTGp7y2IBmZEIOHfE3HAB.jpg",
+			"department": "Acting",
+			"character": "Mike"
 		}
 	},
 	{
@@ -473,7 +577,9 @@
 		"fields": {
 			"movie_id": 628900,
 			"name": "Gillian Jacobs",
-			"profile_path": "/sdhAxrVgmoVpglDsKn2B2yZmdj5.jpg"
+			"profile_path": "/sdhAxrVgmoVpglDsKn2B2yZmdj5.jpg",
+			"department": "Acting",
+			"character": "Brianne"
 		}
 	},
 	{
@@ -482,7 +588,9 @@
 		"fields": {
 			"movie_id": 628900,
 			"name": "Eddie Marsan",
-			"profile_path": "/9atfOgIxhfOKvv2be8HEp6SzOct.jpg"
+			"profile_path": "/9atfOgIxhfOKvv2be8HEp6SzOct.jpg",
+			"department": "Acting",
+			"character": "Virgil"
 		}
 	},
 	{
@@ -491,7 +599,9 @@
 		"fields": {
 			"movie_id": 628900,
 			"name": "Kiefer Sutherland",
-			"profile_path": "/g4HLUHuQ742roPxugGzxeVoKnel.jpg"
+			"profile_path": "/g4HLUHuQ742roPxugGzxeVoKnel.jpg",
+			"department": "Acting",
+			"character": "Rusty"
 		}
 	},
 	{
@@ -500,7 +610,9 @@
 		"fields": {
 			"movie_id": 508947,
 			"name": "Sandra Oh",
-			"profile_path": "/zU8vjebHxcP60ESEL5Ok68KWZvj.jpg"
+			"profile_path": "/zU8vjebHxcP60ESEL5Ok68KWZvj.jpg",
+			"department": "Acting",
+			"character": "Ming (voice)"
 		}
 	},
 	{
@@ -509,7 +621,9 @@
 		"fields": {
 			"movie_id": 508947,
 			"name": "Rosalie Chiang",
-			"profile_path": "/cbEWkQM0FS9vzv07JFErCk0YKkx.jpg"
+			"profile_path": "/cbEWkQM0FS9vzv07JFErCk0YKkx.jpg",
+			"department": "Acting",
+			"character": "Meilin 'Mei' Lee (voice)"
 		}
 	},
 	{
@@ -518,7 +632,9 @@
 		"fields": {
 			"movie_id": 508947,
 			"name": "Ava Morse",
-			"profile_path": "/e3bkf5MHPzqvSrJALr78pp0DCWt.jpg"
+			"profile_path": "/e3bkf5MHPzqvSrJALr78pp0DCWt.jpg",
+			"department": "Acting",
+			"character": "Miriam (voice)"
 		}
 	},
 	{
@@ -527,7 +643,9 @@
 		"fields": {
 			"movie_id": 508947,
 			"name": "Maitreyi Ramakrishnan",
-			"profile_path": "/jBFqjwvngaz6ZXEhNd6dMeZ0W6c.jpg"
+			"profile_path": "/jBFqjwvngaz6ZXEhNd6dMeZ0W6c.jpg",
+			"department": "Acting",
+			"character": "Priya (voice)"
 		}
 	},
 	{
@@ -536,115 +654,141 @@
 		"fields": {
 			"movie_id": 508947,
 			"name": "Hyein Park",
-			"profile_path": "/dDGYpMSGoo18k2xj0ydaN1JHIMR.jpg"
+			"profile_path": "/dDGYpMSGoo18k2xj0ydaN1JHIMR.jpg",
+			"department": "Art",
+			"character": "Abby (voice)"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 61,
 		"fields": {
-			"movie_id": 785985,
-			"name": "Omar Sy",
-			"profile_path": "/laNZay6AfEzvEvY1NUH9UFiSD0a.jpg"
+			"movie_id": 406759,
+			"name": "Halle Berry",
+			"profile_path": "/ylkN2DRmjIFwoJDzHL3Zw7CSvwF.jpg",
+			"department": "Acting",
+			"character": "Jo Fowler"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 62,
 		"fields": {
-			"movie_id": 785985,
-			"name": "Laurent Lafitte",
-			"profile_path": "/lpF5sb1aEMEmxxfZT3u8PWGEipC.jpg"
+			"movie_id": 406759,
+			"name": "Patrick Wilson",
+			"profile_path": "/tc1ezEfIY8BhCy85svOUDtpBFPt.jpg",
+			"department": "Acting",
+			"character": "Brian Harper"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 63,
 		"fields": {
-			"movie_id": 785985,
-			"name": "Izïa Higelin",
-			"profile_path": "/bHt0lK9qNQLXhwRSYfp8Yt6i0kb.jpg"
+			"movie_id": 406759,
+			"name": "John Bradley",
+			"profile_path": "/eLcisM9qqCLWnf0iImHuSn08FOi.jpg",
+			"department": "Acting",
+			"character": "K.C. Houseman"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 64,
 		"fields": {
-			"movie_id": 785985,
-			"name": "Dimitri Storoge",
-			"profile_path": "/oB0iZvyEQAVPFE2QG7R4bk78pOH.jpg"
+			"movie_id": 406759,
+			"name": "Charlie Plummer",
+			"profile_path": "/fzKdQaaUWv4VDF8b3DE0yTcGU8z.jpg",
+			"department": "Acting",
+			"character": "Sonny Harper"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 65,
 		"fields": {
-			"movie_id": 785985,
-			"name": "Stéphane Pezerat",
-			"profile_path": "/ZjJMccU9L7X98DJymLqBMdjjuq.jpg"
+			"movie_id": 406759,
+			"name": "Yu Wenwen",
+			"profile_path": "/p5mHHHr3Wa3iKBca6dwkdZWN7QF.jpg",
+			"department": "Acting",
+			"character": "Michelle"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 66,
 		"fields": {
-			"movie_id": 406759,
-			"name": "Halle Berry",
-			"profile_path": "/ylkN2DRmjIFwoJDzHL3Zw7CSvwF.jpg"
+			"movie_id": 785985,
+			"name": "Omar Sy",
+			"profile_path": "/laNZay6AfEzvEvY1NUH9UFiSD0a.jpg",
+			"department": "Acting",
+			"character": "Ousmane Diakhité"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 67,
 		"fields": {
-			"movie_id": 406759,
-			"name": "Patrick Wilson",
-			"profile_path": "/tc1ezEfIY8BhCy85svOUDtpBFPt.jpg"
+			"movie_id": 785985,
+			"name": "Laurent Lafitte",
+			"profile_path": "/lpF5sb1aEMEmxxfZT3u8PWGEipC.jpg",
+			"department": "Acting",
+			"character": "François Monge"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 68,
 		"fields": {
-			"movie_id": 406759,
-			"name": "John Bradley",
-			"profile_path": "/eLcisM9qqCLWnf0iImHuSn08FOi.jpg"
+			"movie_id": 785985,
+			"name": "Izïa Higelin",
+			"profile_path": "/bHt0lK9qNQLXhwRSYfp8Yt6i0kb.jpg",
+			"department": "Acting",
+			"character": "Alice"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 69,
 		"fields": {
-			"movie_id": 406759,
-			"name": "Charlie Plummer",
-			"profile_path": "/fzKdQaaUWv4VDF8b3DE0yTcGU8z.jpg"
+			"movie_id": 785985,
+			"name": "Dimitri Storoge",
+			"profile_path": "/oB0iZvyEQAVPFE2QG7R4bk78pOH.jpg",
+			"department": "Acting",
+			"character": "Brunner"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 70,
 		"fields": {
-			"movie_id": 406759,
-			"name": "Yu Wenwen",
-			"profile_path": "/p5mHHHr3Wa3iKBca6dwkdZWN7QF.jpg"
+			"movie_id": 785985,
+			"name": "Stéphane Pezerat",
+			"profile_path": "/aJ3VKcVKzs1rEZsh4mWmFoCxSS.jpg",
+			"department": "Acting",
+			"character": "Mercier"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 71,
 		"fields": {
-			"movie_id": 763285,
-			"name": "Jake Gyllenhaal",
-			"profile_path": "/oA6fp6SQBQQWZEzn4NfY3E8mJhV.jpg"
+			"movie_id": 893370,
+			"name": "Daniel Hendler",
+			"profile_path": "/8Q36TGfbnm4CjuKVWz1XGmTiZtk.jpg",
+			"department": "Acting",
+			"character": "Luis"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 72,
 		"fields": {
-			"movie_id": 763285,
-			"name": "Yahya Abdul-Mateen II",
-			"profile_path": "/aBDebGZs2pAucyaK4EhHVJGm0Xu.jpg"
+			"movie_id": 893370,
+			"name": "Paula Silva",
+			"profile_path": null,
+			"department": "Acting",
+			"character": "Iris"
 		}
 	},
 	{
@@ -652,8 +796,10 @@
 		"pk": 73,
 		"fields": {
 			"movie_id": 763285,
-			"name": "Eiza González",
-			"profile_path": "/w2pZ8gLqZNguj8cqrDGbMw2Ibj0.jpg"
+			"name": "Jake Gyllenhaal",
+			"profile_path": "/oA6fp6SQBQQWZEzn4NfY3E8mJhV.jpg",
+			"department": "Acting",
+			"character": "Danny Sharp"
 		}
 	},
 	{
@@ -661,8 +807,10 @@
 		"pk": 74,
 		"fields": {
 			"movie_id": 763285,
-			"name": "Garret Dillahunt",
-			"profile_path": "/9ISUezmwt2Hnm2do6Mg75EyAwgE.jpg"
+			"name": "Yahya Abdul-Mateen II",
+			"profile_path": "/aBDebGZs2pAucyaK4EhHVJGm0Xu.jpg",
+			"department": "Acting",
+			"character": "Will Sharp"
 		}
 	},
 	{
@@ -670,62 +818,76 @@
 		"pk": 75,
 		"fields": {
 			"movie_id": 763285,
-			"name": "Keir O'Donnell",
-			"profile_path": "/4PnupUSZLvtT5DOfAuqHrGgdEuV.jpg"
+			"name": "Eiza González",
+			"profile_path": "/w2pZ8gLqZNguj8cqrDGbMw2Ibj0.jpg",
+			"department": "Acting",
+			"character": "Cam Thompson"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 76,
 		"fields": {
-			"movie_id": 893370,
-			"name": "Daniel Hendler",
-			"profile_path": "/8Q36TGfbnm4CjuKVWz1XGmTiZtk.jpg"
+			"movie_id": 763285,
+			"name": "Garret Dillahunt",
+			"profile_path": "/9ISUezmwt2Hnm2do6Mg75EyAwgE.jpg",
+			"department": "Acting",
+			"character": "Captain Monroe"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 77,
 		"fields": {
-			"movie_id": 893370,
-			"name": "Paula Silva",
-			"profile_path": null
+			"movie_id": 763285,
+			"name": "Keir O'Donnell",
+			"profile_path": "/4PnupUSZLvtT5DOfAuqHrGgdEuV.jpg",
+			"department": "Acting",
+			"character": "FBI Agent Anson Clark"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 78,
 		"fields": {
-			"movie_id": 883502,
-			"name": "Chad Michael Murray",
-			"profile_path": "/uX04loV7QcU17hbKzs8XPKQ45qY.jpg"
+			"movie_id": 799876,
+			"name": "Mark Rylance",
+			"profile_path": "/gpnwdLoAbhAKwXQzJ04ga7UeJhs.jpg",
+			"department": "Acting",
+			"character": "Leonard"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 79,
 		"fields": {
-			"movie_id": 883502,
-			"name": "Bruce Willis",
-			"profile_path": "/caX3KtMU42EP3VLRFFBwqIIrch5.jpg"
+			"movie_id": 799876,
+			"name": "Zoey Deutch",
+			"profile_path": "/aG8lof9iCfmv135fKamRy6ffnUA.jpg",
+			"department": "Acting",
+			"character": "Mable"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 80,
 		"fields": {
-			"movie_id": 883502,
-			"name": "Jesse Metcalfe",
-			"profile_path": "/atp5FK0tBemYNYQfSPnI2egR7rX.jpg"
+			"movie_id": 799876,
+			"name": "Dylan O'Brien",
+			"profile_path": "/bO2siXPq477k47nBVdgPJqPZoCc.jpg",
+			"department": "Acting",
+			"character": "Richie"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 81,
 		"fields": {
-			"movie_id": 883502,
-			"name": "Kelly Greyson",
-			"profile_path": "/dbygGZLqAqhPLQKVa24TACboAj9.jpg"
+			"movie_id": 799876,
+			"name": "Johnny Flynn",
+			"profile_path": "/xGCDMRFkUeEhz9h0cbK2lGuKTSD.jpg",
+			"department": "Acting",
+			"character": "Francis"
 		}
 	},
 	{
@@ -733,44 +895,54 @@
 		"pk": 82,
 		"fields": {
 			"movie_id": 799876,
-			"name": "Mark Rylance",
-			"profile_path": "/bztEZRyXrvW3Pg1fexNASXlZrq7.jpg"
+			"name": "Nikki Amuka-Bird",
+			"profile_path": "/bbZouEqBH8lhldqYmnBxR7XxhlA.jpg",
+			"department": "Acting",
+			"character": "Violet"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 83,
 		"fields": {
-			"movie_id": 799876,
-			"name": "Zoey Deutch",
-			"profile_path": "/aG8lof9iCfmv135fKamRy6ffnUA.jpg"
+			"movie_id": 883502,
+			"name": "Chad Michael Murray",
+			"profile_path": "/uX04loV7QcU17hbKzs8XPKQ45qY.jpg",
+			"department": "Acting",
+			"character": "Balzary"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 84,
 		"fields": {
-			"movie_id": 799876,
-			"name": "Dylan O'Brien",
-			"profile_path": "/bO2siXPq477k47nBVdgPJqPZoCc.jpg"
+			"movie_id": 883502,
+			"name": "Bruce Willis",
+			"profile_path": "/caX3KtMU42EP3VLRFFBwqIIrch5.jpg",
+			"department": "Acting",
+			"character": "Robert"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 85,
 		"fields": {
-			"movie_id": 799876,
-			"name": "Johnny Flynn",
-			"profile_path": "/xGCDMRFkUeEhz9h0cbK2lGuKTSD.jpg"
+			"movie_id": 883502,
+			"name": "Jesse Metcalfe",
+			"profile_path": "/atp5FK0tBemYNYQfSPnI2egR7rX.jpg",
+			"department": "Acting",
+			"character": "Paul"
 		}
 	},
 	{
 		"model": "movies.actor",
 		"pk": 86,
 		"fields": {
-			"movie_id": 799876,
-			"name": "Nikki Amuka-Bird",
-			"profile_path": "/bbZouEqBH8lhldqYmnBxR7XxhlA.jpg"
+			"movie_id": 883502,
+			"name": "Kelly Greyson",
+			"profile_path": "/dbygGZLqAqhPLQKVa24TACboAj9.jpg",
+			"department": "Acting",
+			"character": "Kate"
 		}
 	},
 	{
@@ -779,7 +951,9 @@
 		"fields": {
 			"movie_id": 568124,
 			"name": "Stephanie Beatriz",
-			"profile_path": "/ihKxmsmo8mpJjmRuchBo9W8gJq4.jpg"
+			"profile_path": "/ihKxmsmo8mpJjmRuchBo9W8gJq4.jpg",
+			"department": "Acting",
+			"character": "Mirabel Madrigal (voice)"
 		}
 	},
 	{
@@ -788,7 +962,9 @@
 		"fields": {
 			"movie_id": 568124,
 			"name": "María Cecilia Botero",
-			"profile_path": "/nH6eBBgv1PI9J6Ftkn01ny1TMt1.jpg"
+			"profile_path": "/nH6eBBgv1PI9J6Ftkn01ny1TMt1.jpg",
+			"department": "Acting",
+			"character": "Abuela Alma Madrigal (voice)"
 		}
 	},
 	{
@@ -797,7 +973,9 @@
 		"fields": {
 			"movie_id": 568124,
 			"name": "John Leguizamo",
-			"profile_path": "/kEbXDtcPJ46GEhj5QlCTLZS6PWE.jpg"
+			"profile_path": "/kEbXDtcPJ46GEhj5QlCTLZS6PWE.jpg",
+			"department": "Acting",
+			"character": "Bruno Madrigal (voice)"
 		}
 	},
 	{
@@ -806,7 +984,9 @@
 		"fields": {
 			"movie_id": 568124,
 			"name": "Mauro Castillo",
-			"profile_path": "/qGNGBRyy9LumdFw32M7elnHP4IJ.jpg"
+			"profile_path": "/qGNGBRyy9LumdFw32M7elnHP4IJ.jpg",
+			"department": "Acting",
+			"character": "Félix Madrigal (voice)"
 		}
 	},
 	{
@@ -815,7 +995,9 @@
 		"fields": {
 			"movie_id": 568124,
 			"name": "Jessica Darrow",
-			"profile_path": "/rJojc1ZUasEnUxSk7lL42RxyQbP.jpg"
+			"profile_path": "/rJojc1ZUasEnUxSk7lL42RxyQbP.jpg",
+			"department": "Acting",
+			"character": "Luisa Madrigal (voice)"
 		}
 	}
 ]
