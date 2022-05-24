@@ -35,6 +35,22 @@
                                 <!-- <div style="width:160px; text-align:center; word-break:normal; " class="text-center text-dark">{{director.department}}</div> -->
                             </div>
                         </div>
+                        {% if user.id %}
+                        <div>
+                            <form class="dlike-form" data-director-id="{{ director.pk }}">
+                                {% csrf_token %}
+                                {% if user in director.like_users.all %}
+                                  <button>
+                                    <i id="dlike-{{ director.pk }}" class="fa-solid fa-heart" style="color:red"></i>
+                                  </button>
+                                {% else %}
+                                  <button>
+                                    <i id="dlike-{{ director.pk }}" class="fa-solid fa-heart" style="color:black"></i>
+                                  </button>
+                                  {% endif %}
+                                {% endif %}
+                            </form>
+                        </div>
                         {% endif %}
                         {% endfor %}
                     </div>
@@ -51,6 +67,22 @@
                                 <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.name}}</div>
                                 <!-- <div style="width:130px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.department}}</div> -->
                             </div>
+                        </div>
+                        {% if user.id %}
+                        <div>
+                            <form class="alike-form" data-actor-id="{{ actor.pk }}">
+                                {% csrf_token %}
+                                {% if user in actor.like_users.all %}
+                                  <button>
+                                    <i id="alike-{{ actor.pk }}" class="fa-solid fa-heart" style="color:red"></i>
+                                  </button>
+                                {% else %}
+                                  <button>
+                                    <i id="alike-{{ actor.pk }}" class="fa-solid fa-heart" style="color:black"></i>
+                                  </button>
+                                  {% endif %}
+                                {% endif %}
+                            </form>
                         </div>
                         {% endif %}
                         {% endfor %}
@@ -93,4 +125,52 @@
     </div>
     <br>
 </div>
+<script>
+    const dforms = document.querySelectorAll('.dlike-form')
+    const dcsrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    dforms.forEach((form) => {
+        form.addEventListener('submit', (event)=>{
+            event.preventDefault()
+            const directorId = event.target.dataset.directorId
+            axios({
+                method: 'post',
+                url: `http://127.0.0.1:8000/movies/${directorId}/director_likes/`,
+                headers: {'X-CSRFToken': dcsrftoken},
+            })
+            .then(response => {
+                const { isLiked, likedCount } = response.data
+                const likeBtn = document.querySelector(`#dlike-${directorId}`)
+                const likeCount = document.querySelector(`#dlike-count-${directorId}`)
+                if (isLiked) {
+                    likeBtn.style.color = 'red'
+                } else {
+                    likeBtn.style.color = 'black'
+                }
+            })
+        })
+    })
+    const aforms = document.querySelectorAll('.alike-form')
+    const acsrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    aforms.forEach((form) => {
+        form.addEventListener('submit', (event)=>{
+            event.preventDefault()
+            const actorId = event.target.dataset.actorId
+            axios({
+                method: 'post',
+                url: `http://127.0.0.1:8000/movies/${actorId}/actor_likes/`,
+                headers: {'X-CSRFToken': acsrftoken},
+            })
+            .then(response => {
+                const { isLiked, likedCount } = response.data
+                const likeBtn = document.querySelector(`#alike-${actorId}`)
+                const likeCount = document.querySelector(`#alike-count-${actorId}`)
+                if (isLiked) {
+                    likeBtn.style.color = 'red'
+                } else {
+                    likeBtn.style.color = 'black'
+                }
+            })
+        })
+    })
+</script>
 {% endblock detail %}

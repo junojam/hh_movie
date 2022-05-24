@@ -1,5 +1,4 @@
 import json
-# from pprint import pprint
 import sys
 import requests
 import pprint
@@ -25,12 +24,11 @@ def director_info(movie_list):
                     'language' : 'ko-KR',
                 }
                 res = requests.get(BASE_URL3 + str(response['crew'][idx2]['id']), params = params).json()
-                pprint.pprint(res['name'])
-                pprint.pprint(res['profile_path'])
-                fields['movie_id'] = movie['id']
+                fields['id'] = res['id']
                 fields['name'] = res['name']
                 fields['profile_path'] = res['profile_path']
-                fields['department'] = response['crew'][idx2]['department']
+                fields['movie_id'] = movie['id']
+
                 info = { 
                     "model": "movies.director",
                     "pk": i,
