@@ -1,16 +1,14 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block detail %}
 <div class="backgroundimagesetting">
-    <!-- <div> -->
     <br>
     <div class="container" style="padding: 12px; background-color: #ffffff;">
         <iframe width="100%" height="600px" src="{{ movie.video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <hr> 
-
         <div class="d-flex flex-row justify-content-start align-items-start">
             <img class="items me-3 mt-3" width="480px" height="720px" src="https://www.themoviedb.org/t/p/original{{ movie.poster_path }}" alt="">
-            <div class="">
+            <div >
                 <br>
                 <div class="item d-flex flex-row justify-content-between align-items-center">
                     <h2 class="item align-items-center">{{ movie.title }} <span class="ms-2 btn btn-success" style="cursor:default">{{movie.vote_average}}</span></h2>
@@ -19,87 +17,121 @@
                 <hr>
                 <div>개봉일 : {{ movie.release_date}}</div>
                 <br>
-                <h5 class="item" >{{ movie.overview }}</h5>
-                <br>
+                <h5 class="item" >&ensp;{{ movie.overview }}</h5>
+
                 <div>
-                    <h4>감독</h4>
+                    <br>
+                    <h4> 감독</h4>
                     <hr>
+
                     <div class="d-flex flex-row justify-content-start fw-bold">
                         {% for director in directors %}
-                        {% if director.movie_id == movie.id %}
-                        <div class="d-flex">
-                            <div class="item" style="margin:10px;">
-                                {% load static %}
-                                <img width="135px" src="https://www.themoviedb.org/t/p/original{{director.profile_path}}" onerror="this.src=`{% static 'movies/ALT_IMAGE.png' %}`" alt="">
-                                <div style="width:135px; text-align:center; word-break:normal; " class="text-center text-dark">{{director.name}}</div>
-                                <!-- <div style="width:160px; text-align:center; word-break:normal; " class="text-center text-dark">{{director.department}}</div> -->
+                            {% if director.movie_id == movie.id %}
+                            {% if user.id %}
+                            <div>
+                                <form class="dlike-form" data-director-id="{{ director.pk }}" style="margin:10px;">
+                                    {% csrf_token %}
+                                    {% if user in director.like_users.all %}
+                                    <button class="btn btn-outline-light border border-none" style="border: none; padding:0; outline:none;">
+                                        <img width="135px" src="https://www.themoviedb.org/t/p/original{{director.profile_path}}" onerror="this.src=`{% static 'movies/ALT_IMAGE.png' %}`" alt="">
+                                    </button>
+                                    <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{director.name}}
+                                        <span>
+                                            <i id="dlike-{{ director.pk }}" class="fa-solid fa-heart" style="color:red">
+                                            </i>
+                                        </span>
+                                    </div>
+                                    {% else %}
+                                    <button class="btn btn-outline-light border border-none" style="border: none; padding:0; outline:none;">
+                                        <img width="135px" src="https://www.themoviedb.org/t/p/original{{director.profile_path}}" onerror="this.src=`{% static 'movies/ALT_IMAGE.png' %}`" alt="">
+                                    </button>
+                                    <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{director.name}}
+                                        <span>
+                                            <i id="dlike-{{ director.pk }}" class="fa-solid fa-heart" style="color:black">
+                                            </i>
+                                        </span>
+                                    </div>
+                                    {% endif %}
+                                </form>
                             </div>
-                        </div>
-                        {% if user.id %}
-                        <div>
-                            <form class="dlike-form" data-director-id="{{ director.pk }}">
-                                {% csrf_token %}
-                                {% if user in director.like_users.all %}
-                                  <button>
-                                    <i id="dlike-{{ director.pk }}" class="fa-solid fa-heart" style="color:red"></i>
-                                  </button>
-                                {% else %}
-                                  <button>
-                                    <i id="dlike-{{ director.pk }}" class="fa-solid fa-heart" style="color:black"></i>
-                                  </button>
-                                  {% endif %}
-                                {% endif %}
-                            </form>
-                        </div>
-                        {% endif %}
+                            {% else %}
+                            <div class="d-flex">
+                                <div class="item" style="margin:10px;">
+                                    <img width="135px" src="https://www.themoviedb.org/t/p/original{{director.profile_path}}" onerror="this.src=`{% static 'movies/ALT_IMAGE.png' %}`" alt="">
+                                    <div style="width:135px; text-align:center; word-break:normal; " class="text-center text-dark">{{director.name}}</div>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endif %}
                         {% endfor %}
                     </div>
+
                     <br>
-                    <h4>배우</h4>
+                    <h4> 배우</h4>
                     <hr>
+
                     <div class="d-flex flex-row justify-content-start fw-bold">
                         {% for actor in actors %}
-                        {% if actor.movie_id == movie.id %}
-                        <div class="d-flex">
-                            <div class="item" style="margin:10px;">
-                                <img  width="135px" src="https://www.themoviedb.org/t/p/original{{actor.profile_path}}" onerror="this.src=`{% static 'movies/ALT_IMAGE.png' %}`" alt="">
-                                <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.character}} 역</div>
-                                <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.name}}</div>
-                                <!-- <div style="width:130px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.department}}</div> -->
+                            {% if actor.movie_id == movie.id %}
+                            {% if user.id %}
+                            <div>
+                                <form class="alike-form" data-actor-id="{{ actor.pk }}" style="margin:10px;">
+                                    {% csrf_token %}
+                                    {% if user in actor.like_users.all %}
+                                    <button class="btn btn-outline-light border border-none" style="border: none; padding:0; outline:none;">
+                                        <img  width="135px" src="https://www.themoviedb.org/t/p/original{{actor.profile_path}}" onerror="this.src=`{% static 'movies/ALT_IMAGE.png' %}`" alt="">
+                                    </button>
+                                    <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.character}} 역</div>
+                                    <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.name}}
+                                        <span>
+                                            <i id="alike-{{ actor.pk }}" class="fa-solid fa-heart" style="color:red">
+                                            </i>
+                                        </span>
+                                    </div>
+                                    {% else %}
+                                    <button class="btn btn-outline-light border border-none" style="border: none; padding:0; outline:none;">
+                                        <img  width="135px" src="https://www.themoviedb.org/t/p/original{{actor.profile_path}}" onerror="this.src=`{% static 'movies/ALT_IMAGE.png' %}`" alt="">
+                                    </button>
+                                    <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.character}} 역</div>
+                                    <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.name}}
+                                        <span>
+                                            <i id="alike-{{ actor.pk }}" class="fa-solid fa-heart" style="color:black">
+                                            </i>
+                                        </span>
+                                    </div>
+
+                                    {% endif %}
+                                </form>
                             </div>
-                        </div>
-                        {% if user.id %}
-                        <div>
-                            <form class="alike-form" data-actor-id="{{ actor.pk }}">
-                                {% csrf_token %}
-                                {% if user in actor.like_users.all %}
-                                  <button>
-                                    <i id="alike-{{ actor.pk }}" class="fa-solid fa-heart" style="color:red"></i>
-                                  </button>
-                                {% else %}
-                                  <button>
-                                    <i id="alike-{{ actor.pk }}" class="fa-solid fa-heart" style="color:black"></i>
-                                  </button>
-                                  {% endif %}
-                                {% endif %}
-                            </form>
-                        </div>
-                        {% endif %}
+                            {% else %}
+                            <div class="d-flex">
+                                <div class="item" style="margin:10px;">
+                                    <img  width="135px" src="https://www.themoviedb.org/t/p/original{{actor.profile_path}}" onerror="this.src=`{% static 'movies/ALT_IMAGE.png' %}`" alt="">
+                                    <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.character}} 역</div>
+                                    <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{actor.name}}</div>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endif %}
                         {% endfor %}
                     </div>
                 </div>
-
             </div>
         </div>
+
         {% if movie.user == request.user %}
+
         <div>
             <a href="{% url 'movies:update' movie.pk %}">UPDATE</a>
         </div>
+
         <form action="{% url 'movies:delete' movie.pk %}" method="POST">
             {% csrf_token %}
             <input type="submit" value="DELETE">
         </form>
+
             {% comment %} <a href="{% url 'movies:delete' movie.pk %}">DELETE</a> {% endcomment %}
+
         {% endif %}
 
         <hr>
@@ -109,8 +141,8 @@
             <li>{{ comment.content }}
                 {% if request.user == movie.user %}
                 <form action="{% url 'movies:comments_delete' movie.pk comment.pk %}" method='POST' class='d-inline'>
-                {% csrf_token %}
-                <input type="submit" value="DELETE">
+                    {% csrf_token %}
+                    <input type="submit" value="DELETE">
                 </form>
                 {% endif %}
             </li>
@@ -125,6 +157,7 @@
     </div>
     <br>
 </div>
+
 <script>
     const dforms = document.querySelectorAll('.dlike-form')
     const dcsrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
@@ -149,6 +182,7 @@
             })
         })
     })
+
     const aforms = document.querySelectorAll('.alike-form')
     const acsrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
     aforms.forEach((form) => {
@@ -172,5 +206,6 @@
             })
         })
     })
+
 </script>
 {% endblock detail %}

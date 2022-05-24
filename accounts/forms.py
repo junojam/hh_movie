@@ -11,4 +11,4 @@ class CustomUserCreationForm(UserCreationForm):
     
     class Meta(UserCreationForm.Meta):
         model = get_user_model()
-        fields = (UserCreationForm.Meta.fields)
+        fields = ('username', 'password1', 'password2')
