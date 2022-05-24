@@ -2,7 +2,7 @@
 
 {% block content %}
 <br>
-<div class="container bg-secondary">
+<div class="container bg-secondary" style="height: 60%">
   <h1>회원정보수정</h1>
   <form action="{% url 'accounts:update' %}" method="POST">
     {% csrf_token %}

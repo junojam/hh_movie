@@ -2,9 +2,9 @@
 
 {% block content %}
 <br>
-<div class="container bg-secondary">
+<div class="container bg-secondary" style="height: 60%">
     <h1>Login</h1>
-    <br>
+    <hr>
     <form action="" method="POST">
         {% csrf_token %}
         {{ form.as_p }}

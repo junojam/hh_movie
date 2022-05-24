@@ -2,13 +2,13 @@
 
 {% block content %}
 <br>
-<div class="container bg-secondary">
+<div class="container bg-secondary" style="height: 60%">
   <h1>Signup</h1>
+  <hr>
   <form action="{% url 'accounts:signup' %}" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Submit">
+    <input type="submit" value="Signup">
   </form>
-  <a href="{% url 'movies:index' %}">BACK</a>
 </div>
 {% endblock content %}

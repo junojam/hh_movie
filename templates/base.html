@@ -48,8 +48,8 @@
 
     </style>
 </head>
-<body class="mainbackgroundimagesetting">
-    <div>
+<body class="mainbackgroundimagesetting" style="height: 100%">
+    <div style="height: 100%">
       {% if request.user.is_authenticated %}
       <nav class="d-flex justify-content-between navbar-light bg-dark sticky-top">
         <div class="d-flex flew-row">
@@ -57,51 +57,45 @@
             <img class="mx-5 my-2" width="100px" src="{% static 'movies/LOGO_INVISIBLE.png' %}" alt="My image">
           </a>
           <div class="d-flex flex-row">
-            <a class="d-flex align-items-center me-2 text-decoration-none text-white" href="{% url 'movies:index' %}">Home</a>
+            <a class="d-flex align-items-center mx-2 text-decoration-none text-white" href="{% url 'movies:index' %}">Home</a>
+
             {% comment %} 영화 추천 {% endcomment %}
-            {% comment %} <div class="d-flex">
-              <a href="{% url 'articles:index' %}">Community</a>
-            </div> {% endcomment %}
+            <a class="d-flex align-items-center mx-2 text-decoration-none text-white" href="#">Recommend</a>
             
-            {% comment %} 내가 좋아요 한 영화 {% endcomment %}
-            
-            {% comment %} 프로필 {% endcomment %}
             <div class="d-flex align-items-center justify-content-start  text-decoration-none text-white">
               <a class=" text-decoration-none text-white mx-2" href="{% url 'articles:index' %}">Community</a>
             </div>
           </div>
         </div>
-
         <div class="d-flex flex-row justify-content-start align-items-center">
-              <div class="text-white me-1">
-                <div>안녕하세요, {{ user }}님</div>
+            <div class="text-white mx-2">
+              <div>안녕하세요, 
+                  <a class="text-decoration-none text-white" href="{% url 'accounts:profile' user.username %}">
+                    {{ user }}
+                  </a>
+                  님
               </div>
-
-              <div class="me-1">
-                <a class="text-decoration-none text-white" href="{% url 'accounts:update' %}">회원정보수정</a>
-              </div>
-
-
-
-              <div class="me-5">
-                <form action="{% url 'accounts:logout' %}" method="POST">
-                  {% csrf_token %}
-                  <input type="submit" value="Logout">
-                </form>
-              </div>
-              <!-- <div class="me-5 m-1">
-                <form action="{% url 'accounts:delete' %}" method="POST">
-                  {% csrf_token %}
-                  <input type="submit" value="회원탈퇴">
-                </form>
-              </div> -->
             </div>
 
+            <div class="mx-2">
+              <a class="text-decoration-none text-white" href="{% url 'accounts:profile' user.username %}">내 프로필</a>
+            </div>
+
+            <div class="me-5 ms-2">
+              <form action="{% url 'accounts:logout' %}" method="POST">
+                {% csrf_token %}
+                <input type="submit" value="Logout">
+              </form>
+            </div>
+            <!-- <div class="me-5 m-1">
+              <form action="{% url 'accounts:delete' %}" method="POST">
+                {% csrf_token %}
+                <input type="submit" value="회원탈퇴">
+              </form>
+            </div> -->
         </div>
       </nav>
-
       {% else %}
-
       <nav class="d-flex justify-content-between navbar-light bg-dark sticky-top">
         <div class="d-flex flew-row">
           <a href="{% url 'movies:index' %}">
@@ -140,10 +134,13 @@
 
       {% block index %}
       {% endblock index %}
+
       {% block detail %}
       {% endblock detail %}
+
       {% block content %}
       {% endblock content %}
+
       </div>
     </div>
     
