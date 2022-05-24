@@ -3,7 +3,7 @@
 {% block content %}
 <br>
 <div class="container bg-white" style="height: 60%">
-  <h1>Signup</h1>
+  <h1>회원가입</h1>
   <hr>
   <form action="{% url 'accounts:signup' %}" method="POST">
     {% csrf_token %}
