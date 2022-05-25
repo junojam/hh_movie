@@ -28,9 +28,9 @@ def index(request):
     # 6. 감독, 배우를 검색을 통해서 영화 가져올 수 있도록
     
 def recommend(request):
+    movies = Movie.objects.all()
     context={
         'movies':movies,
-        'movie_directors':movie_directors
     }
     return render(request, 'movies/recommend.html',context)
 
