@@ -89,7 +89,6 @@
         opacity: 0.7;
         background-size: cover;
       }
-
       {% comment %} 평점 배경설정 {% endcomment %}
       .scoremainbackgroundimagesetting {
         width: 100%;
@@ -336,6 +335,38 @@
   myModal.addEventListener('shown.bs.modal', function () {
     myInput.focus()
   })
+
+
+
+  {% comment %} 별점 틀 {% endcomment %}
+  document.addEventListener('DOMContentLoaded', function(){
+    //별점선택 이벤트 리스너
+    document.querySelector('.rating').addEventListener('click',function(e){
+        let elem = e.target;
+        if(elem.classList.contains('rate_radio')){
+            rating.setRate(parseInt(elem.value));
+        }
+    })
+});
+
+//별점 마킹 모듈 프로토타입으로 생성
+function Rating(){};
+Rating.prototype.rate = 0;
+Rating.prototype.setRate = function(newrate){
+    //별점 마킹 - 클릭한 별 이하 모든 별 체크 처리
+    this.rate = newrate;
+    document.querySelector('.ratefill').style.width = parseInt(newrate * 60) + 'px';
+    let items = document.querySelectorAll('.rate_radio');
+    items.forEach(function(item, idx){
+        if(idx < newrate){
+            item.checked = true;
+        }else{
+            item.checked = false;
+        }
+    });
+}
+
+let rating = new Rating();//별점 인스턴스 생성
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>

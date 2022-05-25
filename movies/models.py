@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
 class Movie(models.Model):
@@ -37,3 +38,8 @@ class Actor(models.Model):
     profile_path = models.TextField(null=True)
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
     character = models.TextField()
+    
+class Score(models.Model):
+    star = models.FloatField()
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)

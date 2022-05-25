@@ -1,9 +1,10 @@
 from django.shortcuts import get_list_or_404, get_object_or_404, render, redirect
 from .models import Director, Movie, Comment, Actor
-from .forms import MovieForm, CommentForm
+from .forms import MovieForm, CommentForm, ScoreForm
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods, require_POST, require_GET
 from django.http import JsonResponse
+from django.db.models import Avg
 
 # Create your views here.
 def index(request):
@@ -38,6 +39,9 @@ def detail(request, pk):
     actors = get_list_or_404(Actor)
     directors = get_list_or_404(Director)
     comment_form=CommentForm()
+    scores_num= len(movie.score_set.all())
+    scores=movie.score_set.aggregate(Avg('star'))
+    scores_avg=str(scores['star__avg'])[:3]
     comments=movie.comment_set.all()
     comments_num = len(movie.comment_set.all())
     context = {
@@ -47,6 +51,8 @@ def detail(request, pk):
         'comment_form':comment_form,
         'comments':comments,
         'comments_num':comments_num,
+        'scores_num':scores_num,
+        'scores_avg':scores_avg,
     }
     return render(request, 'movies/detail.html', context)
 
@@ -65,7 +71,6 @@ def update(request, pk):
         'movie':movie,
         'form':form,
     }
-
     return render(request, 'movies/update.html', context)
 
 @require_POST
@@ -146,4 +151,18 @@ def actor_likes(request, actor_pk):
             'likedCount': actor.like_users.count(),
         }
         return JsonResponse(context)
+    return redirect('accounts:login')
+
+
+@require_POST
+def scores_create(request, pk):
+    if request.user.is_authenticated:
+        movie = get_object_or_404(Movie, pk=pk)
+        score_form = ScoreForm(request.POST)
+        if score_form.is_valid():
+            star=score_form.save(commit=False)
+            star.movie=movie
+            star.user = request.user
+            star.save()
+        return redirect('movies:detail', movie.pk)
     return redirect('accounts:login')
