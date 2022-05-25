@@ -295,7 +295,7 @@
 
                     <div class="d-flex flex-row justify-content-start fw-bold">
                         {% for movie_director in movie_directors %}
-                            {% if director.movie_id == movie.id %}
+                            {% if user.id %}
                             <div>
                                 <form class="dlike-form" data-director-id="{{ movie_director.pk }}" style="margin:10px;">
                                     {% csrf_token %}
@@ -339,7 +339,7 @@
 
                     <div class="d-flex flex-row justify-content-start fw-bold">
                         {% for movie_actor in movie_actors %}
-                            {% if actor.movie_id == movie.id %}
+                            {% if user.id %}
                             <div>
                                 <form class="alike-form" data-actor-id="{{ movie_actor.pk }}" style="margin:10px;">
                                     {% csrf_token %}
