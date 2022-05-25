@@ -1,0 +1,170 @@
+[
+	{
+		"model": "movies.director",
+		"pk": 76009,
+		"fields": {
+			"name": "Arie Posin",
+			"profile_path": "/kG00Bm098iTtK6RJRowss7QMRZ7.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 56578,
+		"fields": {
+			"name": "Jeff Tremaine",
+			"profile_path": "/3R8FemTgvyY1vLn9r0lYlL45P3Q.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 197,
+		"fields": {
+			"name": "David Silverman",
+			"profile_path": "/4ia152M03hntrS7FBHveRx2VeuP.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 2710,
+		"fields": {
+			"name": "James Cameron",
+			"profile_path": "/9NAZnTjBQ9WcXAQEzZpKy4vdQto.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 10828,
+		"fields": {
+			"name": "Guillermo del Toro",
+			"profile_path": "/gldeyCtKcaqnK1v4Vu9vqayhzUQ.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 3193734,
+		"fields": {
+			"name": "Sammi Cohen",
+			"profile_path": null
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 1224778,
+		"fields": {
+			"name": "Monika Mitchell",
+			"profile_path": "/rVQdInhmvt6VaX8apV9AxSU5JQb.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 17633,
+		"fields": {
+			"name": "Rob Marshall",
+			"profile_path": "/4cTHkbMpsHHNI23HP3RHNLFoPRz.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 1704,
+		"fields": {
+			"name": "Gore Verbinski",
+			"profile_path": "/vu50X3GaGz1q1xoVfoKHS7hFkiG.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 55615,
+		"fields": {
+			"name": "Megan Park",
+			"profile_path": "/dZbpZjJm5ZIMKRoV2gzEpeJhRmt.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 1800570,
+		"fields": {
+			"name": "Cristian Bernard",
+			"profile_path": null
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 40256,
+		"fields": {
+			"name": "D. J. Caruso",
+			"profile_path": "/f1SZVhhjvzVot596JYVJdf60dWY.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 1227608,
+		"fields": {
+			"name": "Doug Murphy",
+			"profile_path": null
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 19271,
+		"fields": {
+			"name": "Anthony Russo",
+			"profile_path": "/x2ZZJPBhuCJCTzRMu0GWuTt544W.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 19272,
+		"fields": {
+			"name": "Joe Russo",
+			"profile_path": "/ph1GRCWVKk6Mz9lMBrxKvlb6Imo.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 2793711,
+		"fields": {
+			"name": "Mark Andrew Hamer",
+			"profile_path": null
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 123238,
+		"fields": {
+			"name": "Brian Skiba",
+			"profile_path": null
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 1704,
+		"fields": {
+			"name": "Gore Verbinski",
+			"profile_path": "/vu50X3GaGz1q1xoVfoKHS7hFkiG.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 1704,
+		"fields": {
+			"name": "Gore Verbinski",
+			"profile_path": "/vu50X3GaGz1q1xoVfoKHS7hFkiG.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 50767,
+		"fields": {
+			"name": "Craig Gillespie",
+			"profile_path": "/pVHspL9QWsXCm3t3VXEaCJ9y8Zz.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 1457161,
+		"fields": {
+			"name": "Paco Caballero",
+			"profile_path": "/z4rvKHnWHTBsZV7spengr3HYOU.jpg"
+		}
+	}
+]

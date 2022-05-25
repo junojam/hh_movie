@@ -21,10 +21,10 @@ class Movie(models.Model):
     release_date = models.TextField()
     vote_average = models.FloatField()
     poster_path = models.TextField()
-    backdrop_path = models.TextField()
+    backdrop_path = models.TextField(null=True)
     adult = models.BooleanField()
     genre = models.TextField()
-    video_url = models.TextField()
+    video_url = models.TextField(null=True)
     actors = models.ManyToManyField(Actor)
     directors = models.ManyToManyField(Director)
 

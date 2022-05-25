@@ -1,0 +1,194 @@
+[
+	{
+		"model": "movies.director",
+		"pk": 52443,
+		"fields": {
+			"name": "Jason Reitman",
+			"profile_path": "/eNNN1dwfB6b6p2hoEG1xyoa7H2p.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 1981891,
+		"fields": {
+			"name": "David Blue Garcia",
+			"profile_path": "/7hOkGPtXZQK9siUvrmLnlLwPEf3.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 24618,
+		"fields": {
+			"name": "Paloma Baeza",
+			"profile_path": "/iXT3kKAAXwbaeTumswzje8chq8n.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 1087746,
+		"fields": {
+			"name": "Niki Lindroth von Bahr",
+			"profile_path": "/snqOLwCHXf9xv5aHYysrYaKvhzN.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 1437799,
+		"fields": {
+			"name": "Emma De Swaef",
+			"profile_path": "/jOpuajeVo4dbjidglOcZDUVkbQ1.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 1579618,
+		"fields": {
+			"name": "Marc James Roels",
+			"profile_path": "/bmB0o5DM2NMWx9qWFxwTizDOWIi.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 2542498,
+		"fields": {
+			"name": "Aakash Bhatia",
+			"profile_path": null
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 11092,
+		"fields": {
+			"name": "Simon Kinberg",
+			"profile_path": "/3xvTvkIaKfU276cpajiAoGjvaaO.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 66681,
+		"fields": {
+			"name": "Matt Bettinelli-Olpin",
+			"profile_path": "/gVb02wTpNfD2YN5oyJL2AgeFP8x.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 1039527,
+		"fields": {
+			"name": "Tyler Gillett",
+			"profile_path": "/puopb3xK23iJPQHmgJW0o2iggjh.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 68573,
+		"fields": {
+			"name": "Walt Becker",
+			"profile_path": "/mxhqwB0WjXjVH8EgjWDmACPKLxP.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 64278,
+		"fields": {
+			"name": "Michael Feifer",
+			"profile_path": "/jpN5kuRan3QSlTYkKNn71HbKfdi.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 18864,
+		"fields": {
+			"name": "Tom McGrath",
+			"profile_path": "/83lSBvaRShYObPvhE89UDUkUfWo.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 3076703,
+		"fields": {
+			"name": "Fansu Njie",
+			"profile_path": null
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 1458106,
+		"fields": {
+			"name": "Pietro Loprieno",
+			"profile_path": null
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 9340,
+		"fields": {
+			"name": "Lana Wachowski",
+			"profile_path": "/5KNV7YBSPTBUAIXGfIcPmbhho9w.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 2628883,
+		"fields": {
+			"name": "Pedro Flores Maldonado",
+			"profile_path": "/9uGVBcwmBwRDxYrIMlUqZg49Pd7.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 1530279,
+		"fields": {
+			"name": "Toshifumi Akai",
+			"profile_path": null
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 93364,
+		"fields": {
+			"name": "Jeff Fowler",
+			"profile_path": "/wExdubFgeBkEUP8MojKPKoOcgdZ.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 93364,
+		"fields": {
+			"name": "Jeff Fowler",
+			"profile_path": "/wExdubFgeBkEUP8MojKPKoOcgdZ.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 2613318,
+		"fields": {
+			"name": "Edward Drake",
+			"profile_path": "/il6fHejjJ4J7YQt0wKLf7VfpAhN.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 219961,
+		"fields": {
+			"name": "Kim Farrant",
+			"profile_path": "/vvvrNK0VhzsedMEgrzoDnnvdZW1.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 57633,
+		"fields": {
+			"name": "Rawson Marshall Thurber",
+			"profile_path": "/4gpzB12oy73qr5nWNNyZICz9nFB.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 2109683,
+		"fields": {
+			"name": "Sofia Alvarez",
+			"profile_path": null
+		}
+	}
+]

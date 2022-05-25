@@ -1,0 +1,497 @@
+[
+	{
+		"model": "movies.movie",
+		"pk": 929472,
+		"fields": {
+			"poster_path": "/7b0pFRFDSkhYyNRKZjll5MqS3sh.jpg",
+			"genre": "미스터리",
+			"release_date": "2022-02-17",
+			"title": "이랙스",
+			"overview": "마법 동화책에서 요괴들이 튀어나와 한바탕 대혼란을 일으킨다. 악동 요괴들에 맞선 고모와 조카의 활약을 그린 오싹한 단편 영화.",
+			"vote_average": 5,
+			"backdrop_path": "/n67cIiOFqzdralhIbjppltWZDYe.jpg",
+			"adult": false,
+			"actors": [
+				1291890,
+				2836221,
+				112566
+			],
+			"directors": [
+				3391783
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 438631,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/95tTFeC63RI?autoplay=1&mute=1",
+			"poster_path": "/Dtwad1HQv3jc2f54QQQHJ1VZ1W.jpg",
+			"genre": "SF",
+			"release_date": "2021-09-15",
+			"title": "듄",
+			"overview": "10191년, 아트레이데스 가문의 후계자인 폴은 시간과 공간을 초월해 과거와 미래를 모두 볼 수 있고, 더 나은 미래를 만들 유일한 구원자인 예지된 자의 운명을 타고났다. 그리고 어떤 계시처럼 매일 꿈에서 아라키스의 행성에 있는 한 여인을 만난다. 귀족들이 지지하는 아트레이데스 가문에 대한 황제의 질투는 폴과 그 일족들을 죽음이 기다리는 아라키스로 이끄는데...",
+			"vote_average": 7.9,
+			"backdrop_path": "/jYEW5xZkZk2WTrdbMGAPFuBqbDc.jpg",
+			"adult": false,
+			"actors": [
+				1190668,
+				933238,
+				25072,
+				16851,
+				1640
+			],
+			"directors": [
+				137427
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 774741,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/VKhCPUa-glo?autoplay=1&mute=1",
+			"poster_path": "/vAznJlCGjHDbpddJn8WVWieLqyy.jpg",
+			"genre": "애니메이션",
+			"release_date": "2021-12-03",
+			"title": "윔피 키드",
+			"overview": "누구나 경험했을 법한 중학교 첫 학기의 갖가지 사건들! 중학생이 된 그레그 헤플리가 정글과 같은 중학교에서 살아 남기 위해 펼치는 진땀 나는 모험들이 일기장 안에서 생생하게 그려진다. 시시각각 다가오는 왕따의 위험, 이해할 수 없는 인기의 척도, 식당에서도 투명인간 취급을 받아야 하는 살벌한 현실, 그 속에서 생존을 위해 애쓰던 그레그 헤플리는 여러 사건을 통해 우정의 진정한 의미를 배우게 된다.",
+			"vote_average": 6.4,
+			"backdrop_path": "/x78cvxbmpBNcHON7x3Iv8vih5Sj.jpg",
+			"adult": false,
+			"actors": [
+				2239159,
+				2295755,
+				1882895,
+				1218928,
+				1217648
+			],
+			"directors": [
+				1219048
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 379686,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/rp0fu71y3eA?autoplay=1&mute=1",
+			"poster_path": "/bWgZVEUc3V2Yd1Tz4jdsy6jULv4.jpg",
+			"genre": "가족",
+			"release_date": "2021-07-08",
+			"title": "스페이스 잼: 새로운 시대",
+			"overview": "농구를 하기 싫다며 투정하는 아들이 갑자기 사라지고, 매트릭스 같은 공간으로 빨려 들어간 아빠 킹 제임스 앞에 나타난 도메인의 왕은 아들을 만나려면 자신과의 농구 경기에서 이겨야 한다는 것! 워너 3000 엔터테인먼트 서버버스의 ‘툰 월드’에 떨어진 킹 제임스는 아들을 되찾기 위해 루니 툰 캐릭터들과 드림팀을 결성, 군 스쿼드와 시합을 펼치는데… 놀랄 준비 완료? 지금부터 게임의 룰이 바뀐다, 레디 플레이어 원!",
+			"vote_average": 7,
+			"backdrop_path": "/8s4h9friP6Ci3adRGahHARVd76E.jpg",
+			"adult": false,
+			"actors": [
+				107379,
+				1896,
+				2998402,
+				179896,
+				86498
+			],
+			"directors": [
+				72024
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 370172,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/uiIIyepK6XY?autoplay=1&mute=1",
+			"poster_path": "/68ZwnPALUeweaFdT1z75oXJ4Xie.jpg",
+			"genre": "모험",
+			"release_date": "2021-09-29",
+			"title": "007 노 타임 투 다이",
+			"overview": "MI6를 떠난 이후 매들린(레아 세두)과 이탈리아의 오랜 도시 마테라에서 평화로운 일상을 즐기던 제임스 본드(대니엘 크레이그).  어느 날 CIA 요원 펠릭스(제프리 라이트)가 찾아와 선별적 DNA 공격이 가능한 새로운 형태의 생화학 무기 유출을 알린다. 위험에 처한 전 세계를 구하기 위해 복귀하게 된 제임스 본드는 임무를 수행하는 과정에서 새로운 MI6 요원 노미(라샤나 린치)를 만나고, 모든 사건의 배후에 운명으로 얽혀 있는 최악의 적 사핀(라미 말렉)이 존재한다는 것을 알아낸다. 위험천만한 위기 속, 감춰져 있던 비밀이 밝혀지면서 작전은 점점 더 예측할 수 없는 상황으로 치닫게 되는데...",
+			"vote_average": 7.5,
+			"backdrop_path": "/r2GAjd4rNOHJh6i6Y0FntmYuPQW.jpg",
+			"adult": false,
+			"actors": [
+				8784,
+				121529,
+				17838,
+				1360281,
+				5469
+			],
+			"directors": [
+				87257
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 744275,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/xDmRI9y0LEs?autoplay=1&mute=1",
+			"poster_path": "/o0PgoBD6jLYId3LYpu9yUY06SLT.jpg",
+			"genre": "로맨스",
+			"release_date": "2021-09-01",
+			"title": "애프터: 관계의 함정",
+			"overview": "영국 런던에서 미국 시애틀까지, 핫스팟에서 시작된 사랑의 클라이맥스! 첫사랑, 첫키스, 첫경험, 설렘 가득했던 처음을 뒤로 하고 꿈을 위해 잠시 서로를 떠나게 된 하딘과 테사. 각자 영국 런던과 미국 시애틀에서 롱디 연애를 앞둔 두 사람은 시간과 장소를 가리지 않고 달콤한 사랑을 속삭인다. 하지만 연애와 꿈의 갈림길에 선 둘은 서로에게 감춘 '누군가'의 존재와 예상치 못한 비밀까지 알게 되면서 사랑의 클라이맥스에 치닫게 되는데…",
+			"vote_average": 7.1,
+			"backdrop_path": "/lV3UFPPxDIPelh46G9oySXN9Mcz.jpg",
+			"adult": false,
+			"actors": [
+				1753914,
+				1114487,
+				20805,
+				2035329,
+				20960
+			],
+			"directors": [
+				1448492
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 943158,
+		"fields": {
+			"poster_path": "/em2LVkDDRcNWLexiQDs5JKGfT0x.jpg",
+			"genre": "코미디",
+			"release_date": "2022-01-27",
+			"title": "Un Rabón Con Corazón",
+			"overview": "",
+			"vote_average": 6.6,
+			"backdrop_path": "/gl3xEZ3qb8ab6wb5przQVrJF3iH.jpg",
+			"adult": false,
+			"actors": [
+				839684,
+				3480683,
+				985166,
+				1992755
+			],
+			"directors": [
+				3396527
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 632357,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/OpJu2y02BR8?autoplay=1&mute=1",
+			"poster_path": "/cFOWiYDQ8Nttmt0K6PU38L48wWK.jpg",
+			"genre": "공포",
+			"release_date": "2021-03-31",
+			"title": "더 언홀리",
+			"overview": "성모 마리아의 성령을 받은것으로 추정되는 청각 장애 소녀. 앨리스(크리켓 브라운)는 병자들을 듣게 하고 말하게 하고 걷게 하고 치료 할 수 있는 능력을 가진 것으로 소문이 나게 되고, 소문이 퍼지고 근처에 사는 이웃 뿐 아니라 먼 곳의 사람들까지 그녀의 기적을 목격하기 위해 몰려 들게 된다. 이 소식을 들은 한 불명예기자(제프리 딘 모건)는 자신의 명예가 회복 되기를 바라며 조사를 위해 작은 뉴 잉글랜드 마을을 방문하게 된다. 끔찍한 사건이 사방에서 발생하자, 그는 이러한 현상이 성모 마리아의 작품인지 또는 훨씬 더 사악한 것인지 의문을 갖기 시작한다.",
+			"vote_average": 6.8,
+			"backdrop_path": "/jw6ASGRT2gi8EjCImpGtbiJ9NQ9.jpg",
+			"adult": false,
+			"actors": [
+				47296,
+				2067034,
+				6573,
+				221944,
+				2130
+			],
+			"directors": [
+				80675
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 259316,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/IbfT6qVkll8?autoplay=1&mute=1",
+			"poster_path": "/1HHH1YR2UL5JLkrsbO6gfcg0gna.jpg",
+			"genre": "액션",
+			"release_date": "2016-11-16",
+			"title": "신비한 동물사전",
+			"overview": "1926년 뉴욕, 검은 존재가 거리를 쑥대밭으로 만들고 미국의 마법의회 MACUSA의 대통령과 어둠의 마법사를 체포하는 오러의 수장 그레이브스가 이를 추적하는 혼돈 속에 영국의 마법사 뉴트 스캐맨더가 이 곳을 찾는다. 그의 목적은 세계 곳곳에 숨어있는 신비한 동물들을 찾기 위한 것. 여행을 하면서 다양한 크기의 신비한 동물을 구조해 안에 마법의 공간이 있는 가방에 넣어 다니며 보살핀다. 하지만 은행을 지나던 중 금은보화를 좋아하는 신비한 동물인 니플러가 가방 안에서 탈출을 하고 이 일로 전직 오러였던 티나와 노마지 제이콥과 엮이게 된다. 한편 검은 존재의 횡포는 더욱 거세져 결국 인간 사회와 마법 사회를 발칵 뒤집는 사건이 발생하고, 이 모든 것이 뉴트의 소행이라는 오해를 받게 되는데...",
+			"vote_average": 7.4,
+			"backdrop_path": "/8Qsr8pvDL3s1jNZQ4HK1d1Xlvnh.jpg",
+			"adult": false,
+			"actors": [
+				37632,
+				77795,
+				58873,
+				998225,
+				72466
+			],
+			"directors": [
+				11343
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 423108,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/Ie9sPUVhbX0?autoplay=1&mute=1",
+			"poster_path": "/yxPlLa5p54Wk1o2koiW4hqn4wfG.jpg",
+			"genre": "공포",
+			"release_date": "2021-05-25",
+			"title": "컨저링 3: 악마가 시켰다",
+			"overview": "1981년, 미국 역사상 최초로 잔혹한 살인사건의 용의자가 악마가 살해하도록 시켰다고 주장하는 초유의 사태가 일어난다. 그리고 사건의 배후에는 악마에게 빙의된 소년이 있다. 살인사건의 범인은 인간인가 악마인가…",
+			"vote_average": 7.6,
+			"backdrop_path": "/qi6Edc1OPcyENecGtz8TF0DUr9e.jpg",
+			"adult": false,
+			"actors": [
+				17178,
+				21657,
+				1731961,
+				2485582,
+				2047847
+			],
+			"directors": [
+				1607672
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 399566,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/nCEa5M6iUoM?autoplay=1&mute=1",
+			"poster_path": "/sqo672rKMXiLRC5kVcGvBRebkp.jpg",
+			"genre": "액션",
+			"release_date": "2021-03-24",
+			"title": "고질라 VS. 콩",
+			"overview": "콩과 보호자들은 정착할 수 있는 곳을 찾아 특별하고 강력한 유대감을 형성하고 있는 지아와 함께 여정을 떠나게 된다. 그러던 중 지구 파괴를 위한 회심의 날을 휘두르는 고질라와 마주하게 되고, 보이지 않는 힘에 의해 맞붙게 된 두 전설의 대결은 지구 깊은 곳에 도사린 수수께끼의 시작에 불과할 뿐이었는데…",
+			"vote_average": 7.8,
+			"backdrop_path": "/inJjDhCjfhh3RtrJWBmmDqeuSYC.jpg",
+			"adult": false,
+			"actors": [
+				28846,
+				1356210,
+				15556,
+				226366,
+				46364
+			],
+			"directors": [
+				98631
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 619979,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/WUhL9G9hAf8?autoplay=1&mute=1",
+			"poster_path": "/vAIdAnOVnyiQtDcWy07n03GCoqT.jpg",
+			"genre": "드라마",
+			"release_date": "2022-03-18",
+			"title": "딥 워터",
+			"overview": "이혼을 피하기 위해 아내가 바람을 피울 수 있도록 허락한 유복한 남편이 연인들의 실종 사건의 유력한 용의자가 된다.",
+			"vote_average": 5.7,
+			"backdrop_path": "/qswImgf57wBf2i8Fv6K2O2BdMoe.jpg",
+			"adult": false,
+			"actors": [
+				880,
+				224513,
+				72638,
+				1488961,
+				6066
+			],
+			"directors": [
+				7270
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 682344,
+		"fields": {
+			"poster_path": "/pnTp17HCwQ6EhsWfqzgwnUfhSym.jpg",
+			"genre": "코미디",
+			"release_date": "2022-03-30",
+			"title": "우박 맞은 날",
+			"overview": "우박을 동반한 대규모 폭풍을 예측하지 못한 유명 기상 예보관. 곤란한 상황을 피해 고향으로 피신했다가 뜻하지 않게 자아 발견의 길로 들어선다.",
+			"vote_average": 6.2,
+			"backdrop_path": "/1yetepKgJ0HZvrjDzd0nQWFQCWR.jpg",
+			"adult": false,
+			"actors": [
+				93650,
+				2507457,
+				103433,
+				589487,
+				2982709
+			],
+			"directors": [
+				89575
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 791373,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/OURUAeBN6Xs?autoplay=1&mute=1",
+			"poster_path": "/qd7iPB26bwMPZqRcnflzAeDkMn.jpg",
+			"genre": "액션",
+			"release_date": "2021-03-18",
+			"title": "잭 스나이더의 저스티스 리그",
+			"overview": "슈퍼맨이 죽고 지구에 어둠의 그림자가 드리운다. 마더박스를 차지하기 위해 빌런 스테픈울프가 파라데몬 군단을 이끌고 지구에 온 것이다. 지구를 지키기 위해 목숨을 바친 슈퍼맨의 희생이 헛되지 않도록 하기 위해 브루스 웨인은 다이애나 프린스와 적에 맞서기로 한다. 배트맨과 원더 우먼은 새로이 등장한 위협에 맞서 싸우기 위해 특별한 능력을 가진 메타휴먼, 아쿠아맨과 사이보그, 플래시를 찾아가 설득하여 힘을 합친다. 드디어 한 팀이 된 저스티스 리그. 혹시 스테픈울프와 데사드 그리고 다크사이드를 물리치기에 너무 늦어버린 것이 아닐까?",
+			"vote_average": 8.3,
+			"backdrop_path": "/pcDc2WJAYGJTTvRSEIpRZwM3Ola.jpg",
+			"adult": false,
+			"actors": [
+				880,
+				73968,
+				90633,
+				117642,
+				132157
+			],
+			"directors": [
+				15217
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 617653,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/s_Jpau_DitI?autoplay=1&mute=1",
+			"poster_path": "/zPDY58lk0YIxr9qsnGV64PEnjkI.jpg",
+			"genre": "액션",
+			"release_date": "2021-10-13",
+			"title": "라스트 듀얼: 최후의 결투",
+			"overview": "부조리한 권력과 야만의 시대, 14세기 프랑스. 장(맷 데이먼)은 영주 피에르(벤 애플렉)의 총애를 받는 자크(애덤 드라이버)에게 불만을 품고 있다. 그러다 피에르에 의해 마르그리트(조디 코머)의 결혼 지참금인 토지를 자크에게 빼앗기게 되자 자크에 대한 적대감이 극에 달한다. 한편 마르그리트에게 첫눈에 반한 자크는 장이 집을 비운 사이 마르그리트를 찾아가 겁탈한다. 용서받지 못할 짓을 저지른 자크는 마르그리트에게 침묵을 강요하지만, 마르그리트는 자신이 입을 여는 순간 감내해야 할 불명예를 각오하고 용기를 내어 자크의 죄를 고발한다. 강간사건에 대한 재판이 시작되고, 서로의 입장이 맹렬히 충돌하면서 파열음을 낸다. 결국 한때 전우였던 장과 자크는 승리한 자가 무죄, 패한 자가 유죄가 되는 결투 재판에서 승부를 겨루게 되는데...",
+			"vote_average": 7.5,
+			"backdrop_path": "/v0zhVgtqisaFsSVAOKxqwVOOlQr.jpg",
+			"adult": false,
+			"actors": [
+				1892,
+				1023139,
+				1388593,
+				17477,
+				880
+			],
+			"directors": [
+				578
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 299534,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/ps5F92s7mi4?autoplay=1&mute=1",
+			"poster_path": "/z7ilT5rNN9kDo8JZmgyhM6ej2xv.jpg",
+			"genre": "모험",
+			"release_date": "2019-04-24",
+			"title": "어벤져스: 엔드게임",
+			"overview": "어벤져스의 패배 이후 지구는 초토화됐고 남은 절반의 사람들은 정신적 고통을 호소하며 하루하루를 근근이 버텨나간다. 와칸다에서 싸우다 생존한 히어로들과 우주의 타이탄 행성에서 싸우다 생존한 히어로들이 뿔뿔이 흩어졌는데, 아이언맨과 네뷸라는 우주를 떠돌고 있고 지구에 남아 있는 어벤져스 멤버들은 닉 퓨리가 마지막에 신호를 보내다 만 송신기만 들여다보며 혹시 모를 우주의 응답을 기다리는 중이다. 애초 히어로의 삶을 잠시 내려놓고 가족과 시간을 보내던 호크아이 역시 헤아릴 수 없는 마음의 상처를 입은 채 사라지고 마는데...",
+			"vote_average": 8.3,
+			"backdrop_path": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+			"adult": false,
+			"actors": [
+				3223,
+				16828,
+				103,
+				74568,
+				1245
+			],
+			"directors": [
+				19271,
+				19272
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 522402,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/s7hXnI3vRHc?autoplay=1&mute=1",
+			"poster_path": "/jKuDyqx7jrjiR9cDzB5pxzhJAdv.jpg",
+			"genre": "SF",
+			"release_date": "2021-11-04",
+			"title": "핀치",
+			"overview": "감마 플레어가 오존층을 파괴하고 전자기 펄스가 모든 전기를 흡수하면서 지상은 황폐화되고 대부분의 인류는 사망한 가까운 미래. 살아남은 소수의 인류는 자외선과 고온을 피해 밤에 활동하고, 먹을 것과 생필품을 구하기 위해 잔인한 본성을 드러낸다. 살아남은 TAE 테크놀로지의 과학자 핀치 와인버그(톰 행크스)는 사랑하는 개 굿이어와 함께 미주리의 폐허 속에서 먹을 것과 생필품을 찾는다. 병들어 죽음을 앞두고 있는 핀치는 굿이어를 돌봐줄 수 있는 인공지능 로봇을 만들고 데이터를 업로드한다. 얼마 후 40일간 지속되는 거대한 폭풍이 핀치의 은신처로 다가오자, 핀치는 안드로이드와 굿이어, 그리고 운반 로봇 듀이와 함께 트럭을 타고 급히 서쪽 샌프란시스코로 향하는데...",
+			"vote_average": 8.1,
+			"backdrop_path": "/oE6bhqqVFyIECtBzqIuvh6JdaB5.jpg",
+			"adult": false,
+			"actors": [
+				31,
+				572541,
+				1457107,
+				1151637,
+				1912057
+			],
+			"directors": [
+				114404
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 671,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/vtJ6eZRanHc?autoplay=1&mute=1",
+			"poster_path": "/unEtC8uWn2lcQLnwKG9PZJX0h0c.jpg",
+			"genre": "모험",
+			"release_date": "2001-11-16",
+			"title": "해리 포터와 마법사의 돌",
+			"overview": "해리 포터는 위압적인 버논 숙부와 냉담한 이모 페투니아, 욕심 많고 버릇없는 사촌 더즐리 밑에서 갖은 구박을 견디며 계단 밑 벽장에서 생활한다. 이모네 식구들 역시 해리와의 동거가 불편하기는 마찬가지. 이모 페투니아에겐 해리가 이상한 언니 부부에 관한 기억을 떠올리게 만드는 달갑지 않은 존재다. 11살 생일이 며칠 앞으로 다가왔지만 한번도 생일파티를 치르거나 제대로 된 생일선물을 받아 본 적이 없는 해리로서는 특별히 신날 것도 기대 할 것도 없다. 11살 생일을 며칠 앞둔 어느 날 해리에게 초록색 잉크로 쓰여진 한 통의 편지가 배달된다. 그 편지의 내용은 다름 아닌 해리의 11살 생일을 맞이하여 호그와트에서 보낸 입학 초대장이었다. 그리고 해리의 생일을 축하하러 온 거인 해그리드는 해리가 모르고 있었던 해리의 진정한 정체를 알려주는데...",
+			"vote_average": 7.9,
+			"backdrop_path": "/5jkE2SzR5uR2egEb1rRhF22JyWN.jpg",
+			"adult": false,
+			"actors": [
+				10980,
+				10989,
+				10990,
+				194,
+				10993
+			],
+			"directors": [
+				10965
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 810693,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/cUcw67t9O0g?autoplay=1&mute=1",
+			"poster_path": "/gHcga1wgDD4MAeApoOM7yDn9BOq.jpg",
+			"genre": "애니메이션",
+			"release_date": "2021-12-24",
+			"title": "극장판 주술회전 0",
+			"overview": "어린 시절, 소꿉친구인 오리모토 리카를 교통사고로 눈앞에서 잃은 옷코츠 유타. “약속해. 리카와 유타는 어른이 되면 결혼하기로.” 옷코츠는 원령으로 변한 리카의 저주에 괴로워한 나머지, 자신도 죽기를 바라지만최강의 주술사인 고죠 사토루에 의해 주술고전에 들어가게 된다. 그리고 동급생인 젠인 마키, 이누마키 토게, 판다를 만나면서 굳은 결심을 한다. “살아도 된다는 자신감이 필요해.” “나는 주술고전에서 리카의 저주를 풀겠습니다.” 한편, 옷코츠와 친구들 앞에 과거에 일반인을 대량으로 학살해서 고전에서 추방된최악의 주저사인 게토 스구루가 나타난다. “12월 24일, 우리는 백귀야행을 간다.” 주술사만의 낙원을 만들려는 게토는 비술사를 섬멸하겠다면서, 신주쿠와 교토에 천의 저주를 내리는데… 과연 옷코츠는 게토를 막을 수 있을까? 그리고 리카의 저주를 풀 수 있을까?",
+			"vote_average": 7.8,
+			"backdrop_path": "/geYUecpFI2AonDLhjyK9zoVFcMv.jpg",
+			"adult": false,
+			"actors": [
+				77927,
+				119143,
+				1281498,
+				1254052,
+				90567
+			],
+			"directors": [
+				2264366
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 303857,
+		"fields": {
+			"video_url": "https://www.youtube.com/embed/uRlSMA1XKYA?autoplay=1&mute=1",
+			"poster_path": "/e6kmwINMGyPNxuoZyjIlhiXyYGH.jpg",
+			"genre": "액션",
+			"release_date": "2015-04-18",
+			"title": "드래곤볼 Z - 부활의 'F'",
+			"overview": "파괴의 신 비루스와의 대결이 끝나고, 평화를 찾은 지구에 프리저군의 생존자들이 프리저를 부활시키기 위해 몰래 잠입, 드래곤볼 7개를 모두 모으는데 성공한다. 이를 이용해 부활한 프리저는 손오공을 비롯한 사이어인에 대한 복수를 위해 수 많은 병사를 이끌고 지구를 침략하고, 손오반과 피콜로, 크리링 등은 이에 맞서 싸우지만 더욱 강해진 프리저의 파워 앞에 속수무책으로 당하고 만다. 한편, 비루스의 별에서 수련중이던 손오공과 베지터는 뒤늦게 프리저의 부활 소식을 듣게되는데…  끝없이 강해지고 싶은 손오공과 지옥에서 부활한 프리저!  다시 한번 최악의 위기에 직면한 지구의 운명은 과연?!",
+			"vote_average": 6.8,
+			"backdrop_path": "/kIgfFzjjBNgx6Tr2LCw8Zkq921s.jpg",
+			"adult": false,
+			"actors": [
+				90496,
+				122501,
+				115305,
+				20664,
+				78402
+			],
+			"directors": [
+				1083452
+			]
+		}
+	}
+]

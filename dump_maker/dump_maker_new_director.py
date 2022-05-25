@@ -40,12 +40,11 @@ path1 = '/movie/popular?'
 params = {
     'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
     'language' : 'ko-KR',
+    'page' : 10
 }
 response = requests.get(BASE_URL1 + path1, params = params).json()
 movie_list = response['results']
 directors = director_info(movie_list)
 
-pprint.pprint(directors)
-
-with open('director3.json', 'w', encoding="utf-8") as f:
+with open('director10.json', 'w', encoding="utf-8") as f:
     json.dump(directors, f, ensure_ascii=False, indent="\t")

@@ -19,7 +19,6 @@ def movie_info(movies_list):
             'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
             'language' : 'ko-KR',
         }
-
         response = requests.get(BASE_URL99 + str(movie['id']) + path99, params = params).json()
         
         # actors 추가
@@ -43,12 +42,16 @@ def movie_info(movies_list):
         }
         response1 = requests.get(BASE_URL + path, params = params1).json()
         response2 = requests.get(BASE_URL + path, params = params2).json()
-        try:
-            if response1['results'][0]['key']:
-                video_url = 'https://www.youtube.com/embed/' + response1['results'][0]['key'] + '?autoplay=1&mute=1'
-        except:
-            video_url = 'https://www.youtube.com/embed/' + response2['results'][0]['key'] + '?autoplay=1&mute=1'
-        fields['video_url'] = video_url
+        # pprint.pprint(response1)
+        # pprint.pprint(response2)
+        if response1['results'] or response2['results']:
+            try:
+                if response1['results'][0]['key']:
+                    video_url = 'https://www.youtube.com/embed/' + response1['results'][0]['key'] + '?autoplay=1&mute=1'
+            except:
+                if response2['results'][0]['key']:
+                    video_url = 'https://www.youtube.com/embed/' + response2['results'][0]['key'] + '?autoplay=1&mute=1'
+            fields['video_url'] = video_url
         
         # movie credit 조회 url
         # https://api.themoviedb.org/3/movie/606402/credits?api_key=b423b9f62c2dcbbc988e246c89249738&language=ko-KR
@@ -76,8 +79,8 @@ def movie_info(movies_list):
     return result
         
 
-for i in range(1, 11):
-    if i == 1:
+for i in range(6, 11):
+    if i == 10:
         BASE_URL='https://api.themoviedb.org/3'
         path = '/movie/popular?'
         params = {
@@ -88,7 +91,7 @@ for i in range(1, 11):
         response = requests.get(BASE_URL + path, params = params).json()
         movie = response['results']
         movies = movie_info(movie)
-        
+
         with open(f'movie{i}.json', 'w', encoding="utf-8") as f:
             json.dump(movies, f, ensure_ascii=False, indent="\t")
         
