@@ -2,10 +2,12 @@
 
 {% block index %}
 <br>
+<html lang="en" style="height: 100%">
 <body class="mainbackgroundimagesetting">
-    <div class="container bg-dark">
+<body>
+    <div class="container indexmainbackgroundimagesetting">
         <br>
-        <h2 class="text-white">인기 영화</h2>
+        <h4 class="text-white">인기 영화</h4>
         <div id="carouselExampleCaptions1" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 {% for i in "x"|rjust:"25" %}
@@ -188,6 +190,7 @@
                     </div>
                 </div>
             </div>
+            <br>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
@@ -197,7 +200,7 @@
               <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <h2 class="text-white">추천 영화</h2>
+        <h4 class="text-white">추천 영화</h4>
         <div id="carouselExampleCaptions2" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 {% for i in "x"|rjust:"25" %}
@@ -380,6 +383,7 @@
                     </div>
                 </div>
             </div>
+            <br>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
@@ -390,6 +394,7 @@
             </button>
         </div>
     </div>
+
 </body>
 
 {% endblock index %}

@@ -39,12 +39,14 @@ def detail(request, pk):
     directors = get_list_or_404(Director)
     comment_form=CommentForm()
     comments=movie.comment_set.all()
+    comments_num = len(movie.comment_set.all())
     context = {
         'movie':movie,
         'directors':directors,
         'actors':actors,
         'comment_form':comment_form,
         'comments':comments,
+        'comments_num':comments_num,
     }
     return render(request, 'movies/detail.html', context)
 

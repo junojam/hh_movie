@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en" style="height: 100%">
+{% comment %} <html lang="en" style="height: 100%"> {% endcomment %}
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +11,10 @@
     <script src="https://kit.fontawesome.com/6725d2d4bc.js" crossorigin="anonymous"></script>
     <title>Document</title>
     <style>
+      {% comment %} 각 영화 배경사진 {% endcomment %}
       .backgroundimagesetting {
         width: 100%;
+        height: 100%;
         min-height: 100%;
         position: relative;
         z-index: 1;
@@ -28,7 +31,8 @@
         opacity: 1;
         background-size: cover;
       }
-
+      
+      {% comment %} 영화관 배경사진 {% endcomment %}
       .mainbackgroundimagesetting {
         width: 100%;
         min-height: 100%;
@@ -44,14 +48,100 @@
         top: 0;
         left: 0;
         z-index: -1;
+        opacity: 1;
+        background-size: cover;
+      }
+      {% comment %} 디테일 배경설정 {% endcomment %}
+      .detailmainbackgroundimagesetting {
+        width: 100%;
+        min-height: 100%;
+        position: relative;
+        z-index: 1;
+      }
+      .detailmainbackgroundimagesetting::after {
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
         opacity: 0.8;
         background-size: cover;
+      }
+      {% comment %} 인덱스 배경설정 {% endcomment %}
+      .indexmainbackgroundimagesetting {
+        width: 100%;
+        min-height: 100%;
+        position: relative;
+        z-index: 1;
+      }
+      .indexmainbackgroundimagesetting::after {
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -5;
+        opacity: 0.7;
+        background-size: cover;
+      }
+
+      {% comment %} 평점 배경설정 {% endcomment %}
+      .scoremainbackgroundimagesetting {
+        width: 100%;
+        min-height: 100%;
+        position: relative;
+        z-index: 1;
+      }
+      .scoremainbackgroundimagesetting::after {
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.1;
+      }
+
+      {% comment %} 별점 주기 {% endcomment %}
+      .star-rating {
+        display:flex;
+        flex-direction: row-reverse;
+        font-size:1.5em;
+        justify-content:space-around;
+        text-align:center;
+        width:5em;
+      }
+      
+      .star-rating input {
+        display:none;
+      }
+      
+      .star-rating label {
+        color:#ccc;
+        cursor:pointer;
+      }
+      
+      .star-rating :checked ~ label {
+        color:#f90;
+      }
+      
+      .star-rating label:hover,
+      .star-rating label:hover ~ label {
+        color:#fc0;
       }
 
     </style>
 </head>
-<body class="mainbackgroundimagesetting" style="height: 100%">
-  <!-- Modal 1 -->
+{% comment %} <body class="mainbackgroundimagesetting" style="height: 100%"> {% endcomment %}
+<body>
+  <!-- 로그인 modal -->
   <div class="modal fade" id="exampleModal1" >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -93,7 +183,7 @@
       </div>
     </div>
   </div>
-
+  <!-- 회원가입 modal -->
   <div class="modal fade" id="exampleModal2" >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -136,19 +226,17 @@
       </div>
     </div>
   </div>
-    <div style="height: 100%">
+    <div style="height: 100%" id="scrollheight">
+      <!-- 로그인 한 경우 -->
       {% if request.user.is_authenticated %}
-      <nav class="d-flex justify-content-between navbar-light bg-dark sticky-top">
+      <nav class="d-flex justify-content-between sticky-top navbar-dark" id="scrollchange">
         <div class="d-flex flew-row">
           <a href="{% url 'movies:index' %}">
             <img class="mx-5 my-2" width="100px" src="{% static 'movies/LOGO_INVISIBLE.png' %}" alt="My image">
           </a>
           <div class="d-flex flex-row">
             <a class="d-flex align-items-center mx-2 text-decoration-none text-white" href="{% url 'movies:index' %}">홈</a>
-
-            {% comment %} 영화 추천 {% endcomment %}
             <a class="d-flex align-items-center mx-2 text-decoration-none text-white" href="#">추천 영화</a>
-            
             <div class="d-flex align-items-center justify-content-start  text-decoration-none text-white">
               <a class=" text-decoration-none text-white mx-2" href="{% url 'articles:index' %}">커뮤니티</a>
             </div>
@@ -171,7 +259,7 @@
             <div class="me-5 ms-2">
               <form action="{% url 'accounts:logout' %}" method="POST">
                 {% csrf_token %}
-                <input type="submit" value="Logout">
+                <input type="submit" value="로그아웃" class="text-white" style="border: none; background: transparent;">
               </form>
             </div>
             <!-- <div class="me-5 m-1">
@@ -182,8 +270,9 @@
             </div> -->
         </div>
       </nav>
+      <!-- 로그인 하지 않은 경우 -->
       {% else %}
-      <nav class="d-flex justify-content-between navbar-light bg-dark sticky-top">
+      <nav class="d-flex justify-content-between navbar-light sticky-top" id="scrollchange">
         <div class="d-flex flew-row">
           <a href="{% url 'movies:index' %}">
             <img class="mx-5 my-2" width="100px" src="{% static 'movies/LOGO_INVISIBLE.png' %}" alt="My image">
@@ -208,10 +297,10 @@
             <a class="text-decoration-none text-white" href="{% url 'accounts:signup' %}">Signup</a>
           </div> {% endcomment %}
 
-          <button type="button" class="btn btn-dark m-1" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+          <button style="border: none; background: transparent;" type="button" class="btn btn-dark m-1" data-bs-toggle="modal" data-bs-target="#exampleModal1">
             로그인
           </button>
-          <button type="button" class="btn btn-dark me-5 m-1" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+          <button style="border: none; background: transparent;" type="button" class="btn btn-dark me-5 m-1" data-bs-toggle="modal" data-bs-target="#exampleModal2">
             회원가입
           </button>
         </div>
@@ -232,6 +321,15 @@
     
 </body>
 <script>
+  window.addEventListener("scroll", (event) => {
+    let scrollY = this.scrollY;
+    if (scrollY > 10) {
+      document.getElementById('scrollchange').classList.add("bg-secondary", "bg-opacity-75");
+    } else {
+      document.getElementById('scrollchange').classList.remove("bg-secondary", "bg-opacity-75");
+    }
+});
+
   var myModal = document.getElementById('myModal')
   var myInput = document.getElementById('myInput')
   
