@@ -22,6 +22,40 @@
                 <div class="carousel-item active">
                     <div class="d-flex justify-content-center">
                         {% for movie in movies %}
+                            {% if forloop.counter == 1 %}
+                            <div class="mb-3">
+                                <a class="text-decoration-none" href="{% url 'movies:detail' movie.pk %}">
+                                    <img width=200px; style="margin-right:50px" src="https://www.themoviedb.org/t/p/original{{ movie.poster_path }}" alt="">
+                                </a>
+                            </div>
+                            {% endif %}
+                            {% if forloop.counter == 2 %}
+                            <div class="mb-3">
+                                <a class="text-decoration-none" href="{% url 'movies:detail' movie.pk %}">
+                                    <img width=200px; style="margin-right:50px" src="https://www.themoviedb.org/t/p/original{{ movie.poster_path }}" alt="">
+                                </a>
+                            </div>
+                            {% endif %}
+                            {% if forloop.counter == 3 %}
+                            <div class="mb-3">
+                                <a class="text-decoration-none" href="{% url 'movies:detail' movie.pk %}">
+                                    <img width=200px; style="margin-right:50px" src="https://www.themoviedb.org/t/p/original{{ movie.poster_path }}" alt="">
+                                </a>
+                            </div>
+                            {% endif %}
+                            {% if forloop.counter == 4 %}
+                            <div class="mb-3">
+                                <a class="text-decoration-none" href="{% url 'movies:detail' movie.pk %}">
+                                    <img width=200px; style="margin-right:50px" src="https://www.themoviedb.org/t/p/original{{ movie.poster_path }}" alt="">
+                                </a>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        {% for movie in movies %}
                             {% if forloop.counter == 5 %}
                             <div class="mb-3">
                                 <a class="text-decoration-none" href="{% url 'movies:detail' movie.pk %}">
@@ -78,40 +112,6 @@
                             </div>
                             {% endif %}
                             {% if forloop.counter == 12 %}
-                            <div class="mb-3">
-                                <a class="text-decoration-none" href="{% url 'movies:detail' movie.pk %}">
-                                    <img width=200px; style="margin-right:50px" src="https://www.themoviedb.org/t/p/original{{ movie.poster_path }}" alt="">
-                                </a>
-                            </div>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-center">
-                        {% for movie in movies %}
-                            {% if forloop.counter == 13 %}
-                            <div class="mb-3">
-                                <a class="text-decoration-none" href="{% url 'movies:detail' movie.pk %}">
-                                    <img width=200px; style="margin-right:50px" src="https://www.themoviedb.org/t/p/original{{ movie.poster_path }}" alt="">
-                                </a>
-                            </div>
-                            {% endif %}
-                            {% if forloop.counter == 14 %}
-                            <div class="mb-3">
-                                <a class="text-decoration-none" href="{% url 'movies:detail' movie.pk %}">
-                                    <img width=200px; style="margin-right:50px" src="https://www.themoviedb.org/t/p/original{{ movie.poster_path }}" alt="">
-                                </a>
-                            </div>
-                            {% endif %}
-                            {% if forloop.counter == 15 %}
-                            <div class="mb-3">
-                                <a class="text-decoration-none" href="{% url 'movies:detail' movie.pk %}">
-                                    <img width=200px; style="margin-right:50px" src="https://www.themoviedb.org/t/p/original{{ movie.poster_path }}" alt="">
-                                </a>
-                            </div>
-                            {% endif %}
-                            {% if forloop.counter == 16 %}
                             <div class="mb-3">
                                 <a class="text-decoration-none" href="{% url 'movies:detail' movie.pk %}">
                                     <img width=200px; style="margin-right:50px" src="https://www.themoviedb.org/t/p/original{{ movie.poster_path }}" alt="">

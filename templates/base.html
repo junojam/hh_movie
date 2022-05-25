@@ -235,7 +235,7 @@
           </a>
           <div class="d-flex flex-row">
             <a class="d-flex align-items-center mx-2 text-decoration-none text-white" href="{% url 'movies:index' %}">홈</a>
-            <a class="d-flex align-items-center mx-2 text-decoration-none text-white" href="#">추천 영화</a>
+            <a class="d-flex align-items-center mx-2 text-decoration-none text-white" href="{% url 'movies:recommend' %}">추천 영화</a>
             <div class="d-flex align-items-center justify-content-start  text-decoration-none text-white">
               <a class=" text-decoration-none text-white mx-2" href="{% url 'articles:index' %}">커뮤니티</a>
             </div>
@@ -277,10 +277,7 @@
             <img class="mx-5 my-2" width="100px" src="{% static 'movies/LOGO_INVISIBLE.png' %}" alt="My image">
           </a>
           <div class="d-flex flex-row">
-            <a class="d-flex align-items-center mx-2 text-decoration-none text-white" href="{% url 'movies:index' %}">홈</a>
-
-            <a class="d-flex align-items-center mx-2 text-decoration-none text-white" href="#">추천 영화</a>
-            
+            <a class="d-flex align-items-center mx-2 text-decoration-none text-white" href="{% url 'movies:index' %}">홈</a>            
             <div class="d-flex align-items-center justify-content-start  text-decoration-none text-white">
               <a class=" text-decoration-none text-white mx-2" href="{% url 'articles:index' %}">커뮤니티</a>
             </div>

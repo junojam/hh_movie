@@ -8,12 +8,31 @@ from django.db.models import Avg
 
 # Create your views here.
 def index(request):
-    movies = Movie.objects.all()
+    # 알고리즘 1 : 최신 순
+    # 5번부터 올리는 것으로 만들기
+    movies = Movie.objects.order_by('-release_date').filter(vote_average__gt=7)
+    # 알고리즘 2 : 평점 순
+    movies_2 = Movie.objects.order_by('-vote_average')
     context={
-        'movies':movies
+        'movies':movies,
+        'movies_2':movies_2
     }
 
     return render(request, 'movies/index.html',context)
+
+    # 1. 최신순 -> 평점 순서 부여
+    # 2. 평점순 -> 전체 goty
+    # 3. 랜덤
+    # 4. 현재 시간 이후 또는 이전 영화
+    # 5. 장르별(식상할듯)
+    # 6. 감독, 배우를 검색을 통해서 영화 가져올 수 있도록
+    
+def recommend(request):
+    context={
+        'movies':movies,
+        'movie_directors':movie_directors
+    }
+    return render(request, 'movies/recommend.html',context)
 
 @login_required
 @require_http_methods(['GET', 'POST'])
