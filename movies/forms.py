@@ -19,4 +19,4 @@ class ScoreForm(forms.ModelForm):
 
     class Meta:
         model = Score
-        fields = ('star',)
+        fields = ('star', )

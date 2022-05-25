@@ -29,13 +29,13 @@
                             <h5 class="m-0">
                                 나의 평점 :&ensp;
                             </h5>
+                        </div>
                             {% comment %} <form action="{% url 'movies:scores_create' movie.pk %}" method='POST'>
                                 {% csrf_token %}
                                 <label for="star"></label>
                                 <input id="star" type="text" name="star" placeholder="나의 평점">
                                 <input type="submit" value='작성'>
                             </form> {% endcomment %}
-                        </div>
                         <form action="{% url 'movies:scores_create' movie.pk %}" method='POST'>
                             {% csrf_token %}
                             <div class="d-flex flex-row justify-content-center">
@@ -55,13 +55,14 @@
                                     <input type="radio" id="1-star" name="star" value="1" />
                                     <label for="1-star" class="star">&#9733;</label>
                                 </div>
-                                <input type="submit" value='별점 등록' class="btn btn-success ms-3">
+                                <input type="submit" value='평점 등록' class="btn btn-success ms-2">
                             </div>
-                            {% comment %} <label for="star"></label>
-                            <input id="star" type="text" name="star" placeholder="나의 평점"> {% endcomment %}
-                            
                         </form>
-                    </div>
+                        {% comment %} <form action="{% url 'movies:scores_delete' movie.pk score.pk %}" method='POST'>
+                            {% csrf_token %}
+                            <input type="submit" value="평점 삭제" class="btn btn-danger ms-2">
+                        </form> {% endcomment %}
+                        </div>
                 </div>
 
             </div>

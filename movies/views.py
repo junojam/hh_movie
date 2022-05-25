@@ -1,5 +1,5 @@
 from django.shortcuts import get_list_or_404, get_object_or_404, render, redirect
-from .models import Director, Movie, Comment, Actor
+from .models import Director, Movie, Comment, Actor, Score
 from .forms import MovieForm, CommentForm, ScoreForm
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods, require_POST, require_GET
@@ -38,23 +38,58 @@ def detail(request, pk):
     movie = get_object_or_404(Movie, pk=pk)
     actors = get_list_or_404(Actor)
     directors = get_list_or_404(Director)
+    # scores= get_list_or_404(Score)
+    
     comment_form=CommentForm()
-    scores_num= len(movie.score_set.all())
-    scores=movie.score_set.aggregate(Avg('star'))
-    scores_avg=str(scores['star__avg'])[:3]
     comments=movie.comment_set.all()
     comments_num = len(movie.comment_set.all())
+    
+    # score_list=movie.score_set.all()
+    # score_form=ScoreForm(request.POST, instance=scores)
+    
+    scores_temp=movie.score_set.aggregate(Avg('star'))
+    scores_avg=str(scores_temp['star__avg'])[:3]
+    scores_num= len(movie.score_set.all())
+    
+    # if score_list.user.filter(pk=request.user.pk).exists():
+    #     score_list.user.remove(request.user)
+    # else:
+    #     score_list.user.add(request.user)
+        
     context = {
         'movie':movie,
         'directors':directors,
         'actors':actors,
+        # 'scores':scores,
+        
         'comment_form':comment_form,
         'comments':comments,
         'comments_num':comments_num,
-        'scores_num':scores_num,
+        
+        # 'score_form':score_form,
+        # 'score_list':score_list,
         'scores_avg':scores_avg,
+        'scores_num':scores_num,
     }
     return render(request, 'movies/detail.html', context)
+
+@require_POST
+def likes(request, movie_pk):
+    if request.user.is_authenticated:
+        movie = get_object_or_404(Movie, pk=movie_pk)
+
+        if movie.like_users.filter(pk=request.user.pk).exists():
+            movie.like_users.remove(request.user)
+            isLiked = False
+        else:
+            movie.like_users.add(request.user)
+            isLiked = True
+        context = {
+            'isLiked': isLiked,
+            'likedCount': movie.like_users.count(),
+        }
+        return JsonResponse(context)
+    return redirect('accounts:login')
 
 @login_required
 @require_http_methods(['GET', 'POST'])
@@ -80,6 +115,7 @@ def delete(request, pk):
         movie.delete()
     return redirect('movies:index')
 
+
 @require_POST
 def comments_create(request, pk):
     if request.user.is_authenticated:
@@ -93,6 +129,7 @@ def comments_create(request, pk):
         return redirect('movies:detail', movie.pk)
     return redirect('accounts:login')
 
+
 @require_POST
 def comments_delete(request, movie_pk, comment_pk):
     if request.user.is_authenticated:
@@ -100,6 +137,7 @@ def comments_delete(request, movie_pk, comment_pk):
         if request.user == comment.user:
             comment.delete()
     return redirect('movies:detail', movie_pk)
+
 
 @require_POST
 def likes(request, movie_pk):
@@ -119,6 +157,7 @@ def likes(request, movie_pk):
         return JsonResponse(context)
     return redirect('accounts:login')
 
+
 @require_POST
 def director_likes(request, director_pk):
     if request.user.is_authenticated:
@@ -135,6 +174,7 @@ def director_likes(request, director_pk):
         }
         return JsonResponse(context)
     return redirect('accounts:login')
+
 
 @require_POST
 def actor_likes(request, actor_pk):
@@ -160,9 +200,18 @@ def scores_create(request, pk):
         movie = get_object_or_404(Movie, pk=pk)
         score_form = ScoreForm(request.POST)
         if score_form.is_valid():
-            star=score_form.save(commit=False)
-            star.movie=movie
-            star.user = request.user
-            star.save()
+            score=score_form.save(commit=False)
+            score.movie=movie
+            score.user = request.user
+            score.save()
         return redirect('movies:detail', movie.pk)
     return redirect('accounts:login')
+
+
+@require_POST
+def scores_delete(request, movie_pk, score_pk):
+    if request.user.is_authenticated:
+        score=get_object_or_404(Score, pk=score_pk)
+        if request.user == score.user:
+            score.delete()
+    return redirect('movies:detail', movie_pk)

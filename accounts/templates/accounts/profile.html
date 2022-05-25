@@ -3,9 +3,9 @@
 {% block content %}
 <br>
 <html lang="en" style="height: 100%">
-<body class="mainbackgroundimagesetting">
+<body class="mainbackgroundimagesetting" >
 
-<div class="container bg-secondary" style="height: 60%">
+<div class="container detailmainbackgroundimagesetting" style="height: 100%">
     <h1>{{ person.username }}</h1>
 
     {% with followers=person.followers.all followings=person.followings.all %}
@@ -31,27 +31,45 @@
     {% if user == person %}
         {% comment %} 이 사람이 작성한 게시글 목록 {% endcomment %}
         <h4>내 게시글</h4>
-        {% for article in person.article_set.all %}
-            <p>{{ article.title }}</p>
-        {% endfor %}
+        {% if person.article_set.all %}
+            {% for article in person.article_set.all %}
+                <p>{{ article.title }}</p>
+            {% endfor %}
+        {% else %}
+            <p>작성된 게시글이 없습니다.</p>
+        {% endif %}
         <hr>
+
         {% comment %} 이 사람이 작성한 댓글 목록 {% endcomment %}
         <h4>내 댓글</h4>
-        {% for comment in person.comment_set.all %}
-            <p>{{ comment.content }}</p>
-        {% endfor %}
+        {% if person.comment_set.all %}
+            {% for comment in person.comment_set.all %}
+                <p>{{ comment.content }}</p>
+            {% endfor %}
+        {% else %}
+            <p>작성된 댓글이 없습니다.</p>
+        {% endif %}
         <hr>
         {% comment %} 이 사람이 좋아요를 누른 게시글 목록 {% endcomment %}
         <h4>좋아요</h4>
-        {% for article in person.like_articles.all %}
-            <p>{{ article.title }}</p>
-        {% endfor %}
+        {% if like_articles.all %}
+            {% for article in person.like_articles.all %}
+                <p>{{ article.title }}</p>
+            {% endfor %}
+        {% else %}
+            <p>좋아요를 누른 게시글이 없습니다.</p>
+        {% endif %}
+        <hr>
     {% else %}
         <h4>{{person.username}}의 게시글</h4>
-        {% for article in person.article_set.all %}
-            <p>{{ article.title }}</p>
-        {% endfor %}
         <hr>
+        {% if person.article_set %}
+            {% for article in person.article_set.all %}
+                <p>{{ article.title }}</p>
+            {% endfor %}
+        {% endif %}
+            <p>작성한 게시글이 없습니다.</p>
+
         <h4>{{person.username}}의 댓글</h4>
         {% for comment in person.comment_set.all %}
             <p>{{ comment.content }}</p>
@@ -61,6 +79,7 @@
         {% for article in person.like_articles.all %}
             <p>{{ article.title }}</p>
         {% endfor %}
+        <hr>
     {% endif %}
 </div>
 

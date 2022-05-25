@@ -13,5 +13,7 @@ urlpatterns = [
     path('<int:movie_pk>/likes/', views.likes, name='likes'),
     path('<int:director_pk>/director_likes/', views.director_likes, name='director_likes'),
     path('<int:actor_pk>/actor_likes/', views.actor_likes, name='actor_likes'),
+    
     path('<int:pk>/scores/', views.scores_create, name='scores_create'),
+    path('<int:movie_pk>/scores/<int:score_pk>/delete/', views.scores_delete, name='scores_delete'),
 ]
