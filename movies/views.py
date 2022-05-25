@@ -38,36 +38,34 @@ def detail(request, pk):
     movie = get_object_or_404(Movie, pk=pk)
     actors = get_list_or_404(Actor)
     directors = get_list_or_404(Director)
-    # scores= get_list_or_404(Score)
+    
+    movie_actors = movie.actors.all()
+    movie_directors = movie.directors.all()
     
     comment_form=CommentForm()
     comments=movie.comment_set.all()
     comments_num = len(movie.comment_set.all())
+
+    scores=movie.score_set.all()
+    scores_user_temp=movie.score_set.aggregate(Avg('star'))
+    scores_user=scores_user_temp['star__avg']
+    scores_avg=str(scores_user_temp['star__avg'])[:3]
+    scores_num=len(movie.score_set.all())
     
-    # score_list=movie.score_set.all()
-    # score_form=ScoreForm(request.POST, instance=scores)
-    
-    scores_temp=movie.score_set.aggregate(Avg('star'))
-    scores_avg=str(scores_temp['star__avg'])[:3]
-    scores_num= len(movie.score_set.all())
-    
-    # if score_list.user.filter(pk=request.user.pk).exists():
-    #     score_list.user.remove(request.user)
-    # else:
-    #     score_list.user.add(request.user)
-        
     context = {
         'movie':movie,
         'directors':directors,
         'actors':actors,
-        # 'scores':scores,
+        'scores':scores,
+        
+        'movie_actors':movie_actors,
+        'movie_directors': movie_directors,
         
         'comment_form':comment_form,
         'comments':comments,
         'comments_num':comments_num,
         
-        # 'score_form':score_form,
-        # 'score_list':score_list,
+        'scores_user':scores_user,
         'scores_avg':scores_avg,
         'scores_num':scores_num,
     }
@@ -215,3 +213,22 @@ def scores_delete(request, movie_pk, score_pk):
         if request.user == score.user:
             score.delete()
     return redirect('movies:detail', movie_pk)
+
+
+@require_POST
+def scores_update(request, movie_pk, score_pk):
+    if request.user.is_authenticated:
+        # 삭제한다
+        score=get_object_or_404(Score, pk=score_pk)
+        if request.user == score.user:
+            score.delete()
+        # 새로 추가한다. 
+        movie = get_object_or_404(Movie, pk=movie_pk)
+        score_form = ScoreForm(request.POST)
+        if score_form.is_valid():
+            score=score_form.save(commit=False)
+            score.movie=movie
+            score.user = request.user
+            score.save()
+        return redirect('movies:detail', movie_pk)
+    return redirect('accounts:login')
