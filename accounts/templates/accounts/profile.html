@@ -7,7 +7,10 @@
 
 <div class="container detailmainbackgroundimagesetting" style="height: 100%">
     <br>
-    <h1>{{ person.username }}</h1>
+    <h1>{{ person.username }} <span>
+        {% if person.is_staff %}
+        (관리자)
+        {% endif %}</span> </h1>
     <hr>
     {% if user == person %}
         <h4>좋아요 누른 감독</h4>
@@ -57,7 +60,7 @@
         <hr>
 
         <h4>내 커뮤니티 게시글</h4>
-        <div class="d-flex flex-row justify-content-start fw-bold">
+        <div class="fw-bold">
 
         {% if person.article_set.all %}
             {% for article in person.article_set.all %}
@@ -73,8 +76,13 @@
         <div class=" fw-bold">
         {% if person.comment_set.all %}
             {% for comment in person.comment_set.all %}
-            <div>
-                <p>&ensp;<a href="{% url 'movies:detail' comment.movie_id %}">{{ comment.content }}</a></p>
+            <div class="d-flex">
+                {% for movie in movies %}
+                    {% if comment.movie_id == movie.id %}
+                        <p>&ensp;<span><a href="{% url 'movies:detail' comment.movie_id %}">{{ movie.title }}</a></span>&ensp; - &ensp;{{ comment.content }}</p>
+                    {% endif %}
+                {% endfor %}
+                <p></p>
             </div>            
             {% endfor %}
             {% else %}
@@ -83,12 +91,23 @@
         </div>
         <hr>
 
-        <h4>평점을 준 영화</h4>
+        <h4>평점을 준 영화(나의 평점)</h4>
         <div class="d-flex flex-row justify-content-start fw-bold">
 
-        {% if like_articles.all %}
-            {% for article in person.like_articles.all %}
-                <p>&ensp;{{ article.title }}</p>
+        {% if scores %}
+            {% for score in scores %}
+                {% for movie in movies %}
+                    {% if score.movie_id == movie.id %}
+                        <div>
+                            <div class="">
+                                <a class="text-decoration-none" href="{% url 'movies:detail' movie.pk %}">
+                                <img class="items m-2 mt-2" width="135px" height="203px" src="https://www.themoviedb.org/t/p/original{{ movie.poster_path }}" alt="">
+                                </a>
+                            </div>
+                            <div class="text-center ms-2" style="width:135px; word-break:normal;">{{movie.title}} ({{score.star}})</div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             {% endfor %}
         {% else %}
             <p>&ensp;평점을 준 영화가 없습니다.</p>
@@ -147,11 +166,11 @@
     <hr>
 
     <h4>{{person.username}}님의 커뮤니티 게시글</h4>
-    <div class="d-flex flex-row justify-content-start fw-bold">
+    <div class="fw-bold">
 
     {% if person.article_set.all %}
         {% for article in person.article_set.all %}
-            <p>&ensp;<a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a></p>
+        <p>&ensp;<a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a></p>
         {% endfor %}
     {% else %}
         <p>&ensp;작성된 게시글이 없습니다.</p>
@@ -175,10 +194,20 @@
 
     <h4>평점을 준 영화</h4>
     <div class="d-flex flex-row justify-content-start fw-bold">
-
-    {% if like_articles.all %}
-        {% for article in person.like_articles.all %}
-            <p>&ensp;{{ article.title }}</p>
+    {% if scores %}
+        {% for score in scores %}
+            {% for movie in movies %}
+                {% if score.movie_id == movie.id %}
+                    <div>
+                        <div class="">
+                            <a class="text-decoration-none" href="{% url 'movies:detail' movie.pk %}">
+                            <img class="items m-2 mt-2" width="135px" height="203px" src="https://www.themoviedb.org/t/p/original{{ movie.poster_path }}" alt="">
+                            </a>
+                        </div>
+                        <div class="text-center ms-2" style="width:135px; word-break:normal;">{{movie.title}} ({{score.star}})</div>
+                    </div>
+                {% endif %}
+            {% endfor %}
         {% endfor %}
     {% else %}
         <p>&ensp;평점을 준 영화가 없습니다.</p>
@@ -189,4 +218,7 @@
     {% endif %}
 </div>
 <br>
+
+
+
 {% endblock content %}

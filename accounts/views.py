@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods, require_POST
 from .forms import CustomUserChangeForm, CustomUserCreationForm
 from django.contrib.auth import get_user_model
-from movies.models import Director, Actor, Comment, Movie
+from movies.models import Director, Actor, Comment, Movie, Score
 
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 
@@ -102,6 +102,8 @@ def profile(request, username):
     directors = Director.objects.filter(like_users__exact=person.pk)
     actors = Actor.objects.filter(like_users__exact=person.pk)
     movies = Movie.objects.all()
+    scores = Score.objects.filter(user_id=person.pk)
+    
     comments = Comment.objects.all()
     
     context = {
@@ -110,6 +112,7 @@ def profile(request, username):
         'directors': directors,
         'actors': actors,
         'comments':comments,
+        'scores':scores,
     }
     return render(request, 'accounts/profile.html', context)
 

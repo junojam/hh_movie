@@ -67,12 +67,11 @@ def recommend(request, user_pk):
         movies3 = Movie.objects.filter(actors=actor.id)
     else:
         movies3 = ''
+    
+    movies_total = Movie.objects.all()
+    scores = Score.objects.all()
         
-
     movies4 = Movie.objects.filter(genre__contains='코미디')
-    movies5 = Movie.objects.filter(genre__contains='범죄')
-    movies6 = Movie.objects.filter(genre__contains='SF')
-
     
     movies_len_1= len(movies) if len(movies) < 40 else 40
     movies_len_4_1_temp = len(movies)//4 if len(movies)%4 == 0 else len(movies)//4 + 1
@@ -90,15 +89,10 @@ def recommend(request, user_pk):
     movies_len_4_4_temp = len(movies4)//4 if len(movies4)%4 == 0 else len(movies4)//4 + 1
     movies_len_4_4= movies_len_4_4_temp if movies_len_4_4_temp < 10 else 10
     
-    movies_len_5= len(movies5) if len(movies6) < 40 else 40
-    movies_len_4_5_temp = len(movies5)//4 if len(movies5)%4 == 0 else len(movies5)//4 + 1
-    movies_len_4_5= movies_len_4_5_temp if movies_len_4_5_temp < 10 else 10
-    
-    movies_len_6= len(movies6) if len(movies6) < 40 else 40
-    movies_len_4_6_temp = len(movies2)//4 if len(movies6)%4 == 0 else len(movies6)//4 + 1
-    movies_len_4_6= movies_len_4_6_temp if movies_len_4_6_temp < 10 else 10
     
     context={
+        'movies_total':movies_total,
+        'scores':scores,
         'director_temp':director_temp,
         'actor_temp':actor_temp,
         'actor':actor,
@@ -107,8 +101,6 @@ def recommend(request, user_pk):
         'movies2':movies2,
         'movies3':movies3,
         'movies4':movies4,
-        'movies5':movies5,
-        'movies6':movies6,
         'movies_len_1':movies_len_1,
         'movies_len_4_1':movies_len_4_1,
         'movies_len_2':movies_len_2,
@@ -117,10 +109,6 @@ def recommend(request, user_pk):
         'movies_len_4_3':movies_len_4_3,
         'movies_len_4':movies_len_4,
         'movies_len_4_4':movies_len_4_4,
-        'movies_len_5':movies_len_5,
-        'movies_len_4_5':movies_len_4_5,
-        'movies_len_6':movies_len_6,
-        'movies_len_4_6':movies_len_4_6,
     }
     return render(request, 'movies/recommend.html',context)
 
@@ -221,22 +209,6 @@ def delete(request, pk):
         movie = get_object_or_404(Movie, pk=pk)
         movie.delete()
     return redirect('movies:index')
-
-
-# def delete(request, pk):
-#     if request.user.is_authenticated:
-#         movie = get_object_or_404(Movie, pk=pk)
-#         actors = get_list_or_404(Actor)
-#         # actor = Movie.actors.objects.get(movie_id=pk)
-#         # director = Movie.directors.objects.get(movie_id=pk)
-#         # actor.delete()
-#         # director.delete()
-#         # movie.delete()
-#         context = {
-#             'movie':movie,
-#             'actors':actors,
-#         }
-#     return render(request, 'movies/test.html', context)
 
 
 @require_POST
