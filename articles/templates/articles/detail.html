@@ -13,23 +13,28 @@
   </div>
   <hr>
   <h3>&ensp;{{ article.content }}</h3>
+  <br>
+  <br>
+  <div class="d-flex align-items-center justify-content-end">
+    <div>&ensp;&ensp;작성시간 : {{ article.created_at }} / 수정시간 : {{ article.updated_at }}</div>
 
-  <div class="d-flex text-center justify-content-end">&ensp;&ensp;&ensp;
-    {% if request.user == article.user %}
-    <div class="d-flex text-center justify-content-center align-items-center btn btn-success">
-      <a class="text-decoration-none text-white" href="{% url 'articles:update' article.pk %}">글 수정하기</a>
-    </div>
-    &ensp;
-    <form action="{% url 'articles:delete' article.pk %}" method="POST">
-      {% csrf_token %}
-      <input type="submit" value="글 삭제" class="btn btn-danger">
-    </form>
-    {% endif %}
-    &ensp;
-    <div>
-      <button class="btn btn-secondary">
-        <a class="text-decoration-none text-white" href="{% url 'articles:index' %}">돌아가기</a>
-      </button>
+    <div class="d-flex text-center justify-content-end">&ensp;&ensp;
+      {% if request.user == article.user %}
+      <div class="d-flex text-center justify-content-center align-items-center btn btn-success">
+        <a class="text-decoration-none text-white" href="{% url 'articles:update' article.pk %}">글 수정하기</a>
+      </div>
+      &ensp;
+      <form action="{% url 'articles:delete' article.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="글 삭제" class="btn btn-danger">
+      </form>
+      {% endif %}
+      &ensp;
+      <div>
+        <button class="btn btn-secondary">
+          <a class="text-decoration-none text-white" href="{% url 'articles:index' %}">돌아가기</a>
+        </button>
+      </div>
     </div>
   </div>
   <hr>
@@ -38,15 +43,23 @@
   <div>
     {% for comment in comments %}
       <div>
-        <div class="d-flex align-items-center">
-          &ensp;<a href="{% url 'accounts:profile' article.user.username %}">{{ article.user }}</a>&ensp;- {{ comment.content }}
-          {% if request.user == comment.user %}
-          <form action="{% url 'articles:comment_delete' article.pk comment.pk %}" method="POST">
-            {% csrf_token %}
-            <input type="submit" value="X" class="btn">
-          </form>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex align-items-center">
+
+            &ensp;<a href="{% url 'accounts:profile' article.user.username %}">{{ article.user }}</a>&ensp;- {{ comment.content }}
+            {% if request.user == comment.user %}
+            <form action="{% url 'articles:comment_delete' article.pk comment.pk %}" method="POST">
+              {% csrf_token %}
+              <input type="submit" value="X" class="btn">
+            </form>
+          </div>
+          <div>
+            <div>
+              작성 시간 : {{comment.created_at}} / 수정 시간 : {{comment.updated_at}}
+            </div>
+          </div>
+          {% endif %}
         </div>
-        {% endif %}
       </div>
     {% endfor %}
   </div>

@@ -1601,7 +1601,7 @@
                         {% if score.movie_id == movie.id %}
                             {% if user.pk == score.user_id %}
                                 <div>
-                                    {{movie.title}}- {{movie.genre}}
+                                    {{movie.title}} - {{movie.genre}}
                                 </div>
                             {% endif %}
                         {% endif %}
@@ -1609,10 +1609,8 @@
                 {% endfor %}
             </div>
             <div>
-
             </div>
         </div>
     </div>
-
 </body>
 {% endblock index %}

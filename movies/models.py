@@ -41,6 +41,8 @@ class Comment(models.Model):
     content = models.CharField(max_length=100)
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     
 class Score(models.Model):
     star = models.FloatField()
