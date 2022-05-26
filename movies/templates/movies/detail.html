@@ -188,7 +188,7 @@
                                                         <input type="radio" id="1-star" name="star" value="1" />
                                                         <label for="1-star" class="star">&#9733;</label>
                                                     </div>
-                                                    <input type="submit" value='평점 등록' class="btn btn-success ms-2">
+                                                    <input type="submit" value='평점 등록' class="btn btn-primary ms-2">
                                                 </div>
                                             </form>
                                         </div>
@@ -221,16 +221,29 @@
                                                 <input type="radio" id="1-star" name="star" value="1" />
                                                 <label for="1-star" class="star">&#9733;</label>
                                             </div>
-                                            <input type="submit" value='평점 등록' class="btn btn-success ms-2">
+                                            <input type="submit" value='평점 등록' class="btn btn-primary ms-2">
                                         </div>
                                     </form>
                                 </div>
                             {% endif %}
                         {% endif %}
-                    </div>
+                        </div>      
                 </div>
+                <br>
+                {% if request.user.is_staff %}
+                <div class="d-flex flex-row justify-content-end me-3">
+                        <a class="btn btn-success" href="{% url 'movies:update' movie.pk %}">영화 수정하기</a>&ensp;
+                        <form action="{% url 'movies:delete' movie.pk %}" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="_method" value="DELETE"/>
+                            <button type="submit" class="btn btn-danger">삭제하기</button>
+                        </form>
+                        {% comment %} <a class="btn btn-danger" href="{% url 'movies:delete' movie.pk %}">영화 삭제하기</a> {% endcomment %}
+                    </button>
+                </div>
+                {% endif %}
             </div>
-            <div >
+            <div>
                 <br>
                 <div class="item d-flex justify-content-start  text-center">
                     <div class="d-flex align-items-center">
@@ -379,19 +392,6 @@
                 </div>
             </div>
         </div>
-
-        {% if movie.user == request.user %}
-
-        <div>
-            <a href="{% url 'movies:update' movie.pk %}">UPDATE</a>
-        </div>
-
-        <form action="{% url 'movies:delete' movie.pk %}" method="POST">
-            {% csrf_token %}
-            <input type="submit" value="DELETE">
-        </form>
-
-        {% endif %}
         <br>
         <h4>댓글&ensp;<span>({{ comments_num }})</span></h4>
         {% if comments_num %}
@@ -399,7 +399,7 @@
         {% endif %}
         <div>
             {% for comment in comments %}
-            <div class="d-flex flex-row justify-content-start align-items-center">&ensp;{{ comment.user }} - {{ comment.content }} 
+            <div class="d-flex fw-bold flex-row justify-content-start align-items-center">&ensp;<a href="{% url 'accounts:profile' comment.user %}">{{ comment.user }}</a>&ensp;- {{ comment.content }} 
                 {% if request.user == comment.user %}
                 <form action="{% url 'movies:comments_delete' movie.pk comment.pk %}" method='POST' class='d-inline'>
                     {% csrf_token %}

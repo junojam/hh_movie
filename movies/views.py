@@ -215,12 +215,28 @@ def update(request, pk):
     }
     return render(request, 'movies/update.html', context)
 
-@require_POST
+
 def delete(request, pk):
     if request.user.is_authenticated:
         movie = get_object_or_404(Movie, pk=pk)
         movie.delete()
     return redirect('movies:index')
+
+
+# def delete(request, pk):
+#     if request.user.is_authenticated:
+#         movie = get_object_or_404(Movie, pk=pk)
+#         actors = get_list_or_404(Actor)
+#         # actor = Movie.actors.objects.get(movie_id=pk)
+#         # director = Movie.directors.objects.get(movie_id=pk)
+#         # actor.delete()
+#         # director.delete()
+#         # movie.delete()
+#         context = {
+#             'movie':movie,
+#             'actors':actors,
+#         }
+#     return render(request, 'movies/test.html', context)
 
 
 @require_POST

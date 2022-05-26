@@ -12,7 +12,7 @@
     <h2 class="m-0">{{ article.title }}</h2>
   </div>
   <hr>
-  <h3>{{ article.content }}</h3>
+  <h3>&ensp;{{ article.content }}</h3>
 
   <div class="d-flex text-center justify-content-end">&ensp;&ensp;&ensp;
     {% if request.user == article.user %}
@@ -39,7 +39,7 @@
     {% for comment in comments %}
       <div>
         <div class="d-flex align-items-center">
-          &ensp;- {{ comment.content }} -&ensp;<a href="{% url 'accounts:profile' article.user.username %}">{{ article.user }}</a>&ensp;&ensp;
+          &ensp;<a href="{% url 'accounts:profile' article.user.username %}">{{ article.user }}</a>&ensp;- {{ comment.content }} &ensp;&ensp;
           {% if request.user == comment.user %}
           <form action="{% url 'articles:comment_delete' article.pk comment.pk %}" method="POST">
             {% csrf_token %}

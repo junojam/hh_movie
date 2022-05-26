@@ -7,13 +7,15 @@
 
 <div class="container detailmainbackgroundimagesetting" style="height: 100%">
     <br>
-    <h1>CREATE</h1>
+    <h1>영화 만들기</h1>
     <hr>
     <form action="{% url 'movies:create' %}" method='POST'>
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Submit">
+        <input class="btn btn-primary" type="submit" value="작성 완료">
+        <a class="btn btn-secondary" href="{% url 'movies:index' %}">돌아가기</a>
     </form>
     <hr>
 </div>
+<br>
 {% endblock content %}

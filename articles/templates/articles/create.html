@@ -12,7 +12,7 @@
   <form action="{% url 'articles:create' %}" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit">
+    <input type="submit" value="글 작성하기">
   </form>
   <br>
 </div>

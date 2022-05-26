@@ -1,3 +1,4 @@
+from xml.etree.ElementTree import Comment
 from django.shortcuts import render, redirect, get_list_or_404, get_object_or_404
 from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
@@ -6,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods, require_POST
 from .forms import CustomUserChangeForm, CustomUserCreationForm
 from django.contrib.auth import get_user_model
-from movies.models import Director, Actor
+from movies.models import Director, Actor, Comment, Movie
 
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 
@@ -100,10 +101,15 @@ def profile(request, username):
     person = get_object_or_404(User, username=username)
     directors = Director.objects.filter(like_users__exact=person.pk)
     actors = Actor.objects.filter(like_users__exact=person.pk)
+    movies = Movie.objects.all()
+    comments = Comment.objects.all()
+    
     context = {
+        'movies':movies,
         'person':person,
         'directors': directors,
         'actors': actors,
+        'comments':comments,
     }
     return render(request, 'accounts/profile.html', context)
 

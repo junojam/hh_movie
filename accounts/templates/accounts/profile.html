@@ -61,7 +61,7 @@
 
         {% if person.article_set.all %}
             {% for article in person.article_set.all %}
-                <p>&ensp;{{ article.title }}</p>
+                <p>&ensp;<a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a></p>
             {% endfor %}
         {% else %}
             <p>&ensp;작성된 게시글이 없습니다.</p>
@@ -70,12 +70,14 @@
         <hr>
 
         <h4>내 영화 댓글</h4>
-        <div class="d-flex flex-row justify-content-start fw-bold">
+        <div class=" fw-bold">
         {% if person.comment_set.all %}
             {% for comment in person.comment_set.all %}
-                <p>&ensp;{{ comment.content }}</p>
+            <div>
+                <p>&ensp;<a href="{% url 'movies:detail' comment.movie_id %}">{{ comment.content }}</a></p>
+            </div>            
             {% endfor %}
-        {% else %}
+            {% else %}
             <p>&ensp;작성된 댓글이 없습니다.</p>
             {% endif %}
         </div>
@@ -149,7 +151,7 @@
 
     {% if person.article_set.all %}
         {% for article in person.article_set.all %}
-            <p>&ensp;{{ article.title }}</p>
+            <p>&ensp;<a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a></p>
         {% endfor %}
     {% else %}
         <p>&ensp;작성된 게시글이 없습니다.</p>
@@ -158,10 +160,12 @@
     <hr>
 
     <h4>{{person.username}}님의 영화 댓글</h4>
-    <div class="d-flex flex-row justify-content-start fw-bold">
+    <div class="fw-bold">
     {% if person.comment_set.all %}
         {% for comment in person.comment_set.all %}
-            <p>&ensp;{{ comment.content }}</p>
+        <div>
+            <p>&ensp;<a href="{% url 'movies:detail' comment.movie_id %}">{{ comment.content }}</a></p>
+        </div>
         {% endfor %}
     {% else %}
         <p>&ensp;작성된 댓글이 없습니다.</p>
