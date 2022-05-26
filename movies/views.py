@@ -12,10 +12,10 @@ def index(request):
     # 5번부터 올리는 것으로 만들기
     movies = Movie.objects.order_by('-release_date').filter(vote_average__gt=7)
     # 알고리즘 2 : 평점 순
-    movies_2 = Movie.objects.order_by('-vote_average')
+    movies2 = Movie.objects.order_by('-vote_average')
     context={
         'movies':movies,
-        'movies_2':movies_2
+        'movies2':movies2
     }
 
     return render(request, 'movies/index.html',context)
@@ -29,8 +29,10 @@ def index(request):
     
 def recommend(request):
     movies = Movie.objects.all()
+    movies2 = Movie.objects.all()
     context={
         'movies':movies,
+        'movies2':movies2,
     }
     return render(request, 'movies/recommend.html',context)
 
