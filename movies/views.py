@@ -82,7 +82,20 @@ def recommend(request, user_pk):
         scores_movie_genre = ''
         movies4 = ''
     
-    
+    scores2 = Score.objects.filter(user_id=user_pk)
+    dict = {'액션':0, '모험':0, '애니메이션':0, '코미디':0, '범죄':0, '다큐멘터리':0, '드라마':0, '가족':0, '판타지':0, '역사':0, '공포':0, '음악':0, '미스터리':0, '로맨스':0, 'SF':0, 'TV 영화':0, '스릴러':0, '전쟁':0, '서부':0}
+    for score in scores2:
+        if score.star >= 4.0:
+            tmp = Movie.objects.filter(pk=score.movie_id)
+            dict[tmp.values()[0]['genre']] += 1
+    maxV = 0
+    genre = ''
+    for key, value in dict.items():
+        if value > maxV:
+            maxV = value
+            genre = key
+    print(dict)
+    movies5 = Movie.objects.filter(genre__contains=genre)
     
     movies_len_1= len(movies) if len(movies) < 40 else 40
     movies_len_4_1_temp = len(movies)//4 if len(movies)%4 == 0 else len(movies)//4 + 1
@@ -100,8 +113,13 @@ def recommend(request, user_pk):
     movies_len_4_4_temp = len(movies4)//4 if len(movies4)%4 == 0 else len(movies4)//4 + 1
     movies_len_4_4= movies_len_4_4_temp if movies_len_4_4_temp < 10 else 10
     
+    movies_len_5= len(movies5) if len(movies5) < 40 else 40
+    movies_len_4_5_temp = len(movies5)//4 if len(movies5)%4 == 0 else len(movies5)//4 + 1
+    movies_len_4_5= movies_len_4_5_temp if movies_len_4_5_temp < 10 else 10
+    
     
     context={
+        'genre':genre,
         'movies_total':movies_total,
         'scores_temp':scores_temp,
         'scores_movie_genre':scores_movie_genre,
@@ -113,6 +131,7 @@ def recommend(request, user_pk):
         'movies2':movies2,
         'movies3':movies3,
         'movies4':movies4,
+        'movies5':movies5,
         'movies_len_1':movies_len_1,
         'movies_len_4_1':movies_len_4_1,
         'movies_len_2':movies_len_2,
@@ -121,6 +140,8 @@ def recommend(request, user_pk):
         'movies_len_4_3':movies_len_4_3,
         'movies_len_4':movies_len_4,
         'movies_len_4_4':movies_len_4_4,
+        'movies_len_5':movies_len_5,
+        'movies_len_4_5':movies_len_4_5,
     }
     return render(request, 'movies/recommend.html',context)
 
