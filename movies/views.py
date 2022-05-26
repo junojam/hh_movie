@@ -53,15 +53,26 @@ def search(request):
     
 def recommend(request, user_pk):
     movies = Movie.objects.order_by('?')
-    movies2 = Movie.objects.filter(genre__contains='액션')
-    movies3 = Movie.objects.filter(genre__contains='애니메이션')
+    
+    
+    director = Director.objects.filter(like_users__exact=user_pk).order_by("?").first()
+    director_temp = len(Director.objects.filter(like_users__exact=user_pk))
+    if director:
+        movies2 = Movie.objects.filter(directors=director.id)
+    else:
+        movies2 = ''
+        
+    actor = Actor.objects.filter(like_users__exact=user_pk).order_by("?").first()
+    actor_temp = len(Actor.objects.filter(like_users__exact=user_pk))
+    if actor:
+        movies3 = Movie.objects.filter(actors=actor.id)
+    else:
+        movies3 = ''
+        
+
     movies4 = Movie.objects.filter(genre__contains='코미디')
     movies5 = Movie.objects.filter(genre__contains='범죄')
     movies6 = Movie.objects.filter(genre__contains='SF')
-    director = Director.objects.filter(like_users__exact=user_pk).order_by("?").first()
-    actor = Actor.objects.filter(like_users__exact=user_pk).order_by("?").first()
-    movies_D = Movie.objects.filter(directors=director.id)
-    movies_A = Movie.objects.filter(actors=actor.id)
 
     
     movies_len_1= len(movies) if len(movies) < 40 else 40
@@ -89,8 +100,10 @@ def recommend(request, user_pk):
     movies_len_4_6= movies_len_4_6_temp if movies_len_4_6_temp < 10 else 10
     
     context={
-        'actor': actor,
-        'director': director,
+        'director_temp':director_temp,
+        'actor_temp':actor_temp,
+        'actor':actor,
+        'director':director,
         'movies':movies,
         'movies2':movies2,
         'movies3':movies3,
@@ -109,8 +122,6 @@ def recommend(request, user_pk):
         'movies_len_4_5':movies_len_4_5,
         'movies_len_6':movies_len_6,
         'movies_len_4_6':movies_len_4_6,
-        'movies_D': movies_D,
-        'movies_A': movies_A
     }
     return render(request, 'movies/recommend.html',context)
 

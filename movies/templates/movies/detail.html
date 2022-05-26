@@ -343,7 +343,7 @@
                             <div>
                                 <form class="alike-form" data-actor-id="{{ movie_actor.pk }}" style="margin:10px;">
                                     {% csrf_token %}
-                                    {% if user in actor.like_users.all %}
+                                    {% if user in movie_actor.like_users.all %}
                                     <button class="btn btn-outline-light border border-none" style="border: none; padding:0; outline:none;">
                                         <img  width="135px" src="https://www.themoviedb.org/t/p/original{{movie_actor.profile_path}}" onerror="this.src=`{% static 'movies/ALT_IMAGE.png' %}`" alt="">
                                     </button>
