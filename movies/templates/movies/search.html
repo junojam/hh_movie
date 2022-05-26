@@ -7,7 +7,8 @@
 <body>
     <div class="container indexmainbackgroundimagesetting">
         <br>
-        <h4 class="text-white">랜덤 추천 영화</h4>
+        <h4 class="text-white">'{{search}}' 제목 검색 결과</h4>
+        {% if movies_len_1 %}
         <div id="carouselExampleCaptions1" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 {% for i in "x"|rjust:movies_len_4_1 %}
@@ -388,9 +389,22 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-
-        <h4 class="text-white">액션 장르를 좋아하시나요?</h4>
-
+        {% else %}
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h4 class="text-white text-center mb-5">&ensp;검색 결과가 없습니다.</h4>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        {% endif %}
+        <h4 class="text-white">'{{search}}' 내용 검색 결과</h4>
+        {% if movies_len_2 %}
         <div id="carouselExampleCaptions2" class="carousel slide" data-bs-ride="carouse2">
             <div class="carousel-indicators">
                 {% for i in "x"|rjust:movies_len_4_2 %}
@@ -771,6 +785,20 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+        {% else %}
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h4 class="text-white text-center mb-5">&ensp;검색 결과가 없습니다.</h4>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        {% endif %}
     </div>
 </body>
 {% endblock index %}

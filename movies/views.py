@@ -17,8 +17,32 @@ def index(request):
         'movies':movies,
         'movies2':movies2
     }
-
     return render(request, 'movies/index.html',context)
+
+def search(request):
+    search=request.GET.get('search')
+    movies = Movie.objects.filter(title__contains=search)
+    movies2 = Movie.objects.filter(overview__contains=search)
+    
+    movies_len_1= len(movies) if len(movies) < 40 else 40
+    movies_len_4_1_temp = len(movies)//4 if len(movies)%4 == 0 else len(movies)//4 + 1
+    movies_len_4_1= movies_len_4_1_temp if movies_len_4_1_temp < 10 else 10
+    
+    movies_len_2= len(movies2) if len(movies2) < 40 else 40
+    movies_len_4_2_temp = len(movies2)//4 if len(movies2)%4 == 0 else len(movies2)//4 + 1
+    movies_len_4_2= movies_len_4_2_temp if movies_len_4_2_temp < 10 else 10
+    
+    context={
+        'search':search,
+        
+        'movies':movies,
+        'movies2':movies2,
+        'movies_len_1':movies_len_1,
+        'movies_len_4_1':movies_len_4_1,
+        'movies_len_2':movies_len_2,
+        'movies_len_4_2':movies_len_4_2,
+    }
+    return render(request, 'movies/search.html',context)
 
     # 1. 최신순 -> 평점 순서 부여
     # 2. 평점순 -> 전체 goty
@@ -28,11 +52,24 @@ def index(request):
     # 6. 감독, 배우를 검색을 통해서 영화 가져올 수 있도록
     
 def recommend(request):
-    movies = Movie.objects.all()
-    movies2 = Movie.objects.all()
+    movies = Movie.objects.order_by('?')
+    movies2 = Movie.objects.filter(genre__contains='액션')
+    
+    movies_len_1= len(movies) if len(movies) < 40 else 40
+    movies_len_4_1_temp = len(movies)//4 if len(movies)%4 == 0 else len(movies)//4 + 1
+    movies_len_4_1= movies_len_4_1_temp if movies_len_4_1_temp < 10 else 10
+    
+    movies_len_2= len(movies2) if len(movies2) < 40 else 40
+    movies_len_4_2_temp = len(movies2)//4 if len(movies2)%4 == 0 else len(movies2)//4 + 1
+    movies_len_4_2= movies_len_4_2_temp if movies_len_4_2_temp < 10 else 10
+    
     context={
         'movies':movies,
         'movies2':movies2,
+        'movies_len_1':movies_len_1,
+        'movies_len_4_1':movies_len_4_1,
+        'movies_len_2':movies_len_2,
+        'movies_len_4_2':movies_len_4_2,
     }
     return render(request, 'movies/recommend.html',context)
 
