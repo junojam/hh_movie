@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods, require_POST
 from .forms import CustomUserChangeForm, CustomUserCreationForm
 from django.contrib.auth import get_user_model
+from movies.models import Director, Actor
 
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 
@@ -97,8 +98,12 @@ def change_password(request):
 def profile(request, username):
     User = get_user_model()
     person = get_object_or_404(User, username=username)
+    directors = Director.objects.filter(like_users__exact=person.pk)
+    actors = Actor.objects.filter(like_users__exact=person.pk)
     context = {
         'person':person,
+        'directors': directors,
+        'actors': actors,
     }
     return render(request, 'accounts/profile.html', context)
 
