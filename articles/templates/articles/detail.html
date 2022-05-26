@@ -16,7 +16,7 @@
 
   <div class="d-flex text-center justify-content-end">&ensp;&ensp;&ensp;
     {% if request.user == article.user %}
-    <div class="d-flex text-center justify-content-center align-items-center btn btn-primary">
+    <div class="d-flex text-center justify-content-center align-items-center btn btn-success">
       <a class="text-decoration-none text-white" href="{% url 'articles:update' article.pk %}">글 수정하기</a>
     </div>
     &ensp;
@@ -27,7 +27,7 @@
     {% endif %}
     &ensp;
     <div>
-      <button class="btn btn-success">
+      <button class="btn btn-secondary">
         <a class="text-decoration-none text-white" href="{% url 'articles:index' %}">돌아가기</a>
       </button>
     </div>
@@ -39,11 +39,11 @@
     {% for comment in comments %}
       <div>
         <div class="d-flex align-items-center">
-          &ensp;<a href="{% url 'accounts:profile' article.user.username %}">{{ article.user }}</a>&ensp;- {{ comment.content }} &ensp;&ensp;
+          &ensp;<a href="{% url 'accounts:profile' article.user.username %}">{{ article.user }}</a>&ensp;- {{ comment.content }}
           {% if request.user == comment.user %}
           <form action="{% url 'articles:comment_delete' article.pk comment.pk %}" method="POST">
             {% csrf_token %}
-            <input type="submit" value="삭제" class="btn btn-danger">
+            <input type="submit" value="X" class="btn">
           </form>
         </div>
         {% endif %}
