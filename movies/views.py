@@ -54,6 +54,10 @@ def search(request):
 def recommend(request):
     movies = Movie.objects.order_by('?')
     movies2 = Movie.objects.filter(genre__contains='액션')
+    movies3 = Movie.objects.filter(genre__contains='애니메이션')
+    movies4 = Movie.objects.filter(genre__contains='코미디')
+    movies5 = Movie.objects.filter(genre__contains='범죄')
+    movies6 = Movie.objects.filter(genre__contains='SF')
     
     movies_len_1= len(movies) if len(movies) < 40 else 40
     movies_len_4_1_temp = len(movies)//4 if len(movies)%4 == 0 else len(movies)//4 + 1
@@ -62,14 +66,42 @@ def recommend(request):
     movies_len_2= len(movies2) if len(movies2) < 40 else 40
     movies_len_4_2_temp = len(movies2)//4 if len(movies2)%4 == 0 else len(movies2)//4 + 1
     movies_len_4_2= movies_len_4_2_temp if movies_len_4_2_temp < 10 else 10
+
+    movies_len_3= len(movies3) if len(movies3) < 40 else 40
+    movies_len_4_3_temp = len(movies3)//4 if len(movies3)%4 == 0 else len(movies3)//4 + 1
+    movies_len_4_3= movies_len_4_3_temp if movies_len_4_3_temp < 10 else 10
+    
+    movies_len_4= len(movies4) if len(movies4) < 40 else 40
+    movies_len_4_4_temp = len(movies4)//4 if len(movies4)%4 == 0 else len(movies4)//4 + 1
+    movies_len_4_4= movies_len_4_4_temp if movies_len_4_4_temp < 10 else 10
+    
+    movies_len_5= len(movies5) if len(movies6) < 40 else 40
+    movies_len_4_5_temp = len(movies5)//4 if len(movies5)%4 == 0 else len(movies5)//4 + 1
+    movies_len_4_5= movies_len_4_5_temp if movies_len_4_5_temp < 10 else 10
+    
+    movies_len_6= len(movies6) if len(movies6) < 40 else 40
+    movies_len_4_6_temp = len(movies2)//4 if len(movies6)%4 == 0 else len(movies6)//4 + 1
+    movies_len_4_6= movies_len_4_6_temp if movies_len_4_6_temp < 10 else 10
     
     context={
         'movies':movies,
         'movies2':movies2,
+        'movies3':movies3,
+        'movies4':movies4,
+        'movies5':movies5,
+        'movies6':movies6,
         'movies_len_1':movies_len_1,
         'movies_len_4_1':movies_len_4_1,
         'movies_len_2':movies_len_2,
         'movies_len_4_2':movies_len_4_2,
+        'movies_len_3':movies_len_3,
+        'movies_len_4_3':movies_len_4_3,
+        'movies_len_4':movies_len_4,
+        'movies_len_4_4':movies_len_4_4,
+        'movies_len_5':movies_len_5,
+        'movies_len_4_5':movies_len_4_5,
+        'movies_len_6':movies_len_6,
+        'movies_len_4_6':movies_len_4_6,
     }
     return render(request, 'movies/recommend.html',context)
 

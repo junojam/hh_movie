@@ -238,12 +238,13 @@
             <a class="d-flex align-items-center mx-2 text-decoration-none text-white" href="{% url 'movies:recommend' %}">추천 영화</a>
             <div class="d-flex align-items-center justify-content-start  text-decoration-none text-white">
               <a class=" text-decoration-none text-white mx-2" href="{% url 'articles:index' %}">커뮤니티</a>
-              {% comment %} <form action="" method="POST"> {% endcomment %}
               <form action="{% url 'movies:search' %}" method="GET">
                 {% csrf_token %}
                 <label for="search"></label>
-                <input id="search" type="text" name="search" placeholder="제목, 내용">
-                <input type="submit" value="검색하기" class="text-white" style="border: none; background: transparent;">
+                <input id="search" type="text" name="search" placeholder="제목, 내용으로 검색" style="background-color:black; opacity:0.5;">
+                <button style="border: none; background: transparent;">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
               </form>
             </div>
           </div>
@@ -287,6 +288,14 @@
             <a class="d-flex align-items-center mx-2 text-decoration-none text-white" href="{% url 'movies:index' %}">홈</a>            
             <div class="d-flex align-items-center justify-content-start  text-decoration-none text-white">
               <a class=" text-decoration-none text-white mx-2" href="{% url 'articles:index' %}">커뮤니티</a>
+              <form action="{% url 'movies:search' %}" method="GET">
+                {% csrf_token %}
+                <label for="search"></label>
+                <input id="search" type="text" name="search" placeholder="제목, 내용으로 검색" style="background-color:black; opacity:0.5;">
+                <button style="border: none; background: transparent;">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
             </div>
           </div>
         </div>

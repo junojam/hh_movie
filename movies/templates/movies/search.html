@@ -10,7 +10,7 @@
         <h4 class="text-white">'{{search}}' 제목 검색 결과</h4>
         {% if movies_len_1 %}
         <div id="carouselExampleCaptions1" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
+            <div class="carousel-indicators" style="margin-left:135px;">
                 {% for i in "x"|rjust:movies_len_4_1 %}
                     {% if forloop.counter0 == 0 %}
                         <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -405,8 +405,8 @@
         {% endif %}
         <h4 class="text-white">'{{search}}' 내용 검색 결과</h4>
         {% if movies_len_2 %}
-        <div id="carouselExampleCaptions2" class="carousel slide" data-bs-ride="carouse2">
-            <div class="carousel-indicators">
+        <div id="carouselExampleCaptions2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators" style="margin-left:135px;">
                 {% for i in "x"|rjust:movies_len_4_2 %}
                     {% if forloop.counter0 == 0 %}
                         <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
