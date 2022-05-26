@@ -24,21 +24,19 @@
 
   - 추천 알고리즘 설명
 
-    
-
 - 주요 기능
 
   - accounts
 
   - movies
 
-    
-
 - 느낀점
 
 - 프로젝트 필수 명세와 비교
 
 - 프로젝트 Day by Day  
+
+- 프로젝트 사용 주의사항
 
   
 
@@ -367,7 +365,7 @@ SSAFY 광주 2반에서 배운 내용을 고루 담아 보여드리고자 합니
         ![0527_17](README.assets/0527_17.gif)
     
      - 평점을 별로써 작성, 수정, 삭제할 수 있다.
-
+    
     ![0527_18](README.assets/0527_18.gif)			
 
 ## 느낀점😊
@@ -1195,6 +1193,15 @@ __MTM 테이블 구현 결과물__
   - 전체적인 글꼴 변경으로 사용자 경험 향상
 
     ![0526_33](README.assets/0526_33.jpg)
+    
+    
+
+## 프로젝트 사용 주의사항
+
+ - pip install -r requirements.txt 
+ - npm install axios
+ - python manage.py loaddata actor.json actor2.json actor3.json actor4.json director.json movie.json movie2.json movie3.json
+   - actor/director 먼저 loaddata, 이후 movie loaddata (MTM 필드 특성)
 
 
 
