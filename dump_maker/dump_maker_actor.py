@@ -6,7 +6,6 @@ import pprint
 
 def actor_info(movie_list):
     result = []
-    i = 1
     for movie in movie_list:
         BASE_URL2='https://api.themoviedb.org/3/movie/'
         path2 = '/credits?'
@@ -26,19 +25,15 @@ def actor_info(movie_list):
                 }
                 
                 res = requests.get(BASE_URL3 + str(response['cast'][idx2]['id']), params = params).json()
-                fields['id'] = res['id']
                 fields['name'] = res['name']
                 fields['profile_path'] = res['profile_path']
-                fields['movie_id'] = movie['id']
-                fields['character'] = response['cast'][idx2]['character']
 
                 info = { 
                     "model": "movies.actor",
-                    "pk": i,
+                    "pk": res['id'],
                 }
                 info["fields"] = fields
                 result.append(info)
-                i += 1
     return result
         
 # ------------------------------------------------------
@@ -47,12 +42,11 @@ path1 = '/movie/popular?'
 params = {
     'api_key' : 'b423b9f62c2dcbbc988e246c89249738',
     'language' : 'ko-KR',
+    'page' : 26
 }
 response = requests.get(BASE_URL1 + path1, params = params).json()
 movie_list = response['results']
 actors = actor_info(movie_list)
 
-pprint.pprint(actors)
-
-with open('actor.json', 'w', encoding="utf-8") as f:
+with open('actor26.json', 'w', encoding="utf-8") as f:
     json.dump(actors, f, ensure_ascii=False, indent="\t")
