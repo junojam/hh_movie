@@ -21,9 +21,11 @@ def index(request):
 
 def search(request):
     search=request.GET.get('search')
+    # movies는 제목 검색
+    # movies2는 내용 검색
     movies = Movie.objects.filter(title__contains=search)
     movies2 = Movie.objects.filter(overview__contains=search)
-    
+    # len과 관련된 것들은 carousel에서 4개씩 보여주기 위한 처리
     movies_len_1= len(movies) if len(movies) < 40 else 40
     movies_len_4_1_temp = len(movies)//4 if len(movies)%4 == 0 else len(movies)//4 + 1
     movies_len_4_1= movies_len_4_1_temp if movies_len_4_1_temp < 10 else 10
@@ -51,25 +53,35 @@ def search(request):
     # 6. 감독, 배우를 검색을 통해서 영화 가져올 수 있도록
     
 def recommend(request, user_pk):
+    # movies는 랜덤 추천을 위한 항목
     movies = Movie.objects.order_by('?')
+    movies_len_1= len(movies) if len(movies) < 40 else 40
+    movies_len_4_1_temp = len(movies)//4 if len(movies)%4 == 0 else len(movies)//4 + 1
+    movies_len_4_1= movies_len_4_1_temp if movies_len_4_1_temp < 10 else 10
     
-    
+    # movies2는 감독 추천을 위한 항목
     director = Director.objects.filter(like_users__exact=user_pk).order_by("?").first()
     director_temp = len(Director.objects.filter(like_users__exact=user_pk))
     if director:
         movies2 = Movie.objects.filter(directors=director.id)
     else:
         movies2 = ''
-        
+    movies_len_2= len(movies2) if len(movies2) < 40 else 40
+    movies_len_4_2_temp = len(movies2)//4 if len(movies2)%4 == 0 else len(movies2)//4 + 1
+    movies_len_4_2= movies_len_4_2_temp if movies_len_4_2_temp < 10 else 10
+    
+    # movies3은 배우 추천을 위한 항목
     actor = Actor.objects.filter(like_users__exact=user_pk).order_by("?").first()
     actor_temp = len(Actor.objects.filter(like_users__exact=user_pk))
     if actor:
         movies3 = Movie.objects.filter(actors=actor.id)
     else:
         movies3 = ''
+    movies_len_3= len(movies3) if len(movies3) < 40 else 40
+    movies_len_4_3_temp = len(movies3)//4 if len(movies3)%4 == 0 else len(movies3)//4 + 1
+    movies_len_4_3= movies_len_4_3_temp if movies_len_4_3_temp < 10 else 10
     
-    movies_total = Movie.objects.all()
-    
+    # movies4는 가장 높은 평점을 준 영화를 위한 항목
     scores = Score.objects.filter(user_id=user_pk).order_by('-star')
     scores_temp = len(Score.objects.filter(user_id=user_pk))
     
@@ -82,6 +94,7 @@ def recommend(request, user_pk):
         scores_movie_genre = ''
         movies4 = ''
     
+    # movies5는 4점 이상 평점이 가장 많은 영화 장르를 위한 항목
     scores2 = Score.objects.filter(user_id=user_pk)
     dict = {'액션':0, '모험':0, '애니메이션':0, '코미디':0, '범죄':0, '다큐멘터리':0, '드라마':0, '가족':0, '판타지':0, '역사':0, '공포':0, '음악':0, '미스터리':0, '로맨스':0, 'SF':0, 'TV 영화':0, '스릴러':0, '전쟁':0, '서부':0}
     for score in scores2:
@@ -96,17 +109,9 @@ def recommend(request, user_pk):
             genre = key
     movies5 = Movie.objects.filter(genre__contains=genre)
     
-    movies_len_1= len(movies) if len(movies) < 40 else 40
-    movies_len_4_1_temp = len(movies)//4 if len(movies)%4 == 0 else len(movies)//4 + 1
-    movies_len_4_1= movies_len_4_1_temp if movies_len_4_1_temp < 10 else 10
-    
-    movies_len_2= len(movies2) if len(movies2) < 40 else 40
-    movies_len_4_2_temp = len(movies2)//4 if len(movies2)%4 == 0 else len(movies2)//4 + 1
-    movies_len_4_2= movies_len_4_2_temp if movies_len_4_2_temp < 10 else 10
 
-    movies_len_3= len(movies3) if len(movies3) < 40 else 40
-    movies_len_4_3_temp = len(movies3)//4 if len(movies3)%4 == 0 else len(movies3)//4 + 1
-    movies_len_4_3= movies_len_4_3_temp if movies_len_4_3_temp < 10 else 10
+    movies_total = Movie.objects.all()
+
     
     movies_len_4= len(movies4) if len(movies4) < 40 else 40
     movies_len_4_4_temp = len(movies4)//4 if len(movies4)%4 == 0 else len(movies4)//4 + 1
