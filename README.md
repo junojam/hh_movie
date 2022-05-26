@@ -13,17 +13,26 @@
 - 프로젝트 명세
 
   - 프로젝트 목표
+
   - 프로젝트 개요
 
   - 개발 환경
+
   - 개발 일정
+
   - ERD
+
   - 추천 알고리즘 설명
+
+    
 
 - 주요 기능
 
   - accounts
+
   - movies
+
+    
 
 - 느낀점
 
@@ -62,37 +71,40 @@ SSAFY 광주 2반에서 배운 내용을 고루 담아 보여드리고자 합니
 
 ## 프로젝트 명세
 
- - 프로젝트 목표
+- 프로젝트 목표
    - 영화 데이터 기반 추천 서비스 구성
-   
+
    - 영화 추천 알고리즘 구성
-   
+
    - 커뮤니티 서비스 구성
-   
+
    - HTML, CSS, Django, REST API, Database를 활용한 실제 서비스 설계
-   
+
      
-   
- - 프로젝트 개요
+
+- 프로젝트 개요
 
    - 영화 데이터 수집
 
      - The Movie Database(TMDB)를 활용한 데이터 수집, 가공하여 데이터베이스화
-     
-   
+
+
         ![TMDB](README.assets/TMDB.png)
-   
+
      - Django REST Framework를 활용한 URL 렌더링, DTL 사용
-   
+
         ![DRF](README.assets/DRF.png) 
-   
+
      - SSAFYlab을 활용한 소스코드 버전 관리
-       ![SSAFYLAB](README.assets/SSAFYLAB.png)
-     
-       
-     
-   - 프로젝트 폴더 구성
-   ```
+
+
+![SSAFYLAB](README.assets/SSAFYLAB.png)
+
+
+
+- 프로젝트 폴더 구성
+
+```
 ├── README.md
 ├── accounts
 │   ├── migrations
@@ -182,6 +194,7 @@ SSAFY 광주 2반에서 배운 내용을 고루 담아 보여드리고자 합니
 ├── package-lock.json
 ├── package.json
 └── requirements.txt
+```
 
 
 
