@@ -1582,14 +1582,14 @@
         <div class="text-center text-white">
             <br>
             <br>
-            <h5>영화에 평점<span style="color:yellow;">&#9733;</span> 를 매겨 좋아하는 영화 장르의 작품을 추천받아보세요!</h5>
+            <h5>영화에 평점<span style="color:yellow;">&#9733;</span> 을 매겨 좋아하는 영화 장르의 작품을 추천받아보세요!</h5>
             <br>   
             <br>
         </div>
         {% endif %}
         <!-- 4차 추천 끝 -->
         <!-- 5차 추천 -->
-        {% comment %} {% if  %} {% endcomment %}
+        {% if genre %}
         <h4 class="text-white">
             &ensp;&ensp;<span class="fw-bold">{{user}}</span>&ensp;님이 4점 이상을 많이 준 장르 : {{genre}}
         </h4>
@@ -1973,18 +1973,18 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-        {% comment %} {% else %}
+        {% else %}
         <h4 class="text-white">
-            &ensp;&ensp;좋아하는 영화 장르가 없으신가요?
+            &ensp;&ensp;높은 평점을 받은 영화가 없어요!
         </h4>
         <div class="text-center text-white">
             <br>
             <br>
-            <h5>영화에 평점<span style="color:yellow;">&#9733;</span> 를 매겨 좋아하는 영화 장르의 작품을 추천받아보세요!</h5>
+            <h5>좋아하는 영화에 높은 평점<span style="color:yellow;">&#9733;</span> 을 매겨보세요!</h5>
             <br>   
             <br>
         </div>
-        {% endif %} {% endcomment %}
+        {% endif %}
     </div>
 </body>
 <br>

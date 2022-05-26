@@ -94,7 +94,6 @@ def recommend(request, user_pk):
         if value > maxV:
             maxV = value
             genre = key
-    print(dict)
     movies5 = Movie.objects.filter(genre__contains=genre)
     
     movies_len_1= len(movies) if len(movies) < 40 else 40
@@ -119,6 +118,7 @@ def recommend(request, user_pk):
     
     
     context={
+        'maxV':maxV,
         'genre':genre,
         'movies_total':movies_total,
         'scores_temp':scores_temp,
