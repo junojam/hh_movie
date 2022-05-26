@@ -19,9 +19,8 @@
         {% for director in directors %}
             <div>
                 <form style="margin:10px;">
-                    <button class="btn btn-outline-light border border-none" style="border: none; padding:0; outline:none;">
+                                    {% comment %} <p>&ensp;<a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a></p> {% endcomment %}
                         <img width="135px" src="https://www.themoviedb.org/t/p/original{{ director.profile_path }}" onerror="this.src=`{% static 'accounts/ALT_IMAGE.png' %}`" alt="">
-                    </button>
                     <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{ director.name }}
                         <span>
                             <i class="fa-solid fa-heart" style="color:red"></i>
@@ -125,9 +124,7 @@
     {% for director in directors %}
         <div>
             <form style="margin:10px;">
-                <button class="btn btn-outline-light border border-none" style="border: none; padding:0; outline:none;">
                     <img width="135px" src="https://www.themoviedb.org/t/p/original{{ director.profile_path }}" onerror="this.src=`{% static 'accounts/ALT_IMAGE.png' %}`" alt="">
-                </button>
                 <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{ director.name }}
                     <span>
                         <i class="fa-solid fa-heart" style="color:red"></i>

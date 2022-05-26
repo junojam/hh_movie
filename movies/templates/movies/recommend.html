@@ -1191,8 +1191,9 @@
         {% endif %}
         <!-- 3차 추천 끝 -->
         <!-- 4차 추천 -->
+        {% if scores_temp %}
         <h4 class="text-white">
-            &ensp;&ensp;<span class="fw-bold">{{user}}</span>&ensp;님이 제일 좋아하는 장르 : 
+            &ensp;&ensp;<span class="fw-bold">{{user}}</span>&ensp;님이 가장 높은 평점을 준 장르 : {{scores_movie_genre}}
         </h4>
         <div id="carouselExampleCaptions4" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators" style="margin-left:135px;">
@@ -1574,7 +1575,24 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+        {% else %}
+        <h4 class="text-white">
+            &ensp;&ensp;좋아하는 영화 장르가 없으신가요?
+        </h4>
+        <div class="text-center text-white">
+            <br>
+            <br>
+            <h5>영화에 평점<span style="color:yellow;">&#9733;</span> 를 매겨 좋아하는 영화 장르의 작품을 추천받아보세요!</h5>
+            <br>   
+            <br>
+        </div>
+        {% endif %}
         <!-- 4차 추천 끝 -->
+        {% comment %} {% for movie in movies %}
+            {% if movie.id == scores_movie.movie_id %}
+                {{movie.genre}}
+            {% endif %}
+        {% endfor %} {% endcomment %}
         {% comment %} <div class="text-white">
             <div>
                 {{ user.pk }}
@@ -1613,4 +1631,6 @@
         </div> {% endcomment %}
     </div>
 </body>
+<br>
+<br>
 {% endblock index %}

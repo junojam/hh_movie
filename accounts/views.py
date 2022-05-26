@@ -103,7 +103,6 @@ def profile(request, username):
     actors = Actor.objects.filter(like_users__exact=person.pk)
     movies = Movie.objects.all()
     scores = Score.objects.filter(user_id=person.pk)
-    
     comments = Comment.objects.all()
     
     context = {

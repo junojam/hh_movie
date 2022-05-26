@@ -69,9 +69,20 @@ def recommend(request, user_pk):
         movies3 = ''
     
     movies_total = Movie.objects.all()
-    scores = Score.objects.all()
-        
-    movies4 = Movie.objects.filter(genre__contains='코미디')
+    
+    scores = Score.objects.filter(user_id=user_pk).order_by('-star')
+    scores_temp = len(Score.objects.filter(user_id=user_pk))
+    
+    if scores:
+        scores_movie = scores.values('movie_id')[0]['movie_id']
+        scores_movie_genre = Movie.objects.filter(pk=scores_movie).values()[0]['genre']
+        movies4 = Movie.objects.filter(genre__contains=scores_movie_genre)
+    else:
+        scores_movie = ''
+        scores_movie_genre = ''
+        movies4 = ''
+    
+    
     
     movies_len_1= len(movies) if len(movies) < 40 else 40
     movies_len_4_1_temp = len(movies)//4 if len(movies)%4 == 0 else len(movies)//4 + 1
@@ -92,7 +103,8 @@ def recommend(request, user_pk):
     
     context={
         'movies_total':movies_total,
-        'scores':scores,
+        'scores_temp':scores_temp,
+        'scores_movie_genre':scores_movie_genre,
         'director_temp':director_temp,
         'actor_temp':actor_temp,
         'actor':actor,
