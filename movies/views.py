@@ -51,13 +51,18 @@ def search(request):
     # 5. 장르별(식상할듯)
     # 6. 감독, 배우를 검색을 통해서 영화 가져올 수 있도록
     
-def recommend(request):
+def recommend(request, user_pk):
     movies = Movie.objects.order_by('?')
     movies2 = Movie.objects.filter(genre__contains='액션')
     movies3 = Movie.objects.filter(genre__contains='애니메이션')
     movies4 = Movie.objects.filter(genre__contains='코미디')
     movies5 = Movie.objects.filter(genre__contains='범죄')
     movies6 = Movie.objects.filter(genre__contains='SF')
+    director = Director.objects.filter(like_users__exact=user_pk).order_by("?").first()
+    actor = Actor.objects.filter(like_users__exact=user_pk).order_by("?").first()
+    movies_D = Movie.objects.filter(directors=director.id)
+    movies_A = Movie.objects.filter(actors=actor.id)
+
     
     movies_len_1= len(movies) if len(movies) < 40 else 40
     movies_len_4_1_temp = len(movies)//4 if len(movies)%4 == 0 else len(movies)//4 + 1
@@ -84,6 +89,8 @@ def recommend(request):
     movies_len_4_6= movies_len_4_6_temp if movies_len_4_6_temp < 10 else 10
     
     context={
+        'actor': actor,
+        'director': director,
         'movies':movies,
         'movies2':movies2,
         'movies3':movies3,
@@ -102,6 +109,8 @@ def recommend(request):
         'movies_len_4_5':movies_len_4_5,
         'movies_len_6':movies_len_6,
         'movies_len_4_6':movies_len_4_6,
+        'movies_D': movies_D,
+        'movies_A': movies_A
     }
     return render(request, 'movies/recommend.html',context)
 

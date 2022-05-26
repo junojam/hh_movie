@@ -4,11 +4,11 @@ from . import views
 app_name='movies'
 urlpatterns = [
     path('', views.index, name='index'),
-    path('recommend/', views.recommend, name='recommend'),
     path('search/', views.search, name='search'),
     
     path('create/', views.create, name='create'),
     path('<int:pk>/', views.detail, name='detail'),
+    path('<int:user_pk>/recommend/', views.recommend, name='recommend'),
     path('<int:pk>/update/', views.update, name='update'),
     path('<int:pk>/delete/', views.delete, name='delete'),
     
