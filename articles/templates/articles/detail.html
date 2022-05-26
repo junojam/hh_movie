@@ -9,7 +9,7 @@
       <br>
 
   <div class="d-flex text-center justify-content-between align-items-center">
-    <h2 class="m-0">{{ article.title }}</h2>
+    <h2 class="m-0">{{ article.title }} - <a href="{% url 'accounts:profile' article.user.username %}">{{article.user.username}}</a></h2>
   </div>
   <hr>
   <h3>&ensp;{{ article.content }}</h3>
@@ -43,22 +43,25 @@
   <div>
     {% for comment in comments %}
       <div>
-        <div class="d-flex justify-content-between">
-          <div class="d-flex align-items-center">
-
-            &ensp;<a href="{% url 'accounts:profile' article.user.username %}">{{ article.user }}</a>&ensp;- {{ comment.content }}
-            {% if request.user == comment.user %}
-            <form action="{% url 'articles:comment_delete' article.pk comment.pk %}" method="POST">
-              {% csrf_token %}
-              <input type="submit" value="X" class="btn">
-            </form>
-          </div>
-          <div>
+        <div class="">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center ">
+              <div>
+                &ensp;<a href="{% url 'accounts:profile' comment.user.username %}">{{ comment.user }}</a>&ensp;- {{ comment.content }}
+              </div>
+              <div>
+                {% if request.user == comment.user %}
+                <form action="{% url 'articles:comment_delete' article.pk comment.pk %}" method="POST">
+                  {% csrf_token %}
+                  <input type="submit" value="X" class="btn">
+                </form>
+                {% endif %}   
+              </div>
+            </div>
             <div>
-              작성 시간 : {{comment.created_at}} / 수정 시간 : {{comment.updated_at}}
+                작성 시간 : {{comment.created_at}} / 수정 시간 : {{comment.updated_at}}
             </div>
           </div>
-          {% endif %}
         </div>
       </div>
     {% endfor %}

@@ -311,7 +311,6 @@
           <div class="d-flex flex-row">
             <a class="d-flex align-items-center mx-2 text-decoration-none text-white" href="{% url 'movies:index' %}">홈</a>            
             <div class="d-flex align-items-center justify-content-start  text-decoration-none text-white">
-              <a class=" text-decoration-none text-white mx-2" href="{% url 'articles:index' %}">커뮤니티</a>
               <form action="{% url 'movies:search' %}" method="GET">
                 {% csrf_token %}
                 <label for="search"></label>

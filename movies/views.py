@@ -93,6 +93,9 @@ def recommend(request, user_pk):
         scores_movie = ''
         scores_movie_genre = ''
         movies4 = ''
+    movies_len_4= len(movies4) if len(movies4) < 40 else 40
+    movies_len_4_4_temp = len(movies4)//4 if len(movies4)%4 == 0 else len(movies4)//4 + 1
+    movies_len_4_4= movies_len_4_4_temp if movies_len_4_4_temp < 10 else 10
     
     # movies5는 4점 이상 평점이 가장 많은 영화 장르를 위한 항목
     scores2 = Score.objects.filter(user_id=user_pk)
@@ -108,20 +111,12 @@ def recommend(request, user_pk):
             maxV = value
             genre = key
     movies5 = Movie.objects.filter(genre__contains=genre)
-    
-
-    movies_total = Movie.objects.all()
-
-    
-    movies_len_4= len(movies4) if len(movies4) < 40 else 40
-    movies_len_4_4_temp = len(movies4)//4 if len(movies4)%4 == 0 else len(movies4)//4 + 1
-    movies_len_4_4= movies_len_4_4_temp if movies_len_4_4_temp < 10 else 10
-    
     movies_len_5= len(movies5) if len(movies5) < 40 else 40
     movies_len_4_5_temp = len(movies5)//4 if len(movies5)%4 == 0 else len(movies5)//4 + 1
     movies_len_4_5= movies_len_4_5_temp if movies_len_4_5_temp < 10 else 10
     
-    
+    movies_total = Movie.objects.all()
+
     context={
         'maxV':maxV,
         'genre':genre,
