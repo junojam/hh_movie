@@ -7,7 +7,7 @@ class MovieForm(forms.ModelForm):
 
     class Meta:
         model = Movie
-        exclude=('user', )
+        exclude=('user', 'like_users', )
 
 class CommentForm(forms.ModelForm):
 

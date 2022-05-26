@@ -32,7 +32,6 @@
         {% endif %}
         </div>
         <hr>
-        <br>
 
         <h4>좋아요 누른 배우</h4>
         <div class="d-flex flex-row justify-content-start fw-bold">
@@ -56,74 +55,134 @@
         {% endif %}
         </div>
         <hr>
-        <br>
 
         <h4>내 커뮤니티 게시글</h4>
+        <div class="d-flex flex-row justify-content-start fw-bold">
+
         {% if person.article_set.all %}
             {% for article in person.article_set.all %}
-                <p>{{ article.title }}</p>
+                <p>&ensp;{{ article.title }}</p>
             {% endfor %}
         {% else %}
             <p>&ensp;작성된 게시글이 없습니다.</p>
         {% endif %}
+        </div>
         <hr>
-        <br>
 
         <h4>내 영화 댓글</h4>
+        <div class="d-flex flex-row justify-content-start fw-bold">
         {% if person.comment_set.all %}
             {% for comment in person.comment_set.all %}
-                <p>{{ comment.content }}</p>
+                <p>&ensp;{{ comment.content }}</p>
             {% endfor %}
         {% else %}
             <p>&ensp;작성된 댓글이 없습니다.</p>
-        {% endif %}
+            {% endif %}
+        </div>
         <hr>
-        <br>
 
         <h4>평점을 준 영화</h4>
+        <div class="d-flex flex-row justify-content-start fw-bold">
+
         {% if like_articles.all %}
             {% for article in person.like_articles.all %}
-                <p>{{ article.title }}</p>
+                <p>&ensp;{{ article.title }}</p>
             {% endfor %}
         {% else %}
-            <p>&ensp;좋아요를 누른 게시글이 없습니다.</p>
+            <p>&ensp;평점을 준 영화가 없습니다.</p>
         {% endif %}
+        </div>
         <hr>
-        
+        <br>
+
+    
     {% else %}
 
-        <h4>{{person.username}}의 게시글</h4>
-        {% if person.article_set.all %}
-            {% for article in person.article_set.all %}
-                <p>{{ article.title }}</p>
-            {% endfor %}
-        {% else %}
-            <p>작성한 게시글이 없습니다.</p>
-        {% endif %}
-        <hr>
+    <h4>{{person.username}}님이 좋아요 누른 감독</h4>
+    <div class="d-flex flex-row justify-content-start fw-bold">
+    {% if directors %}
+    {% for director in directors %}
+        <div>
+            <form style="margin:10px;">
+                <button class="btn btn-outline-light border border-none" style="border: none; padding:0; outline:none;">
+                    <img width="135px" src="https://www.themoviedb.org/t/p/original{{ director.profile_path }}" onerror="this.src=`{% static 'accounts/ALT_IMAGE.png' %}`" alt="">
+                </button>
+                <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{ director.name }}
+                    <span>
+                        <i class="fa-solid fa-heart" style="color:red"></i>
+                    </span>
+                </div>
+            </form>
+        </div>
+    {% endfor %}
+    {% else %}
+        <p>&ensp;좋아하는 감독이 없습니다.</p>
+    {% endif %}
+    </div>
+    <hr>
 
-        <h4>{{person.username}}의 댓글</h4>
-        {% if person.comment_set.all %}
-            {% for comment in person.comment_set.all %}
-                <p>{{ comment.content }}</p>
-            {% endfor %}
-        {% else %}
-            <p>&ensp;작성된 댓글이 없습니다.</p>
-        {% endif %}
-        <hr>
+    <h4>{{person.username}}님이 좋아요 누른 배우</h4>
+    <div class="d-flex flex-row justify-content-start fw-bold">
+    {% if actors %}
+    {% for actor in actors %}
+        <div>
+            <form style="margin:10px;">
+                <button class="btn btn-outline-light border border-none" style="border: none; padding:0; outline:none;">
+                    <img width="135px" src="https://www.themoviedb.org/t/p/original{{ actor.profile_path }}" onerror="this.src=`{% static 'accounts/ALT_IMAGE.png' %}`" alt="">
+                </button>
+                <div style="width:135px; text-align: center; word-break:normal;" class="text-center text-dark">{{ actor.name }}
+                    <span>
+                        <i class="fa-solid fa-heart" style="color:red"></i>
+                    </span>
+                </div>
+            </form>
+        </div>
+    {% endfor %}
+    {% else %}
+        <p>&ensp;좋아하는 배우가 없습니다.</p>
+    {% endif %}
+    </div>
+    <hr>
 
-        <h4>{{person.username}}의 좋아요</h4>
-        {% if like_articles.all %}
-            {% for article in person.like_articles.all %}
-                <p>{{ article.title }}</p>
-            {% endfor %}
-        {% else %}
-            <p>&ensp;좋아요를 누른 게시글이 없습니다.</p>
+    <h4>{{person.username}}님의 커뮤니티 게시글</h4>
+    <div class="d-flex flex-row justify-content-start fw-bold">
+
+    {% if person.article_set.all %}
+        {% for article in person.article_set.all %}
+            <p>&ensp;{{ article.title }}</p>
+        {% endfor %}
+    {% else %}
+        <p>&ensp;작성된 게시글이 없습니다.</p>
+    {% endif %}
+    </div>
+    <hr>
+
+    <h4>{{person.username}}님의 영화 댓글</h4>
+    <div class="d-flex flex-row justify-content-start fw-bold">
+    {% if person.comment_set.all %}
+        {% for comment in person.comment_set.all %}
+            <p>&ensp;{{ comment.content }}</p>
+        {% endfor %}
+    {% else %}
+        <p>&ensp;작성된 댓글이 없습니다.</p>
         {% endif %}
-        <hr>
-        
-        <br>
+    </div>
+    <hr>
+
+    <h4>평점을 준 영화</h4>
+    <div class="d-flex flex-row justify-content-start fw-bold">
+
+    {% if like_articles.all %}
+        {% for article in person.like_articles.all %}
+            <p>&ensp;{{ article.title }}</p>
+        {% endfor %}
+    {% else %}
+        <p>&ensp;평점을 준 영화가 없습니다.</p>
+    {% endif %}
+    </div>
+    <hr>
+    <br>
     {% endif %}
 </div>
-
+<br>
 {% endblock content %}

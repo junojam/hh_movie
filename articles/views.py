@@ -7,7 +7,7 @@ from .forms import ArticleForm, CommentForm
 # Create your views here.
 @require_safe
 def index(request):
-    articles = Article.objects.order_by('-pk')
+    articles = Article.objects.order_by('pk')
     context = {
         'articles': articles,
     }
@@ -39,10 +39,12 @@ def detail(request, pk):
     comment_form = CommentForm()
     # 조회한 article의 모든 댓글을 조회(역참조)
     comments = article.articlecomment_set.all()
+    comments_len = len(comments)
     context = {
         'article': article,
         'comment_form': comment_form,
         'comments': comments,
+        'comments_len': comments_len
     }
     return render(request, 'articles/detail.html', context)
 

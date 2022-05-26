@@ -7,44 +7,57 @@
 <body>
     <div class="container detailmainbackgroundimagesetting">
       <br>
-  <h1>DETAIL</h1>
-  <h3>{{ article.pk }}번째 글</h3>
+
+  <div class="d-flex text-center justify-content-between align-items-center">
+    <h2 class="m-0">{{ article.title }}</h2>
+  </div>
   <hr>
-  <p>제목 : {{ article.title }}</p>
-  <p>내용 : {{ article.content }}</p>
-  <p>작성 시각 : {{ article.created_at }}</p>
-  <p>수정 시각 : {{ article.updated_at }}</p>
-  <hr>
-  {% if request.user == article.user %}
-    <a href="{% url 'articles:update' article.pk %}">수정</a>
+  <h3>{{ article.content }}</h3>
+
+  <div class="d-flex text-center justify-content-end">&ensp;&ensp;&ensp;
+    {% if request.user == article.user %}
+    <div class="d-flex text-center justify-content-center align-items-center btn btn-primary">
+      <a class="text-decoration-none text-white" href="{% url 'articles:update' article.pk %}">글 수정하기</a>
+    </div>
+    &ensp;
     <form action="{% url 'articles:delete' article.pk %}" method="POST">
       {% csrf_token %}
-      <input type="submit" value="삭제">
+      <input type="submit" value="글 삭제" class="btn btn-danger">
     </form>
-  {% endif %}
-  <a href="{% url 'articles:index' %}">back</a>
+    {% endif %}
+    &ensp;
+    <div>
+      <button class="btn btn-success">
+        <a class="text-decoration-none text-white" href="{% url 'articles:index' %}">돌아가기</a>
+      </button>
+    </div>
+  </div>
   <hr>
-  <h4>댓글 목록</h4>
-  <ul>
+  <h4>댓글 ({{comments_len}})</h4>
+  
+  <div>
     {% for comment in comments %}
-      <li>
-        {{ comment.user }} - {{ comment.content }}
-        {% if request.user == comment.user %}
-        <form action="{% url 'articles:comment_delete' article.pk comment.pk %}" method="POST">
-          {% csrf_token %}
-          <input type="submit" value="삭제">
-        </form>
+      <div>
+        <div class="d-flex align-items-center">
+          &ensp;- {{ comment.content }} -&ensp;<a href="{% url 'accounts:profile' article.user.username %}">{{ article.user }}</a>&ensp;&ensp;
+          {% if request.user == comment.user %}
+          <form action="{% url 'articles:comment_delete' article.pk comment.pk %}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="삭제" class="btn btn-danger">
+          </form>
+        </div>
         {% endif %}
-      </li>
+      </div>
     {% endfor %}
-  </ul>
+  </div>
   <hr>
   {% if request.user.is_authenticated %}
   {% comment %} <form action="{% url 'articles:comments_create' article.pk %}" method="POST"> {% endcomment %}
   <form action="{% url 'articles:comment_create' article.pk %}" method="POST">
     {% csrf_token %}
-    {{ comment_form }}
-    <input type="submit">
+    <label for="content"></label>
+    <input id="content" type="text" name="content" placeholder="댓글 작성하기">
+    <input type="submit" value="작성하기">
   </form>
   {% else %}
     <a href="{% url 'accounts:login' %}">[댓글을 작성하려면 로그인하세요.]</a>

@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="backgroundimagesetting">
+<br>
+<html lang="en" style="height: 100%">
+<body class="mainbackgroundimagesetting" >
+
+<div class="container detailmainbackgroundimagesetting" style="height: 100%">
+    <br>
     <h1>CREATE</h1>
     <hr>
     <form action="{% url 'movies:create' %}" method='POST'>
@@ -10,6 +15,5 @@
         <input type="submit" value="Submit">
     </form>
     <hr>
-    <a href="{% url 'movies:index' %}">BACK</a>
 </div>
 {% endblock content %}

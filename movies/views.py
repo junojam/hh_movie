@@ -34,7 +34,6 @@ def search(request):
     
     context={
         'search':search,
-        
         'movies':movies,
         'movies2':movies2,
         'movies_len_1':movies_len_1,

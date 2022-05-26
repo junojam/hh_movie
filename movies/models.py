@@ -8,11 +8,17 @@ class Actor(models.Model):
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_actors')
     name = models.TextField()
     profile_path = models.TextField(null=True)
+    
+    def __str__(self):
+        return self.name
 
 class Director(models.Model):
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_directors')
     name = models.TextField()
     profile_path = models.TextField(null=True)
+    
+    def __str__(self):
+        return self.name
 
 class Movie(models.Model):
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movies')
